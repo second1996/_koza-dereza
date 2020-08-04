@@ -1,0 +1,79 @@
+// Buttons
+.btn, button
+	display: inline-block
+	vertical-align: middle
+	padding: 0 32px
+	border-radius: 60px
+	border: 0
+	background-color: $trsp
+	color: inherit
+	font-family: inherit
+	font-size: 13px
+	font-weight: 500
+	line-height: 64px
+	text-align: center
+	text-transform: uppercase
+	outline: none!important
+	transition: .3s ease
+	&:hover
+		color: inherit
+	&-orange
+		background-color: $orange
+		color: $white
+		&:hover
+			background-color: darken($orange, 10%)
+			color: $white
+	&-search
+		color: #3a4336
+		font-size: 20px
+	&-catalog
+		display: inline-flex
+		align-items: center
+		background-color: $green
+		color: $white
+		font-size: 16px
+		text-transform: none
+		&:hover
+			background-color: $orange
+			color: $white
+		.icon
+			margin-right: 12px
+			font-size: 24px
+
+
+// Form
+.form
+	position: relative
+	&-group
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&:not(:first-child)
+			margin-top: 24px
+		.form-control
+			margin-bottom: 0
+	&-label
+		margin-bottom: 0
+		cursor: pointer
+	&-control,
+	&-textarea
+		appearance: none
+		display: block
+		width: 100%
+		margin-bottom: 20px
+		color: $textcolor
+		font-size: 14px
+		font-weight: 400
+		border-radius: 6px
+		border: 0
+		background-color: $c-f8
+		background-clip: padding-box
+		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out
+	&-control
+		height: 60px
+		padding: 0 32px
+		line-height: 60px
+	&-textarea
+		resize: none
+		padding: 8px 16px

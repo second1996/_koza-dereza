@@ -11,6 +11,7 @@ let paths = {
 	scripts: {
 		src: [
 			'node_modules/jquery/dist/jquery.min.js', // jQuery
+			'node_modules/swiper/swiper-bundle.min.js', // Swiper Carousel
 			baseDir + '/js/app.js' // app.js
 		],
 		dest: baseDir + '/js',

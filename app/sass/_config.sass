@@ -1,24 +1,37 @@
 // USER VARIABLES SECTION
-
-$accent: orange
+$green: #b7d041
+$orange: #e97f54
+$orange-accent: #ee703d
+$black: #1a1a1a
+$white: #fff
+$textcolor: #727272
+$c-f9: #f9f9f9
+$c-f8: #f8f8f8
+$c-f5: #f5f5f5
+$border: #eee
 $fontsize: 16px
-$textcolor: #333
+$trsp: transparent
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-$font: Ubuntu, sans-serif
+$ubuntu: Ubuntu, sans-serif
+$neucha: Neucha, sans-serif
+
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px
 $gutter: $grid-gutter-width
+$container-max-widths  : (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1540px)
+$grid-breakpoints      : (xss: 0, xs: 375px, sm: 576px, md: 768px, lg: 992px, xl: 1240px, xxl: 1600px)
+
 
 // IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'
+@import 'node_modules/swiper/swiper-bundle.min'
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
-
 @mixin font($fname, $fstyle, $fweight, $furl)
 	@font-face
 		font-family: $fname
@@ -31,28 +44,4 @@ $gutter: $grid-gutter-width
 @include font('Ubuntu', normal, 400, '../fonts/ubuntu-regular.woff2')
 @include font('Ubuntu', normal, 500, '../fonts/ubuntu-medium.woff2')
 @include font('Ubuntu', normal, 700, '../fonts/ubuntu-bold.woff2')
-
-// GENERAL DOCUMENT STYLES
-
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
-body
-	overflow-x: hidden
-	position: relative
-	min-width: 320px
-	color: $textcolor
-	font-family: $font
-	font-size: $fontsize
-	line-height: 1.65
+@include font('Neucha', normal, 400, '../fonts/neucha-regular.woff2')
