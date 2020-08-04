@@ -1,0 +1,58 @@
+// USER VARIABLES SECTION
+
+$accent: orange
+$fontsize: 16px
+$textcolor: #333
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$font: Ubuntu, sans-serif
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Ubuntu', normal, 200, '../fonts/ubuntu-light.woff2')
+@include font('Ubuntu', normal, 400, '../fonts/ubuntu-regular.woff2')
+@include font('Ubuntu', normal, 500, '../fonts/ubuntu-medium.woff2')
+@include font('Ubuntu', normal, 700, '../fonts/ubuntu-bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	color: $textcolor
+	font-family: $font
+	font-size: $fontsize
+	line-height: 1.65
