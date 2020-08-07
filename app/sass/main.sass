@@ -50,6 +50,9 @@
           padding-right: 76px
           border-radius: 60px
           line-height: 70px
+          &:focus
+            box-shadow: 0 0 0 2px $green
+            background-color: $white
         .btn-search
           position: absolute
           top: 0
@@ -231,3 +234,63 @@
       margin-top: 40px
   &-photo
     text-align: center
+
+
+// SECTION: ADVANTAGES
+.h-advantages
+  margin-top: 60px
+  &-item
+    padding: 30px
+    border-radius: 6px
+  &-icon
+    margin-bottom: 20px
+    .icon
+      font-size: 60px
+  &-meta
+    .title
+      font-size: 17px
+    .descr
+      margin-bottom: 0
+
+
+// SECTION: ABOUT
+.h-about
+  &-meta
+    .descr
+      margin-top: 40px
+    .button
+      margin-top: 40px
+
+
+// SECTION: KOZA RECOMENDED
+.h-recomended
+  &-wrapper
+    position: relative
+    padding: 68px 0
+    border-radius: 10px
+    background: #fffae7 url('../images/dest/vegetables-bg.png') no-repeat center
+    &::after
+      content: ''
+      position: absolute
+      right: 108px
+      bottom: 0
+      display: block
+      width: 426px
+      height: 320px
+      background: url('../images/dest/koza-dereza.png') no-repeat center/100%
+  &-title
+    > span
+      color: $orange
+  &-descr
+    max-width: 580px
+  &-button
+    text-align: center
+  &-character
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 425px
+    height: 320px
+    > img
+      width: 100%
+      height: 100%

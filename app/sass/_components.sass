@@ -10,7 +10,7 @@
 	font-family: inherit
 	font-size: 13px
 	font-weight: 500
-	line-height: 64px
+	line-height: 60px
 	text-align: center
 	text-transform: uppercase
 	outline: none!important
@@ -22,6 +22,12 @@
 		color: $white
 		&:hover
 			background-color: darken($orange, 10%)
+			color: $white
+	&-green
+		background-color: $green
+		color: $white
+		&:hover
+			background-color: darken($green, 7%)
 			color: $white
 	&-search
 		color: #3a4336
@@ -69,7 +75,8 @@
 		border: 0
 		background-color: $c-f8
 		background-clip: padding-box
-		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out
+		color: $black
+		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
 	&-control
 		height: 60px
 		padding: 0 32px
@@ -77,3 +84,22 @@
 	&-textarea
 		resize: none
 		padding: 8px 16px
+
+
+// Background colors
+.l-green
+	background-color: #f0ffef
+	.icon
+		fill: #517159
+.l-brown
+	background-color: #faf4ef
+	.icon
+		fill: #c69c72
+.l-blue
+	background-color: #eff7ff
+	.icon
+		fill: #64748d
+.l-purple
+	background-color: #f7f2fd
+	.icon
+		fill: #9a8aaE
