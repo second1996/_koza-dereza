@@ -1,0 +1,82 @@
+.btn, button
+	display: inline-block
+	vertical-align: middle
+	height: 60px
+	padding: 0 32px
+	border-radius: 60px
+	border: 0
+	background-color: $trsp
+	color: inherit
+	font-family: inherit
+	font-size: 13px
+	font-weight: 500
+	line-height: 60px
+	text-align: center
+	text-transform: uppercase
+	outline: none!important
+	transition: $trs-3s
+	&:hover
+		color: inherit
+	&-orange
+		background-color: $orange
+		color: $white
+		&:hover
+			background-color: darken($orange, 10%)
+			color: $white
+	&-green
+		background-color: $green
+		color: $white
+		&:hover
+			background-color: $green-2
+			color: $white
+	&-outline
+		border: 1px solid $border
+		background-color: $white
+		color: $black
+		&:hover
+			border-color: $orange
+			background-color: $orange
+			color: $white
+	// Button «Search»
+	&-search
+		color: #3a4336
+		font-size: 20px
+	// Button «Catalog»
+	&-catalog
+		display: inline-flex
+		align-items: center
+		background-color: $green
+		color: $white
+		font-size: 16px
+		text-transform: none
+		&:hover
+			background-color: $green-2
+			color: $white
+		.icon
+			margin-right: 12px
+			font-size: 24px
+	// Button «Add to cart»
+	&-order
+		display: inline-flex
+		align-items: center
+		height: 46px
+		padding: 0 22px
+		line-height: 46px
+		.icon
+			margin-right: 8px
+			font-size: 18px
+	// Button «Add to wishlist»
+	&-wishlist
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 46px
+		height: 46px
+		padding: 0
+		line-height: 46px
+		&:hover
+			border-color: #ff4d4d
+			background-color: $trsp
+			color: #ff4d4d
+		.icon
+			font-size: 17px

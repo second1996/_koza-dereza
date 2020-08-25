@@ -1,0 +1,150 @@
+@import '../helpers/helpers'
+
+.card
+	position: relative
+	&:hover
+		z-index: 2
+		.card-buttons
+			visibility: visible
+			opacity: 1
+	// Product
+	&--product
+		height: 100%
+		padding: 40px 35px
+		border-radius: 4px
+		border: 1px solid $trsp
+		transition: $trs-3s
+		&:hover
+			border-color: #f4f4f4
+			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
+			background-color: $white
+		.card-labels
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: 1
+			display: flex
+			flex-wrap: wrap
+			.label
+				padding: 8px 12px
+				border-radius: 32px
+				font-size: 12px
+				line-height: 1
+				&-featured
+					background-color: #fe8858
+					color: $white
+					font-weight: 200
+				&-promo
+					margin-left: auto
+					background-color: #ffe892
+					color: $black
+					font-weight: 500
+		.card-photo
+			position: relative
+			> img
+				object-fit: scale-down
+		.card-meta
+			.sku
+				display: block
+				color: #8c8c8c
+				font-size: 14px
+				font-weight: 200
+				line-height: 1
+			.title
+				display: block
+				margin-top: 6px
+				color: $black
+				font-size: 17px
+				line-height: 1.35
+				&:hover
+					color: $orange
+			.stock
+				display: block
+				margin-top: 15px
+				font-size: 14px
+				font-weight: 200
+				line-height: 1
+				&::before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					border-radius: 50%
+					margin-right: 8px
+				&-in
+					color: #555
+					&::before
+						background-color: $green-2
+				&-out
+					color: #aaa
+					&::before
+						background-color: #e0e0e0
+			.price
+				margin-top: 15px
+				display: flex
+				align-items: flex-end
+				flex-wrap: wrap
+				line-height: 1
+				&-wrapper
+					display: flex
+					align-items: center
+					flex-wrap: wrap
+					> del
+						text-decoration: none
+						> .price-amount
+							position: relative
+							margin-right: 6px
+							color: #bbb
+							&::after
+								content: ''
+								position: absolute
+								top: 50%
+								left: 0
+								width: 100%
+								height: 1px
+								background-color: #bbb
+					> ins
+						text-decoration: none
+						> .price-amount
+							color: $black
+				&-amount
+					color: $black
+					font-size: 20px
+					font-weight: 200
+					.currencySymbol
+						font-weight: 200
+				&-count
+					margin-left: 10px
+					margin-bottom: 2px
+					span
+						color: #8c8c8c
+						font-size: 14px
+	// Base customize
+	&-photo
+		height: 305px
+		> img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&-meta
+		position: relative
+		z-index: 2
+	&-buttons
+		visibility: hidden
+		position: relative
+		z-index: 2
+		padding-top: 30px
+		opacity: 0
+		transition: $trs-3s
+		.btn
+			&:not(:last-child)
+				margin-right: 10px
+	&-link
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 100%
+		display: block

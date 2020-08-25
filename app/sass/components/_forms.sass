@@ -1,0 +1,36 @@
+.form
+	position: relative
+	&-group
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&:not(:first-child)
+			margin-top: 24px
+		.form-control
+			margin-bottom: 0
+	&-label
+		margin-bottom: 0
+		cursor: pointer
+	&-control,
+	&-textarea
+		appearance: none
+		display: block
+		width: 100%
+		margin-bottom: 20px
+		color: $textcolor
+		font-size: 14px
+		font-weight: 400
+		border-radius: 6px
+		border: 0
+		background-color: $c-f8
+		background-clip: padding-box
+		color: $black
+		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
+	&-control
+		height: 60px
+		padding: 0 32px
+		line-height: 60px
+	&-textarea
+		resize: none
+		padding: 8px 16px

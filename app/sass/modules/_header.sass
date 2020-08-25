@@ -1,0 +1,153 @@
+@import '../helpers/helpers'
+
+.header
+	&-top
+		padding: 16px 0
+		background: $c-f8
+		.nav
+			display: flex
+			> li
+				line-height: 1
+				&:not(:first-child)
+					margin-left: 30px
+				> a
+					color: $black
+					font-size: 14px
+					&:hover
+						color: $orange
+		.user
+			&-login
+				display: flex
+				align-items: center
+				line-height: 1
+				.icon
+					margin-right: 10px
+					color: $green
+				.link
+					color: $black
+					font-size: 14px
+					&:hover
+						color: $orange
+				.dot
+					margin: 0 6px
+					color: #bbb
+	&-middle
+		padding: 40px 0
+		.logo
+			display: block
+			max-width: 100%
+			height: 50px
+		.search-form
+			max-width: 790px
+			margin: 0 auto
+			.form
+				&-control
+					height: 70px
+					margin-bottom: 0
+					padding-right: 76px
+					border-radius: 60px
+					line-height: 70px
+					&:focus
+						box-shadow: 0 0 0 2px $green
+						background-color: $white
+				.btn-search
+					position: absolute
+					top: 0
+					right: 0
+		.action
+			display: flex
+			align-items: center
+			&-btn
+				position: relative
+				display: flex
+				&-icon
+					position: relative
+					&::before
+						content: ''
+						position: absolute
+						top: 50%
+						left: 50%
+						z-index: -1
+						width: 52px
+						height: 52px
+						margin-top: -26px
+						margin-left: -26px
+						border-radius: 100%
+						background-color: rgba($orange, 0.075)
+						opacity: 0
+						transform: scale(0)
+						transition-duration: .2s
+						transition-timing-function: cubic-bezier(.4,0,.2,1)
+						transition-property: transform, opacity
+				&:hover
+					.action-btn-icon
+						.icon
+							color: $orange
+						&::before
+							transform: scale(1)
+							opacity: 1
+			&-favorite,
+			&-cart
+				margin-right: 30px
+				.icon
+					color: $black
+					font-size: 24px
+					transition: .3s ease
+				.count
+					position: absolute
+					top: -4px
+					right: -10px
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 20px
+					height: 20px
+					border-radius: 50%
+					border: 1px solid $white
+					background: $orange-accent
+					color: $white
+					letter-spacing: -0.5px
+					font-size: 12px
+					font-weight: 500
+					text-align: cente
+			&-cart
+				.currency
+					margin-left: 20px
+					color: $black
+					font-weight: 500
+			&-phone
+				display: flex
+				flex-direction: column
+				margin-left: 30px
+				line-height: 1
+				a
+					margin-bottom: 8px
+					color: $black
+					font-weight: 500
+					&:hover
+						color: $orange
+				span
+					color: #6f7566
+					font-size: 14px
+					font-weight: 200
+	&-bottom
+		.btn-catalog
+			margin-right: 40px
+		.categories
+			display: flex
+			align-items: center
+			justify-content: space-between
+			&-item
+			&-link
+				display: flex
+				align-items: center
+				padding: 10px 4px
+				color: $black
+				&:hover
+					color: $orange
+			&-icon
+				max-width: 100%
+				height: 24px
+				margin-right: 10px
+			&-title
+				font-size: 16px

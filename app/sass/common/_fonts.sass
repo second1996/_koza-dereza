@@ -1,0 +1,13 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Ubuntu', normal, 200, '../../fonts/ubuntu-light.woff2')
+@include font('Ubuntu', normal, 400, '../../fonts/ubuntu-regular.woff2')
+@include font('Ubuntu', normal, 500, '../../fonts/ubuntu-medium.woff2')
+@include font('Ubuntu', normal, 700, '../../fonts/ubuntu-bold.woff2')
+@include font('Neucha', normal, 400, '../../fonts/neucha-regular.woff2')
