@@ -41,8 +41,8 @@
 					color: $black
 					font-weight: 500
 		.card-photo
-			position: relative
 			> img
+				padding: 20px 0
 				object-fit: scale-down
 		.card-meta
 			.sku
@@ -51,14 +51,6 @@
 				font-size: 14px
 				font-weight: 200
 				line-height: 1
-			.title
-				display: block
-				margin-top: 6px
-				color: $black
-				font-size: 17px
-				line-height: 1.35
-				&:hover
-					color: $orange
 			.stock
 				display: block
 				margin-top: 15px
@@ -120,16 +112,76 @@
 					span
 						color: #8c8c8c
 						font-size: 14px
+	// Recipe
+	&--recipe
+		padding: 0
+		.card-link
+			z-index: 2
+			&:hover
+				~ .overlay
+					visibility: visible
+					opacity: 1
+				~ img
+					transform: scale(1.05)
+		.card-photo
+			border-radius: 10px
+			.overlay
+				visibility: hidden
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 1
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				background-color: rgba($orange, 0.65)
+				color: $white
+				opacity: 0
+				transition: $trs-3s
+				.icon
+					font-size: 26px
+			> img
+				transform: scale(1.00001)
+				transition: $trs-3s
+		.card-meta
+			z-index: 1
+			padding: 30px 35px
+			.time
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				.icon
+					margin-right: 8px
+					color: $orange
+					font-size: 18px
+				span
+					color: $textcolor
+					font-size: 14px
+			.title
+				font-size: 18px
 	// Base customize
 	&-photo
+		position: relative
+		overflow: hidden
 		height: 305px
 		> img
 			width: 100%
 			height: 100%
 			object-fit: cover
 	&-meta
-		position: relative
-		z-index: 2
+		.title
+			position: relative
+			z-index: 2
+			display: block
+			margin-top: 6px
+			color: $black
+			font-size: 17px
+			line-height: 1.35
+			&:hover
+				color: $orange
 	&-buttons
 		visibility: hidden
 		position: relative
@@ -148,3 +200,69 @@
 		width: 100%
 		height: 100%
 		display: block
+
+
+/* ==========================================================================
+	 Card «Review»
+	 ========================================================================== */
+.card-review
+	margin-bottom: 15px
+	padding: 40px
+	border-radius: 6px
+	border: 1px solid $trsp
+	transition: $trs-3s
+	&:hover
+		border-color: $c-f5
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05)
+		background-color: $white
+	&-header
+		display: flex
+		align-items: center
+		padding-left: 54px
+		.photo
+			overflow: hidden
+			width: 70px
+			height: 70px
+			border-radius: 50%
+			border: 2px solid $green
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.author
+			margin-left: 30px
+			.name
+				display: block
+				color: $black
+				font-size: 18px
+				line-height: 1.3
+			.date
+				display: block
+				color: #8c8c8c
+				font-size: 14px
+				font-weight: 200
+		.rating
+			margin-left: auto
+			&-list
+				display: flex
+				align-items: center
+			&-star
+				color: #e8e8e8
+				font-size: 16px
+				&--checked
+					color: #ffd83a
+				&:not(:last-child)
+					margin-right: 8px
+	&-body
+		position: relative
+		margin-top: 20px
+		padding-left: 54px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 24px
+			height: 24px
+			background: url('../../images/dest/icons/quote.svg') no-repeat center/cover

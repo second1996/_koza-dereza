@@ -80,3 +80,23 @@
 			color: #ff4d4d
 		.icon
 			font-size: 17px
+	// Button link
+	&-link
+		display: inline-flex
+		align-items: center
+		height: auto
+		margin-right: 12px
+		padding: 0
+		font-size: 15px
+		font-weight: 400
+		line-height: 1
+		&:hover
+			.icon
+				transform: translateX(6px)
+		.icon
+			transform: translateX(12px)
+			transition: transform .3s ease
+		&--orange
+			color: $orange
+		&--green
+			color: $green

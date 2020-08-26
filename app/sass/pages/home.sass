@@ -3,7 +3,7 @@
 /* ==========================================================================
 	 Section: Heroes
 	 ========================================================================== */
-.heroes
+.h-heroes
 	margin-top: 60px
 	&-slider
 		overflow: hidden
@@ -16,6 +16,7 @@
 			&-bullet
 				box-shadow: 0 0 0 3px $trsp
 				background-color: $black
+				outline: none
 				opacity: 0.15
 				transition: $trs-3s
 				&:not(:first-child)
@@ -118,7 +119,7 @@
 .h-recomended
 	&-wrapper
 		position: relative
-		padding: 68px 0
+		padding: 70px 0
 		border-radius: 10px
 		background: #fffae7 url('../../images/dest/vegetables-bg.png') no-repeat center
 		&::after
@@ -155,3 +156,84 @@
 	&-list
 		> [class*="col"]
 			margin-bottom: -75px
+	&-button
+		margin-top: 50px
+		text-align: center
+		.btn
+			position: relative
+			z-index: 1
+
+
+/* ==========================================================================
+	 Section: Our manufacturers
+	 ========================================================================== */
+.h-manufacturers
+	&-wrapper
+		position: relative
+		overflow: hidden
+		padding: 70px 0
+		border-radius: 10px
+		background-color: #f1fdff
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: url('../../images/dest/bg-pattern-1.png') no-repeat center bottom/100%
+			opacity: 0.035
+	&-list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	&-item
+		flex: 0 0 20%
+		max-width: 20%
+		height: 100px
+		&:hover
+			transform: translateY(-4px)
+		> img
+			width: 100%
+			height: 100%
+			padding: 10px
+			object-fit: scale-down
+
+
+/* ==========================================================================
+	 Section: Recipes
+	 ========================================================================== */
+.h-recipes
+	&-button
+		margin-top: 20px
+		text-align: center
+
+
+/* ==========================================================================
+	 Section: Reviews
+	 ========================================================================== */
+.h-reviews
+	&-header
+		position: relative
+		margin-bottom: 40px
+		&-nav
+			.swiper-pagination
+				position: static
+				text-align: center
+				&-bullet
+					box-shadow: 0 0 0 3px $trsp
+					background-color: $black
+					outline: none
+					opacity: 0.15
+					transition: $trs-3s
+					&:not(:first-child)
+						margin-left: 15px
+					&-active
+						box-shadow: 0 0 0 3px $orange
+						background-color: $orange
+						opacity: 1
+		&-button
+			text-align: right
+	&-slider
+		overflow: hidden
+		position: relative
