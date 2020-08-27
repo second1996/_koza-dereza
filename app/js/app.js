@@ -12,17 +12,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 	})
 	var reviewsSlider = new Swiper('.h-reviews-slider', {
-		slidesPerView: 2,
-		spaceBetween: 20,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
 		speed: 700,
-		autoplay: {
-			delay: 2000
-		},
+		autoplay: false,
 		// loop: false,
 		pagination: {
 			el: '.h-reviews .swiper-pagination',
 			clickable: true,
 		},
+		breakpoints: {
+			// when window width is >= 320px
+			1240: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				autoHeight: false,
+				autoplay: {
+					delay: 6500
+				}
+			}
+		}
 	})
 
 });

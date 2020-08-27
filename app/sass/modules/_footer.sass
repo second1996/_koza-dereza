@@ -12,8 +12,10 @@
 		right: 0
 		z-index: -1
 		height: 660px
-		background: url('../../images/dest/footer-bg.jpg') no-repeat center/contain
+		background: url('../../images/dest/footer-bg.jpg') no-repeat center/cover
 		opacity: 0.06
+		+media-breakpoint-down(xl)
+			height: 560px
 	&::after
 		content: ''
 		position: absolute
@@ -21,4 +23,134 @@
 		left: 0
 		right: 0
 		height: 23px
-		background: url('../../images/dest/footer-pattern.png') no-repeat center/100%
+		background: url('../../images/dest/footer-pattern.png') no-repeat center/cover
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		padding-top: 80px
+		padding-bottom: 125px
+		+media-breakpoint-down(lg)
+			flex-wrap: wrap
+			padding-bottom: 80px
+	// Brand
+	&-brand
+		flex: 0 0 auto
+		+media-breakpoint-down(lg)
+			flex-basis: 50%
+			max-width: 50%
+		.about
+			&-logo
+				height: 50px
+			&-descr
+				max-width: 370px
+				margin-top: 45px
+				margin-bottom: 0
+				color: #bbb
+				font-size: 14px
+				font-weight: 200
+		.social
+			margin-top: 30px
+			&-list
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				> li
+					line-height: 1
+					&:not(:last-child)
+						margin-right: 20px
+					> a
+						color: #8d8d8d
+						font-size: 18px
+						&:hover
+							color: $green
+			&-subtitle
+				display: block
+				margin-top: 12px
+				color: #bbb
+				font-size: 14px
+				font-weight: 200
+	// Menu
+	&-menu
+		flex: 0 0 auto
+		+media-breakpoint-down(lg)
+			flex-basis: 25%
+			max-width: 25%
+		&-list
+			> li
+				&:not(:last-child)
+					margin-bottom: 10px
+				> a
+					color: $white
+					font-size: 15px
+					font-weight: 200
+					&:hover
+						color: $orange
+	// Contacts
+	&-contacts
+		flex: 0 0 300px
+		max-with: 300px
+		+media-breakpoint-down(lg)
+			flex-basis: 100%
+			max-width: 100%
+			margin-top: 40px
+		.callback
+			margin-bottom: 30px
+			+media-breakpoint-down(lg)
+				margin-bottom: 40px
+				text-align: center
+				.btn
+					justify-content: center
+					width: auto
+					min-width: 250px
+		.contacts
+			display: flex
+			flex-direction: column
+			+media-breakpoint-down(lg)
+				flex-wrap: wrap
+				flex-direction: row
+			&-item
+				display: flex
+				&:not(:last-child)
+					margin-bottom: 20px
+				+media-breakpoint-down(lg)
+					flex: 0 0 25%
+					&:not(:last-child)
+						margin-bottom: 0
+				+media-breakpoint-down(md)
+					flex-basis: 50%
+				> .icon
+					flex: 0 0 auto
+					margin-right: 15px
+					fill: $green
+					font-size: 22px
+				> a
+					color: #bbb
+					font-weight: 200
+					line-height: 1.35
+					&:hover
+						color: $green
+				> span
+					color: #bbb
+					font-weight: 200
+					line-height: 1.35
+	&-bottom
+		padding: 40px 0
+		border-top: 1px solid rgba($white, 0.1)
+		.copyright
+			span, p
+				color: #bbb
+				font-size: 14px
+				font-weight: 200
+		.payment
+			img
+				height: 26px
+		.madeby
+			text-align: right
+			a
+				display: inline-block
+				color: #bbb
+				font-size: 14px
+				font-weight: 200
+				&:hover
+					color: $green
+

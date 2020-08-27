@@ -9,10 +9,11 @@
 	color: inherit
 	font-family: inherit
 	font-size: 13px
-	font-weight: 500
+	font-weight: 400
 	line-height: 60px
 	text-align: center
 	text-transform: uppercase
+	white-space: nowrap
 	outline: none!important
 	transition: $trs-3s
 	&:hover
@@ -80,13 +81,30 @@
 			color: #ff4d4d
 		.icon
 			font-size: 17px
+	// Button «Callback»
+	&-callback
+		display: inline-flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		border: 1px solid #555
+		color: $white
+		> span
+			font-size: 12px
+		> .icon
+			margin-left: 12px
+			font-size: 18px
+		&:hover
+			border-color: $green-2
+			background-color: $green-2
+			color: $white
 	// Button link
 	&-link
 		display: inline-flex
 		align-items: center
 		height: auto
 		margin-right: 12px
-		padding: 0
+		padding: 4px 0
 		font-size: 15px
 		font-weight: 400
 		line-height: 1
@@ -100,3 +118,4 @@
 			color: $orange
 		&--green
 			color: $green
+	
