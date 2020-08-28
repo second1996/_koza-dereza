@@ -4,40 +4,70 @@
 	 Section: Heroes
 	 ========================================================================== */
 .h-heroes
-	margin-top: 60px
+	margin-top: 40px
+	+media-breakpoint-down(md)
+		margin-top: 0
 	&-slider
 		overflow: hidden
 		position: relative
 		border-radius: 10px
 		.swiper-pagination
 			bottom: 50px
-			text-align: left
+			margin-left: 5px
+			+media-breakpoint-down(lg)
+				bottom: 35px
+			+media-breakpoint-down(md)
+				left: 0
+				right: 0
+				margin-left: 0
+				text-align: center
 			&-bullet
+				margin-right: 15px
 				box-shadow: 0 0 0 3px $trsp
 				background-color: $black
 				outline: none
 				opacity: 0.15
 				transition: $trs-3s
-				&:not(:first-child)
-					margin-left: 15px
+				+media-breakpoint-down(md)
+					margin: 0 7px
 				&-active
 					box-shadow: 0 0 0 3px $black
 					opacity: 0.35
+	&-wrapper
+		min-height: 600px
+		+media-breakpoint-down(xl)
+			min-height: 500px
+		+media-breakpoint-down(lg)
+			min-height: 100%
 	&-slide
 		position: relative
 		height: auto
 		padding: 80px 10px
+		+media-breakpoint-down(xl)
+			padding: 60px 10px
+		+media-breakpoint-down(lg)
+			padding: 40px 10px
+		+media-breakpoint-down(md)
+			padding: 40px 0
 		&::before
 			content: ''
 			position: absolute
 			left: 40%
-			bottom: -200px
+			bottom: -350px
 			z-index: -1
 			width: 400px
 			height: 400px
 			border-radius: 100%
 			border: 104px solid $trsp
 			opacity: 0.35
+			+media-breakpoint-down(md)
+				left: -30%
+			+media-breakpoint-down(xs)
+				top: 75%
+				bottom: auto
+				width: 200px
+				height: 200px
+				border-width: 70px
 		&::after
 			content: ''
 			position: absolute
@@ -49,6 +79,10 @@
 			border-radius: 100%
 			border: 60px solid $trsp
 			opacity: 0.35
+			+media-breakpoint-down(xs)
+				top: -200px
+				width: 250px
+				height: 250px
 		&--orange
 			background-color: #fdf6e5
 			&::before, &::after
@@ -61,12 +95,15 @@
 			background-color: #f1f9fb
 			&::before, &::after
 				border-color: #d9f4ff
+		> .container
+			+media-breakpoint-down(xs)
+				width: auto
 	&-content
 		display: flex
 		align-items: center
-		height: 440px
-		+media-breakpoint-down(xl)
-			height: 400px
+		+media-breakpoint-down(md)
+			flex-direction: column
+			height: 100%
 	&-meta
 		flex: 0 0 42%
 		max-width: 42%
@@ -74,6 +111,11 @@
 		+media-breakpoint-down(xl)
 			flex-basis: 45%
 			max-width: 45%
+		+media-breakpoint-down(md)
+			order: 1
+			flex-basis: 100%
+			max-width: 100%
+			text-align: center
 		.title
 			color: $black
 			font-size: 76px
@@ -82,6 +124,15 @@
 			line-height: 1.15
 			+media-breakpoint-down(xl)
 				font-size: 60px
+			+media-breakpoint-down(lg)
+				font-size: 52px
+				line-height: 1.075
+			+media-breakpoint-down(md)
+				font-size: 46px
+			+media-breakpoint-down(sm)
+				font-size: 38px
+			+media-breakpoint-down(xs)
+				font-size: 32px
 			> span
 				color: $green
 		.descr
@@ -89,19 +140,33 @@
 			margin-top: 20px
 			margin-bottom: 0
 			font-size: 17px
+			+media-breakpoint-down(lg)
+				font-size: 16px
+			+media-breakpoint-down(md)
+				margin: 20px auto 0
+			+media-breakpoint-down(sm)
+				font-size: 15px
 		.btn
 			margin-top: 30px
 	&-photo
 		flex: 0 0 58%
-		align-self: center
 		max-width: 58%
 		text-align: right
 		+media-breakpoint-down(xl)
 			flex-basis: 55%
 			max-width: 55%
+		+media-breakpoint-down(md)
+			order: 0
+			flex-basis: 100%
+			max-width: 100%
+			margin-bottom: 30px
+			text-align: center
 		img
 			max-width: 95%
-
+			max-height: 440px
+			+media-breakpoint-down(md)
+				max-width: 75%
+				max-height: 290px
 
 /* ==========================================================================
 	 Section: Advantages
@@ -127,9 +192,16 @@
 	 Section: About
 	 ========================================================================== */
 .h-about
+	&-photo
+		padding-right: 20px
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+			padding-right: 0
 	&-meta
 		.descr
 			margin-top: 40px
+			+media-breakpoint-down(md)
+				margin-top: 20px
 		.button
 			margin-top: 40px
 
@@ -182,6 +254,8 @@
 	&-list
 		> [class*="col"]
 			margin-bottom: -75px
+			+media-breakpoint-down(md)
+				margin-bottom: 0
 	&-button
 		margin-top: 50px
 		text-align: center
@@ -261,9 +335,14 @@
 	&-header
 		position: relative
 		display: flex
+		flex-wrap: wrap
 		align-items: center
 		justify-content: space-between
 		margin-bottom: 40px
+		&-title
+			margin-right: 20px
+		&-button
+			margin: 6px 0
 	&-slider
 		overflow: hidden
 		position: relative
@@ -272,6 +351,7 @@
 		justify-content: center
 		.swiper-pagination
 			top: 20px
+			padding: 0 3px
 			text-align: center
 			+media-breakpoint-down(lg)
 				top: 100%

@@ -52,12 +52,28 @@
 		<div class="header-middle">
 			<div class="container">
 				<div class="row align-items-center justify-content-between">
-					<div class="col-auto">
+					<div class="col-auto order-1 order-lg-0">
 						<a href="index.html">
 							<img class="logo" src="images/dest/logotype.svg" alt="Koza-Дереza">
 						</a>
 					</div><!-- /.col -->
-					<div class="col">
+					<div class="col order-0 order-lg-1">
+						<div class="mobile-triggers d-flex d-lg-none">
+							<div class="burger">
+								<a href="page-catalog.html" class="burger-btn">
+									<figure class="burger-icon">
+										<span></span>
+										<span></span>
+										<span></span>
+									</figure>
+								</a>
+							</div>
+							<div class="search-btn">
+								<button class="search-btn-trigger">
+									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								</button>
+							</div>
+						</div>
 						<div class="search-form">
 							<form action="" class="form">
 								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?">
@@ -67,7 +83,7 @@
 							</form>
 						</div>
 					</div><!-- /.col -->
-					<div class="col-auto">
+					<div class="col col-lg-auto order-2">
 						<div class="action">
 							<div class="action-favorite">
 								<a href="#" class="action-btn">
@@ -83,7 +99,7 @@
 										<span class="count">5</span>
 										<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
 									</figure>
-									<span class="currency">543 <span class="currency-symbol">₴</span></span>
+									<span class="total">543 <span class="total-symbol">₴</span></span>
 								</a>
 							</div>
 							<div class="action-phone">
@@ -130,19 +146,19 @@
 									<span class="categories-title">Овочі та фрукти</span>
 								</a>
 							</li>
-							<li class="categories-item">
+							<li class="categories-item d-none d-xl-block">
 								<a href="#" class="categories-link">
 									<img src="images/dest/icons/catalog/bakery.svg" alt="" class="categories-icon">
 									<span class="categories-title">Випічка</span>
 								</a>
 							</li>
-							<li class="categories-item">
+							<li class="categories-item d-none d-xxl-block">
 								<a href="#" class="categories-link">
 									<img src="images/dest/icons/catalog/desserts.svg" alt="" class="categories-icon">
 									<span class="categories-title">Десерти без цукру</span>
 								</a>
 							</li>
-							<li class="categories-item">
+							<li class="categories-item d-none d-xxl-block">
 								<a href="#" class="categories-link">
 									<img src="images/dest/icons/catalog/fabricaty.svg" alt="" class="categories-icon">
 									<span class="categories-title">Напівфабрикати</span>
@@ -159,7 +175,7 @@
 	<section class="h-heroes">
 		<div class="container-fluid">
 			<div class="h-heroes-slider">
-				<div class="swiper-wrapper">
+				<div class="h-heroes-wrapper swiper-wrapper">
 					<div class="h-heroes-slide h-heroes-slide--orange swiper-slide">
 						<div class="container">
 							<div class="h-heroes-content">
@@ -180,6 +196,20 @@
 								<div class="h-heroes-meta">
 									<h3 class="title"><span>-30%</span> на молочну продукцію <span>вже зараз!</span></h3>
 									<p class="descr">Отримайте персональну знижку на всю молочну продукцію від виробників “Агроферма” на суму від 500 грн.</p>
+									<a href="#" class="btn btn-orange">Перейти до каталогу</a>
+								</div>
+								<div class="h-heroes-photo">
+									<img src="images/dest/slider-image-2.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div><!-- /.slide -->
+					<div class="h-heroes-slide h-heroes-slide--green swiper-slide">
+						<div class="container">
+							<div class="h-heroes-content">
+								<div class="h-heroes-meta">
+									<h3 class="title"><span>Молочна продукці</span> по знижці!</span></h3>
+									<p class="descr">Отримайте персональну знижку на всю молочну продукцію.</p>
 									<a href="#" class="btn btn-orange">Перейти до каталогу</a>
 								</div>
 								<div class="h-heroes-photo">
@@ -252,12 +282,12 @@
 	<section class="h-about section">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
-				<div class="col-4">
+				<div class="col-8 col-md-6 col-lg-5 col-xl-4">
 					<div class="h-about-photo">
 						<img src="images/dest/koza-dereza.svg" alt="Koza-Дереza">
 					</div>
 				</div>
-				<div class="col-7">
+				<div class="col-lg-7">
 					<div class="h-about-meta">
 						<h2 class="section-title">Трішки про <span>Kozа-Дереzа</span></h2>
 						<div class="descr">
@@ -303,7 +333,7 @@
 				<p class="section-descr">Пропонуємо вам широкий асортимент якісної продукції від провідних виробників за найвигіднішими цінами</p>
 			</div>
 			<div class="h-products-list row no-gutters">
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<!-- <div class="card-labels">
@@ -328,7 +358,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -338,7 +368,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<div class="card-labels">
@@ -363,7 +393,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -373,7 +403,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<div class="card-labels">
@@ -403,7 +433,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -413,7 +443,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<!-- <div class="card-labels">
@@ -438,7 +468,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -448,7 +478,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<div class="card-labels">
@@ -478,7 +508,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -488,7 +518,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<div class="card-labels">
@@ -518,7 +548,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -528,7 +558,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<!-- <div class="card-labels">
@@ -553,7 +583,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -563,7 +593,7 @@
 						<a href="page-product-single.html" class="card-link"></a>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-xs-6 col-xxl-3">
+				<div class="col-xs-6 col-lg-3">
 					<div class="card card--product">
 						<div class="card-photo">
 							<!-- <div class="card-labels">
@@ -588,7 +618,7 @@
 						</div>
 						<div class="card-buttons">
 							<a href="#" class="btn btn-green btn-order btn-icon">
-								<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+								<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 								<span>В кошик</span>
 							</a>
 							<a href="#" class="btn btn-outline btn-wishlist">
@@ -674,7 +704,7 @@
 				<p class="section-descr">Пропонуємо вам широкий асортимент рецептів від Koza-Дереza, які неодмінно вам сподобаються</p>
 			</div>
 			<div class="row row-items">
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card--recipe">
 						<div class="card-photo">
 							<a href="page-single-recipes.html" class="card-link"></a>
@@ -693,7 +723,7 @@
 						</div>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card--recipe">
 						<div class="card-photo">
 							<a href="page-single-recipes.html" class="card-link"></a>
@@ -712,7 +742,7 @@
 						</div>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card--recipe">
 						<div class="card-photo">
 							<a href="page-single-recipes.html" class="card-link"></a>
@@ -992,13 +1022,13 @@
 			</div><!-- /.footer-wrapper -->
 			<div class="footer-bottom">
 				<div class="row align-items-center justify-content-between">
-					<div class="copyright col">
+					<div class="copyright col-md">
 						<span>«Коzа-Дереzа» — доставка продуктів додому © 2020</span>
 					</div>
-					<div class="payment col-auto">
+					<div class="payment col-md-auto">
 						<img src="images/dest/payment.svg" alt="Ми приймаємо">
 					</div>
-					<div class="madeby col">
+					<div class="madeby col-md">
 						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with  ❤️  by A Prostir</a>
 					</div>
 				</div><!-- /.row -->

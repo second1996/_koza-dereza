@@ -9,15 +9,23 @@
 			opacity: 1
 	// Product
 	&--product
+		display: flex
+		flex-direction: column
 		height: 100%
 		padding: 35px
 		border-radius: 4px
 		border: 1px solid $trsp
 		transition: $trs-3s
+		+media-breakpoint-down(sm)
+			padding: 25px
 		&:hover
 			border-color: #f4f4f4
 			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
 			background-color: $white
+			+media-breakpoint-down(xs)
+				border-color: $trsp
+				box-shadow: none
+				background-color: $trsp
 		.card-labels
 			position: absolute
 			top: 0
@@ -34,13 +42,20 @@
 				&-featured
 					background-color: #fe8858
 					color: $white
-					font-weight: 200
 				&-promo
 					margin-left: auto
 					background-color: #ffe892
 					color: $black
-					font-weight: 500
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				.label
+					margin-left: 0
+					margin-right: auto
+					&:not(:last-child)
+						margin-bottom: 3px
 		.card-photo
+			+media-breakpoint-down(xs)
+				height: 180px
 			> img
 				padding: 20px 0
 				object-fit: scale-down
@@ -51,6 +66,10 @@
 				font-size: 14px
 				font-weight: 200
 				line-height: 1
+			.title
+				+media-breakpoint-down(xs)
+					height: 40px
+					font-size: 15px
 			.stock
 				display: block
 				margin-top: 15px
@@ -82,6 +101,11 @@
 					display: flex
 					align-items: center
 					flex-wrap: wrap
+					margin-right: 10px
+					+media-breakpoint-down(xs)
+						flex-direction: column
+						align-items: flex-start
+						margin-right: 6px
 					> del
 						text-decoration: none
 						> .price-amount
@@ -107,11 +131,23 @@
 					.currencySymbol
 						font-weight: 200
 				&-count
-					margin-left: 10px
 					margin-bottom: 2px
 					span
 						color: #8c8c8c
 						font-size: 14px
+		.card-buttons
+			+media-breakpoint-down(md)
+				margin-top: auto
+			.btn-order
+				justify-content: center
+				width: 46px
+				height: 46px
+				padding: 0
+				line-height: 46px
+				.icon
+					margin-right: 0
+				> span
+					display: none
 	// Recipe
 	&--recipe
 		padding: 0
@@ -169,6 +205,8 @@
 		position: relative
 		overflow: hidden
 		height: 305px
+		+media-breakpoint-down(sm)
+			height: 225px
 		> img
 			width: 100%
 			height: 100%
@@ -191,9 +229,15 @@
 		padding-top: 30px
 		opacity: 0
 		transition: $trs-3s
+		+media-breakpoint-down(md)
+			visibility: visible
+			padding-top: 15px
+			opacity: 1
 		.btn
 			&:not(:last-child)
 				margin-right: 10px
+				+media-breakpoint-down(md)
+					margin-right: 4px
 	&-link
 		position: absolute
 		top: 0

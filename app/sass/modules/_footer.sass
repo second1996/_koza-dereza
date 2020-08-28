@@ -31,13 +31,16 @@
 		padding-bottom: 125px
 		+media-breakpoint-down(lg)
 			flex-wrap: wrap
-			padding-bottom: 80px
+			padding-bottom: 65px
 	// Brand
 	&-brand
 		flex: 0 0 auto
 		+media-breakpoint-down(lg)
 			flex-basis: 50%
 			max-width: 50%
+		+media-breakpoint-down(sm)
+			flex-basis: 100%
+			max-width: 100%
 		.about
 			&-logo
 				height: 50px
@@ -48,6 +51,12 @@
 				color: #bbb
 				font-size: 14px
 				font-weight: 200
+				+media-breakpoint-down(md)
+					padding-right: 30px
+				+media-breakpoint-down(sm)
+					max-width: 100%
+					margin-top: 30px
+					padding-right: 0
 		.social
 			margin-top: 30px
 			&-list
@@ -75,6 +84,10 @@
 		+media-breakpoint-down(lg)
 			flex-basis: 25%
 			max-width: 25%
+		+media-breakpoint-down(sm)
+			flex-basis: 50%
+			max-width: 50%
+			margin-top: 30px
 		&-list
 			> li
 				&:not(:last-child)
@@ -118,6 +131,12 @@
 						margin-bottom: 0
 				+media-breakpoint-down(md)
 					flex-basis: 50%
+					padding-right: 15px
+					&:not(:last-child)
+						margin-bottom: 15px
+				+media-breakpoint-down(xs)
+					flex-basis: 100%
+					padding-right: 0
 				> .icon
 					flex: 0 0 auto
 					margin-right: 15px
@@ -138,9 +157,11 @@
 		border-top: 1px solid rgba($white, 0.1)
 		.copyright
 			span, p
+				display: block
 				color: #bbb
 				font-size: 14px
 				font-weight: 200
+				line-height: 1.3
 		.payment
 			img
 				height: 26px
@@ -153,4 +174,12 @@
 				font-weight: 200
 				&:hover
 					color: $green
+		+media-breakpoint-down(sm)
+			.copyright,
+			.payment,
+			.madeby
+				text-align: center
+			.payment
+				margin: 15px 0
+
 

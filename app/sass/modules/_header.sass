@@ -1,9 +1,13 @@
 @import '../helpers/helpers'
 
 .header
+	// HEADER TOP
 	&-top
 		padding: 16px 0
 		background: $c-f8
+		+media-breakpoint-down(md)
+			display: none
+		// Navigation
 		.nav
 			display: flex
 			> li
@@ -15,6 +19,7 @@
 					font-size: 14px
 					&:hover
 						color: $orange
+		// User profile
 		.user
 			&-login
 				display: flex
@@ -31,16 +36,61 @@
 				.dot
 					margin: 0 6px
 					color: #bbb
+	// HEADER MIDDLE
 	&-middle
 		padding: 40px 0
+		+media-breakpoint-down(md)
+			padding: 20px 0
+		// Logotype
 		.logo
 			display: block
 			max-width: 100%
 			height: 50px
+			+media-breakpoint-down(xl)
+				height: 46px
+			+media-breakpoint-down(md)
+				height: 36px
+		// Mobile triggers
+		.mobile-triggers
+			align-items: center
+			.burger
+				&-btn
+					display: flex
+					align-items: center
+					height: 60px
+				&-icon
+					&:hover
+						> span
+							background-color: $orange
+					> span
+						display: block
+						width: 24px
+						height: 2px
+						border-radius: 2px
+						background-color: $black
+						transition: background-color .3s ease
+						&:not(:first-child)
+							margin-top: 6px
+			.search-btn
+				margin-left: 25px
+				+media-breakpoint-down(xs)
+					display: none
+				&-trigger
+					display: flex
+					align-items: center
+					height: 60px
+					padding: 0
+					color: $black
+					font-size: 20px
+					&:hover
+						color: $orange
+		// Search form
 		.search-form
 			margin: 0 90px
 			+media-breakpoint-down(xl)
 				margin: 0 45px
+			+media-breakpoint-down(md)
+				display: none
 			.form
 				&-control
 					height: 70px
@@ -48,6 +98,9 @@
 					padding-right: 76px
 					border-radius: 60px
 					line-height: 70px
+					+media-breakpoint-down(xl)
+						height: 64px
+						line-height: 64px
 					&:focus
 						box-shadow: 0 0 0 2px $green
 						background-color: $white
@@ -57,9 +110,12 @@
 					right: 0
 					bottom: 0
 					height: 100%
+		// Action (Cart, Favorite)
 		.action
 			display: flex
 			align-items: center
+			+media-breakpoint-down(md)
+				justify-content: flex-end
 			&-btn
 				position: relative
 				display: flex
@@ -82,6 +138,8 @@
 						transition-duration: .2s
 						transition-timing-function: cubic-bezier(.4,0,.2,1)
 						transition-property: transform, opacity
+						+media-breakpoint-down(md)
+							display: none
 				&:hover
 					.action-btn-icon
 						.icon
@@ -111,18 +169,29 @@
 					letter-spacing: -0.5px
 					font-size: 12px
 					font-weight: 500
-					text-align: cente
+					text-align: center
+			&-favorite
+				+media-breakpoint-down(xs)
+					display: none
 			&-cart
 				margin-left: 30px
-				.currency
+				+media-breakpoint-down(sm)
+					margin-right: 8px
+				+media-breakpoint-down(xs)
+					margin-left: 15px
+				.total
 					margin-left: 20px
 					color: $black
 					font-weight: 500
+					+media-breakpoint-down(sm)
+						display: none
 			&-phone
 				display: flex
 				flex-direction: column
 				margin-left: 40px
 				line-height: 1
+				+media-breakpoint-down(lg)
+					display: none
 				a
 					margin-bottom: 8px
 					color: $black
@@ -133,15 +202,20 @@
 					color: #6f7566
 					font-size: 14px
 					font-weight: 200
+	// HEADER BOTTOM
 	&-bottom
+		+media-breakpoint-down(md)
+			display: none
+		// Catalog button
 		.btn-catalog
 			margin-right: 40px
+			+media-breakpoint-down(xl)
+				margin-right: 20px
+		// Catalog list
 		.categories
 			display: flex
 			align-items: center
 			justify-content: space-between
-			+media-breakpoint-down(xl)
-				display: none
 			&-item
 			&-link
 				display: flex
