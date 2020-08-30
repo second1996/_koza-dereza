@@ -22,7 +22,7 @@
 			border-color: #f4f4f4
 			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
 			background-color: $white
-			+media-breakpoint-down(xs)
+			+media-breakpoint-down(md)
 				border-color: $trsp
 				box-shadow: none
 				background-color: $trsp
@@ -262,10 +262,19 @@
 		border-color: $c-f5
 		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05)
 		background-color: $white
+		+media-breakpoint-down(md)
+			border-color: $trsp
+			box-shadow: none
+			background-color: $trsp
 	&-header
 		display: flex
 		align-items: center
 		padding-left: 50px
+		+media-breakpoint-down(xs)
+			flex-direction: column
+			align-items: flex-start
+			padding-left: 0
+			flex-wrap: wrap
 		.photo
 			overflow: hidden
 			width: 70px
@@ -280,6 +289,9 @@
 			margin-left: 30px
 			+media-breakpoint-down(xl)
 				margin-left: 25px
+			+media-breakpoint-down(xs)
+				margin-top: 10px
+				margin-left: 0
 			.name
 				display: block
 				color: $black
@@ -292,6 +304,9 @@
 				font-weight: 200
 		.rating
 			margin-left: auto
+			+media-breakpoint-down(xs)
+				flex-basis: 100%
+				margin-left: 0
 			&-list
 				display: flex
 				align-items: center
@@ -315,3 +330,7 @@
 			width: 24px
 			height: 24px
 			background: url('../../images/dest/icons/quote.svg') no-repeat center/cover
+		+media-breakpoint-down(xs)
+			padding-left: 0
+			&::before
+				display: none
