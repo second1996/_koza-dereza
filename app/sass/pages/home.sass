@@ -212,11 +212,8 @@
 .h-recomended
 	&-wrapper
 		position: relative
-		padding: 70px 0
 		border-radius: 10px
 		background: #fffae7 url('../../images/dest/vegetables-bg.png') no-repeat center
-		+media-breakpoint-down(xl)
-			padding: 60px 0
 		&::after
 			content: ''
 			position: absolute
@@ -231,6 +228,8 @@
 			+media-breakpoint-down(md)
 				width: 306px
 				height: 230px
+			+media-breakpoint-down(sm)
+				display: none
 	&-title
 		margin-bottom: 10px
 		> span
@@ -240,6 +239,8 @@
 		margin-bottom: 0
 		+media-breakpoint-down(lg)
 			max-width: 460px
+		+media-breakpoint-down(sm)
+			max-width: 100%
 	&-button
 		text-align: center
 		+media-breakpoint-down(xl)
@@ -255,7 +256,11 @@
 		> [class*="col"]
 			margin-bottom: -75px
 			+media-breakpoint-down(md)
-				margin-bottom: 0
+				margin-bottom: -30px
+			+media-breakpoint-down(sm)
+				margin-bottom: -20px
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
 	&-button
 		margin-top: 50px
 		text-align: center
@@ -275,7 +280,6 @@
 	&-wrapper
 		position: relative
 		overflow: hidden
-		padding: 70px 0
 		border-radius: 10px
 		background-color: #f1fdff
 		&::before
@@ -300,6 +304,14 @@
 			&-button
 				flex: 0 0 auto
 				margin-top: 0
+		+media-breakpoint-down(xs)
+			flex-direction: column
+			align-items: flex-start
+			&-title
+				.section-descr
+					margin-top: 10px
+			&-button
+				margin-top: 10px
 	&-list
 		display: flex
 		flex-wrap: wrap
@@ -308,15 +320,21 @@
 			margin-top: 45px
 	&-item
 		flex: 0 0 20%
+		display: flex
+		align-items: center
+		justify-content: center
 		max-width: 20%
 		height: 100px
 		&:hover
 			transform: translateY(-4px)
 		> img
-			width: 100%
-			height: 100%
-			padding: 10px
-			object-fit: scale-down
+			max-width: 85%
+		+media-breakpoint-down(sm)
+			flex-basis: 50%
+			max-width: 50%
+			height: 80px
+			&:hover
+				transform: none
 
 
 /* ==========================================================================

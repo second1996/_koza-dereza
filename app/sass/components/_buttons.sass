@@ -16,6 +16,9 @@
 	white-space: nowrap
 	outline: none!important
 	transition: $trs-3s
+	+media-breakpoint-down(xs)
+		height: 54px
+		line-height: 54px
 	&:hover
 		color: inherit
 	&-orange
@@ -38,6 +41,34 @@
 			border-color: $orange
 			background-color: $orange
 			color: $white
+	// Button «Close»
+	&-close
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		width: 18px
+		height: 18px
+		padding: 8px
+		box-sizing: content-box
+		line-height: 1
+		> span
+			display: block
+			width: 100%
+			height: 2px
+			background-color: #bbb
+			transition: transform .25s ease
+			&:nth-child(1)
+				transform: rotate(-45deg)
+			&:nth-child(2)
+				margin-top: -2px
+				transform: rotate(45deg)
+		&:hover
+			span
+				transform: rotate(0deg)
+		&--white
+			> span
+				background-color: $white
 	// Button «Search»
 	&-search
 		color: #3a4336

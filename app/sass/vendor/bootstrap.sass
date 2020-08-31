@@ -5,10 +5,9 @@
 	 ========================================================================== */
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'
+@import 'node_modules/bootstrap/scss/_modal.scss'
+@import 'node_modules/bootstrap/scss/_transitions.scss'
 // @import 'node_modules/bootstrap/scss/_nav.scss'
-// @import 'node_modules/bootstrap/scss/_transitions.scss'
-// @import 'node_modules/bootstrap/scss/_modal.scss'
 
 
 /* ==========================================================================
@@ -26,6 +25,10 @@
 		max-width: 670px
 	+media-breakpoint-down(xs)
 		max-width: 100%
+
+.container
+	padding-left: 20px
+	padding-right: 20px
 
 .row-items
 	> [class*="col"]

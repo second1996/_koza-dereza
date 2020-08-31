@@ -1,0 +1,198 @@
+@import '../helpers/helpers'
+
+.modal
+	padding-right: 0!important
+	&.fade
+		.modal-dialog
+			transform: translate(50px, 0)
+	&.show
+		.modal-dialog
+			transform: none
+	&-dialog
+		max-width: 600px
+		height: 100%
+		max-height: 100%
+		margin: 0 0 0 auto
+		box-shadow: -5px 0px 45px rgba(0, 0, 0, 0.15)
+		&-scrollable
+			.modal-content
+				max-height: 100vh
+	&-content
+		border-radius: 0
+		border: 0
+	&-header
+		align-items: center
+		height: 86px
+		padding: 0 40px
+		border-radius: 0
+		border-bottom: 0
+		background-color: $green
+	&-title
+		color: $white
+		font-size: 22px
+	&-body
+		padding: 30px 40px
+	&-footer
+		display: block
+		padding: 30px 40px
+		border-radius: 0
+		border: 0
+
+
+/* ==========================================================================
+	 Modal customize for Cart widget
+	 ========================================================================== */
+.modal-cart
+	.modal-body
+		padding: 10px 30px 0
+	.cart
+		&-item
+			display: flex
+			align-items: center
+			padding: 10px 14px 10px 10px
+			&:not(:last-child)
+				border-bottom: 1px solid $border
+		&-photo
+			margin-right: 20px
+			&-link
+				display: block
+				width: 75px
+				height: 75px
+				> img
+					object-fit: scale-down
+		&-info
+			flex: 1 1 auto
+			display: flex
+			flex-direction: column
+			.title
+				margin-bottom: 10px
+				color: $black
+				font-size: 15px
+				line-height: 1.3
+			.price
+				display: flex
+				align-items: flex-end
+				line-height: 1
+				&-amount
+					color: $orange
+					font-size: 18px
+					font-weight: 500
+				&-count
+					margin-left: 10px
+					font-size: 14px
+					font-weight: 200
+		&-quantity
+			margin: 0 20px
+			.quantity
+				display: flex
+				width: 100px
+				height: 40px
+				padding: 8px
+				border-radius: 40px
+				background-color: $c-f3
+				&-field
+					height: 100%
+					padding: 0 10px
+					margin-bottom: 0
+					background-color: $trsp
+					font-weight: 500
+					text-align: center
+					line-height: 1
+				.minus,
+				.plus
+					position: relative
+					flex: 0 0 auto
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					width: 24px
+					height: 24px
+					border-radius: 50%
+					padding: 0
+					font-size: 0
+					line-height: 1
+					cursor: pointer
+					transition: $trs-3s
+					&::before,
+					&::after
+						content: ''
+						display: block
+						width: 10px
+						height: 2px
+						border-radius: 2px
+						transition: $trs-3s
+				.minus
+					background-color: $white
+					color: $green
+					&::before
+						background-color: $green
+					&::after
+						display: none
+					&:hover
+						background-color: $orange
+						&::before
+							background-color: $white
+				.plus
+					background-color: $green
+					color: $white
+					&::before,
+					&::after
+						background-color: $white
+					&::after
+						margin-top: -2px
+						transform: rotate(90deg)
+					&:hover
+						background-color: $green-2
+		&-remove
+			.btn-close
+				width: 12px
+				height: 12px
+				> span
+					height: 1px
+					background-color: #bbb
+					&:nth-child(2)
+						margin-top: -1px
+		&-total
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-min-order
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			padding: 16px 40px
+			border-radius: 120px
+			background-color: #fff3f3
+			> .icon
+				margin-right: 20px
+				font-size: 20px
+				fill: #602727
+			> span
+				color: $black
+				font-weight: 200
+				> b, strong
+					font-weight: 400
+		&-subtotal
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			margin: 25px 0
+			padding: 0 40px
+			.title
+				color: $black
+				font-size: 20px
+				font-weight: 500
+			.price
+				&-amount
+					color: $orange
+					font-size: 24px
+					font-weight: 500
+					.currencySymbol
+						font-weight: 400
+		&-btn-checkout
+			width: 100%
+
+

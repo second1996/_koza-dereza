@@ -18,6 +18,8 @@
 		transition: $trs-3s
 		+media-breakpoint-down(sm)
 			padding: 25px
+		+media-breakpoint-down(xs)
+			padding: 10px
 		&:hover
 			border-color: #f4f4f4
 			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
@@ -54,11 +56,13 @@
 					&:not(:last-child)
 						margin-bottom: 3px
 		.card-photo
-			+media-breakpoint-down(xs)
-				height: 180px
 			> img
 				padding: 20px 0
 				object-fit: scale-down
+			+media-breakpoint-down(xs)
+				height: 180px
+				> img
+					padding: 0
 		.card-meta
 			.sku
 				display: block

@@ -1,5 +1,5 @@
+// JS scripts
 document.addEventListener("DOMContentLoaded", function() {
-
 	var homeSlider = new Swiper('.h-heroes-slider', {
 		loop: false,
 		effect: 'fade',
@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	})
-
 });
 
-
-
+// jQuery scripts
+jQuery(document).ready(function($) {
+	$('#shopCart').modal('show')
+})
