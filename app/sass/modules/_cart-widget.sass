@@ -1,0 +1,215 @@
+@import '../helpers/helpers'
+
+.cart-widget
+	.modal-body
+		padding: 10px 30px
+		+media-breakpoint-down(xs)
+			padding: 10px
+	// .modal-header
+	// 	position: relative
+	// 	&::after
+	// 		content: ''
+	// 		position: absolute
+	// 		top: 100%
+	// 		left: 0
+	// 		right: 0
+	// 		z-index: 1
+	// 		height: 30px
+	// 		background-image: linear-gradient(to top, rgba($white, 0) 0%, rgba($white, 1) 100%)
+	.modal-footer
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 100%
+			height: 30px
+			background-image: linear-gradient(to bottom, rgba($white, 0) 0%, rgba($white, 1) 100%)
+	.cart
+		&-item
+			position: relative
+			display: flex
+			width: 100%
+			align-items: center
+			padding: 10px 14px 10px 10px
+			+media-breakpoint-down(xxs)
+				padding-left: 6px
+				padding-right: 6px
+			&:not(:last-child)
+				border-bottom: 1px solid $border
+		&-photo
+			flex: 0 0 auto
+			margin-right: 20px
+			&-link
+				display: block
+				width: 75px
+				height: 75px
+				> img
+					width: 100%
+					height: 100%
+					object-fit: scale-down
+		&-body
+			flex: 1 1 auto
+			display: flex
+			align-items: center
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				align-items: flex-start
+		&-info
+			flex: 1 1 auto
+			.product-title
+				display: block
+				margin-bottom: 10px
+				color: $black
+				font-size: 15px
+				line-height: 1.3
+			.price
+				display: flex
+				align-items: flex-end
+				line-height: 1
+				&-amount
+					color: $orange
+					font-size: 18px
+					font-weight: 500
+				&-count
+					margin-left: 10px
+					font-size: 14px
+					font-weight: 200
+		&-quantity
+			margin: 0 20px
+			+media-breakpoint-down(xs)
+				margin: 12px 0 0
+			.quantity
+				display: flex
+				width: 100px
+				height: 40px
+				padding: 8px
+				border-radius: 40px
+				background-color: $c-f3
+				&-field
+					height: 100%
+					padding: 0 10px
+					margin-bottom: 0
+					background-color: $trsp
+					font-weight: 500
+					text-align: center
+					line-height: 1
+				.minus,
+				.plus
+					position: relative
+					flex: 0 0 auto
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					width: 24px
+					height: 24px
+					border-radius: 50%
+					padding: 0
+					font-size: 0
+					line-height: 1
+					cursor: pointer
+					transition: $trs-3s
+					&::before,
+					&::after
+						content: ''
+						display: block
+						width: 10px
+						height: 2px
+						border-radius: 2px
+						transition: $trs-3s
+				.minus
+					background-color: $white
+					color: $green
+					&::before
+						background-color: $green
+					&::after
+						display: none
+					&:hover
+						background-color: $orange
+						&::before
+							background-color: $white
+				.plus
+					background-color: $green
+					color: $white
+					&::before,
+					&::after
+						background-color: $white
+					&::after
+						margin-top: -2px
+						transform: rotate(90deg)
+					&:hover
+						background-color: $green-2
+		&-remove
+			+media-breakpoint-down(xs)
+				flex: 0 0 auto
+			.btn-close
+				width: 12px
+				height: 12px
+				> span
+					height: 1px
+					background-color: #bbb
+					&:nth-child(2)
+						margin-top: -1px
+		&-total
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-min-order
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			margin-bottom: 25px
+			padding: 16px 20px
+			border-radius: 120px
+			background-color: #fff3f3
+			> .icon
+				flex: 0 0 auto
+				margin-right: 20px
+				font-size: 20px
+				fill: #602727
+			> span
+				color: $black
+				font-weight: 200
+				line-height: 1.3
+				> b, strong
+					font-weight: 400
+			+media-breakpoint-down(xs)
+				margin-bottom: 12px
+				> .icon
+					font-size: 14px
+					margin-right: 10px
+				> span
+					font-size: 12px
+			+media-breakpoint-down(xxs)
+				> .icon
+					display: none
+		&-subtotal
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			margin-bottom: 25px
+			padding: 0 40px
+			+media-breakpoint-down(xs)
+				margin-bottom: 12px
+				padding: 0 20px
+			.title
+				color: $black
+				font-size: 20px
+				font-weight: 500
+				+media-breakpoint-down(xs)
+					font-size: 18px
+			.price
+				&-amount
+					color: $orange
+					font-size: 24px
+					font-weight: 500
+					.currencySymbol
+						font-weight: 400
+					+media-breakpoint-down(xs)
+						font-size: 18px
+		&-btn-checkout
+			width: 100%

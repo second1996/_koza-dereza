@@ -1,11 +1,16 @@
 // JS scripts
 document.addEventListener("DOMContentLoaded", function() {
 	var homeSlider = new Swiper('.h-heroes-slider', {
-		loop: false,
+		allowTouchMove: false,
+		loop: true,
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true
 		},
+		autoplay: {
+			delay: 5000
+		},
+		// speed: 700,
 		pagination: {
 			el: '.h-heroes .swiper-pagination',
 			clickable: true,
@@ -38,5 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // jQuery scripts
 jQuery(document).ready(function($) {
-	
+	$('.burger-btn').on('click', function(e) {
+		e.preventDefault()
+		$('body').toggleClass('lock-scroll')
+		$(this).toggleClass('is-active')
+		$('.m-menu').toggleClass('is-active')
+	})
 })

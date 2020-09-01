@@ -1,6 +1,12 @@
 @import '../helpers/helpers'
 
 .header
+	+media-breakpoint-down(md)
+		position: fixed
+		left: 0
+		right: 0
+		z-index: 100
+		background-color: $white
 	// HEADER TOP
 	&-top
 		padding: 16px 0
@@ -40,7 +46,10 @@
 	&-middle
 		padding: 40px 0
 		+media-breakpoint-down(md)
-			padding: 20px 0
+			display: flex
+			align-items: center
+			height: 100px
+			padding: 0
 		// Logotype
 		.logo
 			display: block
@@ -58,6 +67,18 @@
 					display: flex
 					align-items: center
 					height: 60px
+					&.is-active
+						.burger-icon
+							> span
+								margin-top: 0
+								&:nth-child(2)
+									width: 0
+									display: none
+								&:nth-child(1)
+									transform: rotate(45deg)
+								&:nth-child(3)
+									margin-top: -2px
+									transform: rotate(-45deg)
 				&-icon
 					&:hover
 						> span
@@ -68,7 +89,8 @@
 						height: 2px
 						border-radius: 2px
 						background-color: $black
-						transition: background-color .3s ease
+						will-change: transform
+						transition: background-color .3s ease, transform .3s ease
 						&:not(:first-child)
 							margin-top: 6px
 			.search-btn
@@ -91,25 +113,6 @@
 				margin: 0 45px
 			+media-breakpoint-down(md)
 				display: none
-			.form
-				&-control
-					height: 70px
-					margin-bottom: 0
-					padding-right: 76px
-					border-radius: 60px
-					line-height: 70px
-					+media-breakpoint-down(xl)
-						height: 64px
-						line-height: 64px
-					&:focus
-						box-shadow: 0 0 0 2px $green
-						background-color: $white
-				.btn-search
-					position: absolute
-					top: 0
-					right: 0
-					bottom: 0
-					height: 100%
 		// Action (Cart, Favorite)
 		.action
 			display: flex

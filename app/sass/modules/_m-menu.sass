@@ -1,0 +1,80 @@
+@import '../helpers/helpers'
+
+.m-menu
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 199
+	height: 100%
+	margin-top: 100px
+	background-color: $white
+	visibility: hidden
+	opacity: 0
+	transition: $trs-3s
+	&.is-active
+		visibility: visible
+		opacity: 1
+	&-inner
+		height: 100%
+		overflow-y: auto
+		padding-bottom: 130px
+	&-search
+		position: fixed
+		left: 0
+		right: 0
+		padding-bottom: 20px
+		background-color: $white
+		.form-search
+			.form-control
+				padding-left: 22px
+				padding-right: 58px
+			.btn-search
+				right: -8px
+				.icon
+					font-size: 16px
+	&-main
+		height: 100%
+		padding-top: 66px
+	&-nav
+		.nav
+			&-list
+			&-item
+				border-bottom: 1px solid $border
+				> a
+					display: flex
+					padding: 20px 22px
+					color: $black
+					font-weight: 200
+					line-height: 1
+					&:hover
+						color: $orange
+	&-info
+		position: relative
+		// padding-bottom: 76px
+		.phone
+			display: flex
+			flex-direction: column
+			margin: 30px 20px
+			line-height: 1
+			a
+				margin-bottom: 8px
+				color: $black
+				font-weight: 500
+				&:hover
+					color: $orange
+			span
+				color: #6f7566
+				font-size: 14px
+				font-weight: 200
+		.callback
+			.btn-callback
+				justify-content: center
+				height: 76px
+				line-height: 76px
+				// border-radius: 0
+				border: 0
+				background-color: $green-2
+				&:hover
+					background-color: $orange

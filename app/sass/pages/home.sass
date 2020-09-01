@@ -13,6 +13,7 @@
 		border-radius: 10px
 		.swiper-pagination
 			bottom: 50px
+			z-index: 2
 			margin-left: 5px
 			+media-breakpoint-down(lg)
 				bottom: 35px
@@ -33,6 +34,18 @@
 				&-active
 					box-shadow: 0 0 0 3px $black
 					opacity: 0.35
+		.swiper-slide
+			&-active
+				.h-heroes-meta
+					.title
+						animation: fromLeft 1.5s .25s both
+					.descr
+						animation: fromLeft 1.5s .5s both
+					.btn
+						animation: fromLeft 1.5s .75s both
+				.h-heroes-photo
+					img
+						animation: fromRight 1.5s .25s both
 	&-wrapper
 		min-height: 600px
 		+media-breakpoint-down(xl)
@@ -42,11 +55,11 @@
 	&-slide
 		position: relative
 		height: auto
-		padding: 80px 10px
+		padding: 80px 0
 		+media-breakpoint-down(xl)
-			padding: 60px 10px
+			padding: 60px 0
 		+media-breakpoint-down(lg)
-			padding: 40px 10px
+			padding: 40px 0
 		+media-breakpoint-down(md)
 			padding: 40px 0
 		&::before
@@ -101,9 +114,11 @@
 	&-content
 		display: flex
 		align-items: center
+		padding: 0 10px
 		+media-breakpoint-down(md)
 			flex-direction: column
 			height: 100%
+			padding: 0
 	&-meta
 		flex: 0 0 42%
 		max-width: 42%
@@ -121,7 +136,7 @@
 			font-size: 76px
 			font-family: $neucha
 			font-weight: 400
-			line-height: 1.15
+			line-height: 1.1
 			+media-breakpoint-down(xl)
 				font-size: 60px
 			+media-breakpoint-down(lg)

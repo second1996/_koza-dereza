@@ -1,3 +1,5 @@
+@import '../helpers/helpers'
+
 .form
 	position: relative
 	&-group
@@ -40,3 +42,28 @@
 	&-textarea
 		resize: none
 		padding: 8px 16px
+
+
+/* ==========================================================================
+	 Form «Search»
+	 ========================================================================== */
+.form-search
+	.form-control
+		height: 70px
+		margin-bottom: 0
+		padding-right: 76px
+		border-radius: 60px
+		background-color: $c-f5
+		line-height: 70px
+		+media-breakpoint-down(xl)
+			height: 64px
+			line-height: 64px
+		&:focus
+			box-shadow: 0 0 0 2px $green
+			background-color: $white
+	.btn-search
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		height: 100%
