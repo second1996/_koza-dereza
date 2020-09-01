@@ -119,6 +119,7 @@
 			&-btn
 				position: relative
 				display: flex
+				outline: none
 				&-icon
 					position: relative
 					&::before
@@ -204,11 +205,20 @@
 					font-weight: 200
 	// HEADER BOTTOM
 	&-bottom
+		position: relative
 		+media-breakpoint-down(md)
 			display: none
 		// Catalog button
 		.btn-catalog
+			position: relative
 			margin-right: 40px
+			&:hover
+				~ .nav--catalog
+					visibility: visible
+					opacity: 1
+					z-index: 9
+					&::before
+						border-top-color: $green-2
 			+media-breakpoint-down(xl)
 				margin-right: 20px
 		// Catalog list
@@ -225,8 +235,7 @@
 				&:hover
 					color: $orange
 			&-icon
-				max-width: 100%
-				height: 24px
 				margin-right: 10px
+				font-size: 24px
 			&-title
 				font-size: 16px

@@ -38,5 +38,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // jQuery scripts
 jQuery(document).ready(function($) {
-	$('#shopCart').modal('show')
+	
 })
