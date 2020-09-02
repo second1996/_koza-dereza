@@ -33,8 +33,10 @@
 		left: 0
 		right: 0
 		z-index: 2
-		padding-bottom: 20px
 		background-color: $white
+		+media-breakpoint-down(xs)
+			border-top: 1px solid $border
+			border-bottom: 1px solid $border
 		.form-search
 			.form-control
 				padding-left: 22px
@@ -58,7 +60,26 @@
 				border-bottom: 1px solid $border
 				+media-breakpoint-down(xs)
 					padding: 0 20px
-				.icon
+				&--login
+					padding-top: 30px
+					padding-bottom: 30px
+					background-color: $c-f8
+					.user-login
+						display: flex
+						align-items: center
+						justify-content: center
+						.icon
+							margin-right: 10px
+							color: $green-2
+						.link
+							color: $black
+							font-size: 14px
+							&:hover
+								color: $orange
+						.dot
+							margin: 0 6px
+							color: #bbb
+				> .icon
 					position: absolute
 					top: 50%
 					right: 22px
@@ -67,7 +88,7 @@
 				.icon-wishlist
 					fill: $orange
 				.icon-catalog
-					fill: $green
+					fill: $green-2
 				> a
 					position: relative
 					z-index: 1

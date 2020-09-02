@@ -60,3 +60,48 @@
 		border: 0
 		+media-breakpoint-down(xs)
 			padding: 20px 10px
+
+
+/* ==========================================================================
+	 Modal «User Authorization»
+	 ========================================================================== */
+.modal-authorization
+	+media-breakpoint-down(xs)
+		.form-buttons
+			> .btn
+				padding-left: 10px
+				padding-right: 10px
+				font-size: 12px
+	.auth-socials
+		&-title
+			margin-bottom: 30px
+			color: $black
+			text-align: center
+		&-list
+			display: flex
+			justify-content: space-between
+		&-item
+			flex: 0 0 49%
+			max-width: 49%
+		&-link
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 46px
+			border-radius: 46px
+			color: $white
+			line-height: 46px
+			.icon
+				margin-right: 10px
+				font-size: 18px
+			> span
+				font-size: 14px
+				line-height: 1
+			&--facebook
+				background-color: #5b6fd0
+				&:hover
+					background-color: darken(#5b6fd0, 10%)
+			&--google
+				background-color: #f04c4c
+				&:hover
+					background-color: darken(#f04c4c, 10%)

@@ -38,7 +38,7 @@
 						<div class="user">
 							<div class="user-login">
 								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
-								<a href="#" class="link">Вхід</a>
+								<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 								<span class="dot">&bull;</span>
 								<a href="#" class="link">Реєстрація</a>
 								</a>
@@ -53,7 +53,7 @@
 				<div class="row align-items-center justify-content-between">
 					<div class="col-auto order-1 order-xl-0">
 						<a href="index.html">
-							<img class="logo" src="images/dest/logotype.svg" alt="Koza-Дереza">
+							<img class="logo" src="images/dest/logotype.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
 						</a>
 					</div><!-- /.col -->
 					<div class="col order-0 order-xl-1">
@@ -1164,7 +1164,7 @@
 				<div class="footer-brand">
 					<div class="about">
 						<a href="index.html">
-							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza">
+							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
 						</a>
 						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
 					</div>
@@ -1213,7 +1213,7 @@
 						<li><a href="#">Про нас</a></li>
 						<li><a href="#">Наші виробники</a></li>
 						<li><a href="#">Каталог рецептів</a></li>
-						<li><a href="#">Доставка та оплата</a></li>
+						<li><a href="#">Доставка, оплата та повернення</a></li>
 						<li><a href="#">Відгуки</a></li>
 						<li><a href="#">Контакти</a></li>
 					</ul>
@@ -1412,6 +1412,60 @@
 	</div>
 
 	<!-- Callback Modal-->
+	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userProfileModalLabel">Особистий кабінет</h5>
+					<div class="modal-close btn-close btn-close" data-dismiss="modal">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form action="" method="POST" class="form">
+						<div class="form-group">
+							<label class="form-label" for="sign-in-login">E-mail <sup>*</sup></label>
+							<input type="email" id="sign-in-login" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="sign-in-password">Пароль <sup>*</sup></label>
+							<input type="password" id="sign-in-password" class="form-control" required>
+						</div>
+						<div class="form-link">
+							<a href="#">Втратили свій пароль?</a>
+						</div>
+						<div class="form-buttons form-buttons--auth">
+							<button type="submit" class="form-submit btn btn-green">Увійти</button>
+							<a href="#" class="btn btn-outline">Зареєструватися</a>
+						</div>
+					</form>
+					<hr>
+					<div class="auth-socials">
+						<div class="auth-socials-title">Увійти за допомогою соцмереж</div>
+						<ul class="auth-socials-list">
+							<li class="auth-socials-item">
+								<a href="#" class="auth-socials-link auth-socials-link--facebook">
+									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<span>Facebook</span>
+								</a>
+							</li>
+							<li class="auth-socials-item">
+								<a href="#" class="auth-socials-link auth-socials-link--google">
+									<svg class="icon icon-google"><use xlink:href="images/symbol-defs.svg#icon-google"></use></svg>
+									<span>Google</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!-- Callback Modal-->
 	<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
@@ -1468,12 +1522,21 @@
 					<div class="m-menu-nav nav">
 						<ul class="nav-list">
 							<li class="nav-item">
-								<a href="#">Вибрані товари</a>
+								<a href="#">Список бажаного</a>
 								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 							</li>
 							<li class="nav-item">
 								<a href="#">Каталог товарів</a>
 								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							</li>
+							<li class="nav-item nav-item--login">
+								<div class="user-login">
+									<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+									<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
+									<span class="dot">&bull;</span>
+									<a href="#" class="link">Реєстрація</a>
+									</a>
+								</div>
 							</li>
 							<li class="nav-item">
 								<a href="#">Про нас</a>
