@@ -49,4 +49,12 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('is-active')
 		$('.m-menu').toggleClass('is-active')
 	})
+	
+	$('.search-btn-trigger').on('click', function() {
+		$('body').addClass('lock-scroll')
+		$('.burger-btn, .m-menu').addClass('is-active')
+		setTimeout(function() {
+			$('#m-menu-search').focus()
+		}, 100);
+	})
 })

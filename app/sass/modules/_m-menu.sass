@@ -8,18 +8,20 @@
 	bottom: 0
 	z-index: 199
 	height: 100%
-	margin-top: 100px
+	margin-top: 80px
 	background-color: $white
 	visibility: hidden
 	opacity: 0
+	transform: translateY(-8px)
 	transition: $trs-3s
 	&.is-active
 		visibility: visible
 		opacity: 1
+		transform: translateY(0)
 	&-inner
 		height: 100%
 		overflow-y: auto
-		padding-bottom: 130px
+		padding-bottom: 110px
 	&-search
 		position: fixed
 		left: 0
@@ -31,9 +33,9 @@
 				padding-left: 22px
 				padding-right: 58px
 			.btn-search
-				right: -8px
+				right: -9px
 				.icon
-					font-size: 16px
+					font-size: 18px
 	&-main
 		height: 100%
 		padding-top: 66px
@@ -41,10 +43,21 @@
 		.nav
 			&-list
 			&-item
+				padding: 0 22px
 				border-bottom: 1px solid $border
+				&-icon
+					display: flex
+					align-items: center
+					justify-content: space-between
+					.icon
+						font-size: 18px
+					.icon-wishlist
+						fill: $orange
+					.icon-catalog
+						fill: $green
 				> a
 					display: flex
-					padding: 20px 22px
+					padding: 20px 0
 					color: $black
 					font-weight: 200
 					line-height: 1
@@ -52,11 +65,10 @@
 						color: $orange
 	&-info
 		position: relative
-		// padding-bottom: 76px
 		.phone
 			display: flex
 			flex-direction: column
-			margin: 30px 20px
+			margin: 30px 22px
 			line-height: 1
 			a
 				margin-bottom: 8px
@@ -72,9 +84,10 @@
 			.btn-callback
 				justify-content: center
 				height: 76px
-				line-height: 76px
-				// border-radius: 0
 				border: 0
 				background-color: $green-2
+				line-height: 76px
+				> span
+					font-size: 14px
 				&:hover
 					background-color: $orange

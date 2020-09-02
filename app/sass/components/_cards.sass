@@ -190,7 +190,7 @@
 			z-index: 1
 			padding: 30px 35px
 			+media-breakpoint-down(xl)
-				padding: 25px 20px
+				padding: 15px 20px
 			.time
 				display: flex
 				flex-wrap: wrap
@@ -262,6 +262,8 @@
 	transition: $trs-3s
 	+media-breakpoint-down(xl)
 		padding: 25px
+	+media-breakpoint-down(xs)
+		padding: 0
 	&:hover
 		border-color: $c-f5
 		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05)

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Koza-Дереza</title>
 	<meta name="description" content="Доставка фермерських продуктів додому">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
 
@@ -75,7 +75,7 @@
 						</div>
 						<div class="search-form">
 							<form action="" method="POST" class="form form-search">
-								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?">
+								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 								<button class="btn btn-search">
 									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
 								</button>
@@ -88,7 +88,7 @@
 								<a href="#" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">3</span>
-										<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+										<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 									</figure>
 								</a>
 							</div>
@@ -477,7 +477,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -512,7 +512,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -552,7 +552,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -587,7 +587,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -627,7 +627,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -667,7 +667,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -702,7 +702,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -737,7 +737,7 @@
 									<span>В кошик</span>
 								</a>
 								<a href="#" class="btn btn-outline btn-wishlist">
-									<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+									<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 								</a>
 							</div>
 							<a href="page-product-single.html" class="card-link"></a>
@@ -1310,7 +1310,7 @@
 				<div class="m-menu-search">
 					<div class="container">
 						<form action="" method="POST" class="form form-search">
-							<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?">
+							<input type="text" id="m-menu-search" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 							<button class="btn btn-search">
 								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
 							</button>
@@ -1320,11 +1320,13 @@
 				<div class="m-menu-main">
 					<div class="m-menu-nav nav">
 						<ul class="nav-list">
-							<li class="nav-item">
+							<li class="nav-item nav-item-icon">
 								<a href="#">Вибрані товари</a>
+								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item nav-item-icon">
 								<a href="#">Каталог товарів</a>
+								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
 							</li>
 							<li class="nav-item">
 								<a href="#">Про нас</a>
