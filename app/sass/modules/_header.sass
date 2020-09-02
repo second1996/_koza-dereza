@@ -1,7 +1,7 @@
 @import '../helpers/helpers'
 
 .header
-	+media-breakpoint-down(md)
+	+media-breakpoint-down(lg)
 		position: fixed
 		left: 0
 		right: 0
@@ -11,7 +11,7 @@
 	&-top
 		padding: 16px 0
 		background: $c-f8
-		+media-breakpoint-down(md)
+		+media-breakpoint-down(lg)
 			display: none
 		// Navigation
 		.nav
@@ -45,7 +45,7 @@
 	// HEADER MIDDLE
 	&-middle
 		padding: 40px 0
-		+media-breakpoint-down(md)
+		+media-breakpoint-down(lg)
 			display: flex
 			align-items: center
 			height: 80px
@@ -57,7 +57,7 @@
 			height: 50px
 			+media-breakpoint-down(xl)
 				height: 46px
-			+media-breakpoint-down(md)
+			+media-breakpoint-down(lg)
 				height: 36px
 		// Mobile triggers
 		.mobile-triggers
@@ -111,13 +111,13 @@
 			margin: 0 90px
 			+media-breakpoint-down(xl)
 				margin: 0 45px
-			+media-breakpoint-down(md)
+			+media-breakpoint-down(lg)
 				display: none
 		// Action (Cart, Favorite)
 		.action
 			display: flex
 			align-items: center
-			+media-breakpoint-down(md)
+			+media-breakpoint-down(lg)
 				justify-content: flex-end
 			&-btn
 				position: relative
@@ -142,7 +142,7 @@
 						transition-duration: .2s
 						transition-timing-function: cubic-bezier(.4,0,.2,1)
 						transition-property: transform, opacity
-						+media-breakpoint-down(md)
+						+media-breakpoint-down(lg)
 							display: none
 				&:hover
 					.action-btn-icon
@@ -209,7 +209,7 @@
 	// HEADER BOTTOM
 	&-bottom
 		position: relative
-		+media-breakpoint-down(md)
+		+media-breakpoint-down(lg)
 			display: none
 		// Catalog button
 		.btn-catalog
