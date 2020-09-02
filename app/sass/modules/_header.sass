@@ -214,7 +214,6 @@
 		// Catalog button
 		.btn-catalog
 			position: relative
-			margin-right: 40px
 			&:hover
 				~ .nav--catalog
 					visibility: visible
@@ -222,13 +221,12 @@
 					z-index: 9
 					&::before
 						border-top-color: $green-2
-			+media-breakpoint-down(xl)
-				margin-right: 20px
 		// Catalog list
 		.categories
 			display: flex
 			align-items: center
 			justify-content: space-between
+			margin-left: 20px
 			&-item
 			&-link
 				display: flex

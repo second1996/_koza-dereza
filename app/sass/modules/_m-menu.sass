@@ -14,6 +14,10 @@
 	opacity: 0
 	transform: translateY(-8px)
 	transition: $trs-3s
+	.container
+		+media-breakpoint-down(xs)
+			padding-left: 0
+			padding-right: 0
 	&.is-active
 		visibility: visible
 		opacity: 1
@@ -22,17 +26,22 @@
 		height: 100%
 		overflow-y: auto
 		padding-bottom: 110px
+		+media-breakpoint-down(xs)
+			padding-bottom: 80px
 	&-search
 		position: fixed
 		left: 0
 		right: 0
-		z-index: 1
+		z-index: 2
 		padding-bottom: 20px
 		background-color: $white
 		.form-search
 			.form-control
 				padding-left: 22px
 				padding-right: 58px
+				+media-breakpoint-down(xs)
+					padding-left: 20px
+					border-radius: 0
 			.btn-search
 				right: -9px
 				.icon
@@ -47,6 +56,8 @@
 				position: relative
 				padding: 0 22px
 				border-bottom: 1px solid $border
+				+media-breakpoint-down(xs)
+					padding: 0 20px
 				.icon
 					position: absolute
 					top: 50%
@@ -58,6 +69,8 @@
 				.icon-catalog
 					fill: $green
 				> a
+					position: relative
+					z-index: 1
 					display: flex
 					padding: 20px 0
 					color: $black
@@ -72,6 +85,9 @@
 			flex-direction: column
 			margin: 30px 22px
 			line-height: 1
+			+media-breakpoint-down(xs)
+				margin-left: 20px
+				margin-right: 20px
 			a
 				margin-bottom: 8px
 				color: $black
@@ -93,3 +109,5 @@
 					font-size: 14px
 				&:hover
 					background-color: $orange
+				+media-breakpoint-down(xs)
+					border-radius: 0
