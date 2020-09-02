@@ -26,6 +26,7 @@
 		position: fixed
 		left: 0
 		right: 0
+		z-index: 1
 		padding-bottom: 20px
 		background-color: $white
 		.form-search
@@ -43,18 +44,19 @@
 		.nav
 			&-list
 			&-item
+				position: relative
 				padding: 0 22px
 				border-bottom: 1px solid $border
-				&-icon
-					display: flex
-					align-items: center
-					justify-content: space-between
-					.icon
-						font-size: 18px
-					.icon-wishlist
-						fill: $orange
-					.icon-catalog
-						fill: $green
+				.icon
+					position: absolute
+					top: 50%
+					right: 22px
+					margin-top: -9px
+					font-size: 18px
+				.icon-wishlist
+					fill: $orange
+				.icon-catalog
+					fill: $green
 				> a
 					display: flex
 					padding: 20px 0

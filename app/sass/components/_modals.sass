@@ -28,14 +28,15 @@
 		height: 86px
 		padding: 0 40px
 		border-radius: 0
-		border-bottom: 0
-		background-color: $green
+		border: 0
+		background-color: $white
 		+media-breakpoint-down(xs)
 			height: 70px
 			padding: 0 20px
 	&-title
-		color: $white
+		color: $black
 		font-size: 22px
+		font-weight: 400
 		+media-breakpoint-down(xs)
 			font-size: 20px
 	&-close
@@ -44,7 +45,14 @@
 		overflow-x: hidden
 		padding: 30px 40px
 		+media-breakpoint-down(xs)
-			padding: 10px 20px
+			padding: 20px
+	&-descr
+		display: block
+		margin-bottom: 30px
+		color: $black
+		font-size: 15px
+		font-weight: 200
+		line-height: 1.35
 	&-footer
 		display: block
 		padding: 30px 40px

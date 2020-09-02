@@ -210,24 +210,126 @@
 											<img src="images/dest/icons/catalog/fruit-n-vegetables.svg" alt="" class="menu-icon">
 											<span class="menu-title">Овочі та фрукти</span>
 										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/vegetables.png" alt="">
+											</li>
+											<li class="submenu-title">Овочі та фрукти</li>
+											<li class="submenu-item">
+												<a href="#">Овочі</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Зелень</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Фрукти</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Ягоди</a>
+											</li>
+										</ul>
 									</li>
 									<li class="menu-item">
 										<a href="#" class="menu-link">
 											<img src="images/dest/icons/catalog/bakery.svg" alt="" class="menu-icon">
 											<span class="menu-title">Випічка</span>
 										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/baking.png" alt="">
+											</li>
+											<li class="submenu-title">Випічка</li>
+											<li class="submenu-item">
+												<a href="#">Хліб</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Пиріжки</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Рулети</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Прянощі</a>
+											</li>
+										</ul>
 									</li>
 									<li class="menu-item">
 										<a href="#" class="menu-link">
 											<img src="images/dest/icons/catalog/desserts.svg" alt="" class="menu-icon">
 											<span class="menu-title">Десерти без цукру</span>
 										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/desserts.png" alt="">
+											</li>
+											<li class="submenu-title">Десерти без цукру</li>
+											<li class="submenu-item">
+												<a href="#">Морозиво</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Печиво</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Торти</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Тістечка</a>
+											</li>
+										</ul>
 									</li>
 									<li class="menu-item">
 										<a href="#" class="menu-link">
 											<img src="images/dest/icons/catalog/fabricaty.svg" alt="" class="menu-icon">
 											<span class="menu-title">Напівфабрикати</span>
 										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/semi-products.png" alt="">
+											</li>
+											<li class="submenu-title">Напівфабрикати</li>
+											<li class="submenu-item">
+												<a href="#">Вареники</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Пельмені</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Котлети, кебаби та нагетси</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Равіолі</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/fabricaty.svg" alt="" class="menu-icon">
+											<span class="menu-title">Винотека</span>
+										</a>
+										<ul class="submenu submenu-stretch">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/wine.png" alt="">
+											</li>
+											<li class="submenu-title">Винотека</li>
+											<li class="submenu-item">
+												<a href="#">Біле</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Біле органічне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Оранжеве органічне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Рожеве</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Червоне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Червоне органічне</a>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</div>
@@ -1112,7 +1214,7 @@
 				</div><!-- /.footer-menu -->
 				<div class="footer-contacts">
 					<div class="callback">
-						<button class="btn btn-callback">
+						<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 							<span>Зворотній зв’язок</span>
 							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
 						</button>
@@ -1158,7 +1260,7 @@
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
-					<div class="modal-title">Ваша корзина</div>
+					<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
 					<div class="modal-close btn-close btn-close--white" data-dismiss="modal">
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
@@ -1303,6 +1405,45 @@
 		<!-- /.modal-dialog -->
 	</div>
 
+	<!-- Callback Modal-->
+	<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="callbackModalLabel">Зворотній зв'язок</h5>
+					<div class="modal-close btn-close btn-close" data-dismiss="modal">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="modal-body">
+					<span class="modal-descr">Напишіть нам свою пропозицію чи побажання!</span>
+					<form action="" method="POST" class="form">
+						<div class="form-group">
+							<label class="form-label" for="callback-name">Ваше ім'я <sup>*</sup></label>
+							<input type="text" id="callback-name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-phone">Номер телефону <sup>*</sup></label>
+							<input type="tel" id="callback-phone" class="form-control" data-mask="+38 (099) 99-99-999" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-email">E-mail <sup>*</sup></label>
+							<input type="email" id="callback-email" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-message">Ваше повідомлення</label>
+							<textarea id="callback-message" class="form-textarea" rows="6"></textarea>
+						</div>
+						<button type="submit" class="form-submit btn btn-green">Надіслати</button>
+					</form>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
 	<!-- Mobile menu -->
 	<div class="m-menu">
 		<div class="m-menu-inner">
@@ -1320,11 +1461,11 @@
 				<div class="m-menu-main">
 					<div class="m-menu-nav nav">
 						<ul class="nav-list">
-							<li class="nav-item nav-item-icon">
+							<li class="nav-item">
 								<a href="#">Вибрані товари</a>
 								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
 							</li>
-							<li class="nav-item nav-item-icon">
+							<li class="nav-item">
 								<a href="#">Каталог товарів</a>
 								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
 							</li>
@@ -1335,9 +1476,6 @@
 								<a href="#">Наші виробники</a>
 							</li>
 							<li class="nav-item">
-								<a href="#">Відгуки</a>
-							</li>
-							<li class="nav-item">
 								<a href="#">Каталог рецептів</a>
 							</li>
 							<li class="nav-item">
@@ -1347,10 +1485,7 @@
 								<a href="#">Відгуки</a>
 							</li>
 							<li class="nav-item">
-								<a href="#">Каталог рецептів</a>
-							</li>
-							<li class="nav-item">
-								<a href="#">Доставка, оплата та повернення</a>
+								<a href="#">Контакти</a>
 							</li>
 						</ul>
 					</div>
@@ -1360,7 +1495,7 @@
 							<span>Пн-Сб з 11:00 до 20:00</span>
 						</div>
 						<div class="callback">
-							<button class="btn btn-callback">
+							<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 								<span>Зворотній зв’язок</span>
 								<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
 							</button>

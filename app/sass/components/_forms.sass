@@ -5,15 +5,23 @@
 	&-group
 		position: relative
 		display: flex
-		align-items: center
-		justify-content: space-between
+		flex-direction: column
 		&:not(:first-child)
-			margin-top: 24px
-		.form-control
+			margin-top: 30px
+			+media-breakpoint-down(xs)
+				margin-top: 20px
+		.form-control,
+		.form-textarea
 			margin-bottom: 0
 	&-label
-		margin-bottom: 0
+		margin-bottom: 12px
+		color: $black
+		font-size: 15px
 		cursor: pointer
+		+media-breakpoint-down(xs)
+			margin-bottom: 8px
+		> sup
+			color: red
 	&-control,
 	&-textarea
 		appearance: none
@@ -25,10 +33,13 @@
 		font-weight: 400
 		border-radius: 6px
 		border: 0
-		background-color: $c-f8
+		background-color: $c-f5
 		background-clip: padding-box
 		color: $black
 		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
+		&:focus
+			box-shadow: 0 0 0 2px $green
+			background-color: $white
 	&-control
 		height: 60px
 		padding: 0 32px
@@ -42,6 +53,9 @@
 	&-textarea
 		resize: none
 		padding: 8px 16px
+	&-submit
+		min-width: 160px
+		margin-top: 40px
 
 
 /* ==========================================================================
@@ -49,19 +63,14 @@
 	 ========================================================================== */
 .form-search
 	.form-control
-		// font-size: 16px
 		height: 70px
 		margin-bottom: 0
 		padding-right: 76px
 		border-radius: 60px
-		background-color: $c-f5
 		line-height: 70px
 		+media-breakpoint-down(xl)
 			height: 64px
 			line-height: 64px
-		&:focus
-			box-shadow: 0 0 0 2px $green
-			background-color: $white
 	.btn-search
 		position: absolute
 		top: 0

@@ -24,6 +24,7 @@
 		"gulp-stylus": "^2.7.0",
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.5.1",
+		"jquery-mask-plugin": "^1.14.16",
 		"swiper": "^6.1.1"
 	}
 }

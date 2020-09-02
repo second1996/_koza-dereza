@@ -14,6 +14,7 @@ let paths = {
 			'node_modules/bootstrap/js/dist/util.js', // Bootstrap Util lib
 			'node_modules/bootstrap/js/dist/modal.js', // Bootstrap Modal
 			'node_modules/swiper/swiper-bundle.min.js', // Swiper Carousel
+			'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js', // jQuery Input Mask
 			baseDir + '/js/app.js' // app.js
 		],
 		dest: baseDir + '/js',
