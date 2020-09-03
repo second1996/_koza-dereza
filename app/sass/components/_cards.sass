@@ -1,5 +1,8 @@
 @import '../helpers/helpers'
 
+/* ==========================================================================
+	 Base customize for card
+	 ========================================================================== */
 .card
 	position: relative
 	&:hover
@@ -7,204 +10,6 @@
 		.card-buttons
 			visibility: visible
 			opacity: 1
-	// Product
-	&--product
-		display: flex
-		flex-direction: column
-		height: 100%
-		padding: 35px
-		border-radius: 4px
-		border: 1px solid $trsp
-		transition: $trs-3s
-		+media-breakpoint-down(sm)
-			padding: 25px
-		+media-breakpoint-down(xs)
-			padding: 10px
-		&:hover
-			border-color: #f4f4f4
-			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
-			background-color: $white
-			+media-breakpoint-down(md)
-				border-color: $trsp
-				box-shadow: none
-				background-color: $trsp
-		.card-labels
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			z-index: 1
-			display: flex
-			flex-wrap: wrap
-			.label
-				padding: 8px 12px
-				border-radius: 32px
-				font-size: 12px
-				line-height: 1
-				&-featured
-					background-color: #fe8858
-					color: $white
-				&-promo
-					margin-left: auto
-					background-color: #ffe892
-					color: $black
-			+media-breakpoint-down(xs)
-				flex-direction: column
-				.label
-					margin-left: 0
-					margin-right: auto
-					&:not(:last-child)
-						margin-bottom: 3px
-		.card-photo
-			> img
-				padding: 20px 0
-				object-fit: scale-down
-			+media-breakpoint-down(xs)
-				height: 180px
-				> img
-					padding: 0
-		.card-meta
-			.sku
-				display: block
-				color: #8c8c8c
-				font-size: 14px
-				font-weight: 200
-				line-height: 1
-			.title
-				+media-breakpoint-down(xs)
-					height: 40px
-					font-size: 15px
-			.stock
-				display: block
-				margin-top: 15px
-				font-size: 14px
-				font-weight: 200
-				line-height: 1
-				&::before
-					content: ''
-					display: inline-block
-					width: 10px
-					height: 10px
-					border-radius: 50%
-					margin-right: 8px
-				&-in
-					color: #555
-					&::before
-						background-color: $green-2
-				&-out
-					color: #aaa
-					&::before
-						background-color: #e0e0e0
-			.price
-				margin-top: 15px
-				display: flex
-				align-items: flex-end
-				flex-wrap: wrap
-				line-height: 1
-				&-wrapper
-					display: flex
-					align-items: center
-					flex-wrap: wrap
-					margin-right: 10px
-					+media-breakpoint-down(xs)
-						flex-direction: column
-						align-items: flex-start
-						margin-right: 6px
-					> del
-						text-decoration: none
-						> .price-amount
-							position: relative
-							margin-right: 6px
-							color: #bbb
-							&::after
-								content: ''
-								position: absolute
-								top: 50%
-								left: 0
-								width: 100%
-								height: 1px
-								background-color: #bbb
-					> ins
-						text-decoration: none
-						> .price-amount
-							color: $black
-				&-amount
-					color: $black
-					font-size: 20px
-					font-weight: 200
-					.currencySymbol
-						font-weight: 200
-				&-count
-					margin-bottom: 2px
-					span
-						color: #8c8c8c
-						font-size: 14px
-		.card-buttons
-			+media-breakpoint-down(md)
-				margin-top: auto
-			.btn-order
-				justify-content: center
-				width: 46px
-				height: 46px
-				padding: 0
-				line-height: 46px
-				.icon
-					margin-right: 0
-				> span
-					display: none
-	// Recipe
-	&--recipe
-		padding: 0
-		.card-link
-			z-index: 2
-			&:hover
-				~ .overlay
-					visibility: visible
-					opacity: 1
-				~ img
-					transform: scale(1.05)
-		.card-photo
-			border-radius: 10px
-			.overlay
-				visibility: hidden
-				position: absolute
-				top: 0
-				left: 0
-				right: 0
-				bottom: 0
-				z-index: 1
-				display: flex
-				flex-direction: column
-				align-items: center
-				justify-content: center
-				background-color: rgba($orange, 0.65)
-				color: $white
-				opacity: 0
-				transition: $trs-3s
-				.icon
-					font-size: 26px
-			> img
-				transform: scale(1.00001)
-				transition: $trs-3s
-		.card-meta
-			z-index: 1
-			padding: 30px 35px
-			+media-breakpoint-down(xl)
-				padding: 15px 20px
-			.time
-				display: flex
-				flex-wrap: wrap
-				align-items: center
-				.icon
-					margin-right: 8px
-					color: $orange
-					font-size: 18px
-				span
-					color: $textcolor
-					font-size: 14px
-			.title
-				font-size: 18px
-	// Base customize
 	&-photo
 		position: relative
 		overflow: hidden
@@ -224,8 +29,14 @@
 			color: $black
 			font-size: 17px
 			line-height: 1.35
+			transition: color .3s ease
 			&:hover
 				color: $orange
+		.subtitle
+			margin-top: 4px
+			color: #9b9b9b
+			font-size: 14px
+			font-weight: 200
 	&-buttons
 		visibility: hidden
 		position: relative
@@ -250,6 +61,211 @@
 		width: 100%
 		height: 100%
 		display: block
+
+
+/* ==========================================================================
+	 Card «Product»
+	 ========================================================================== */
+.card-product
+	display: flex
+	flex-direction: column
+	height: 100%
+	padding: 35px
+	border-radius: 4px
+	border: 1px solid $trsp
+	transition: $trs-3s
+	+media-breakpoint-down(sm)
+		padding: 25px
+	+media-breakpoint-down(xs)
+		padding: 10px
+	&:hover
+		border-color: #f4f4f4
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
+		background-color: $white
+		+media-breakpoint-down(md)
+			border-color: $trsp
+			box-shadow: none
+			background-color: $trsp
+	.card-labels
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1
+		display: flex
+		flex-wrap: wrap
+		.label
+			padding: 8px 12px
+			border-radius: 32px
+			font-size: 12px
+			line-height: 1
+			&-featured
+				background-color: #fe8858
+				color: $white
+			&-promo
+				margin-left: auto
+				background-color: #ffe892
+				color: $black
+		+media-breakpoint-down(xs)
+			flex-direction: column
+			.label
+				margin-left: 0
+				margin-right: auto
+				&:not(:last-child)
+					margin-bottom: 3px
+	.card-photo
+		> img
+			padding: 20px 0
+			object-fit: scale-down
+		+media-breakpoint-down(xs)
+			height: 180px
+			> img
+				padding: 0
+	.card-meta
+		.sku
+			display: block
+			color: #8c8c8c
+			font-size: 14px
+			font-weight: 200
+			line-height: 1
+		.title
+			+media-breakpoint-down(xs)
+				height: 40px
+				font-size: 15px
+		.stock
+			display: block
+			margin-top: 15px
+			font-size: 14px
+			font-weight: 200
+			line-height: 1
+			&::before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				margin-right: 8px
+			&-in
+				color: #555
+				&::before
+					background-color: $green-2
+			&-out
+				color: #aaa
+				&::before
+					background-color: #e0e0e0
+		.price
+			margin-top: 15px
+			display: flex
+			align-items: flex-end
+			flex-wrap: wrap
+			line-height: 1
+			&-wrapper
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				margin-right: 10px
+				+media-breakpoint-down(xs)
+					flex-direction: column
+					align-items: flex-start
+					margin-right: 6px
+				> del
+					text-decoration: none
+					> .price-amount
+						position: relative
+						margin-right: 6px
+						color: #bbb
+						&::after
+							content: ''
+							position: absolute
+							top: 50%
+							left: 0
+							width: 100%
+							height: 1px
+							background-color: #bbb
+				> ins
+					text-decoration: none
+					> .price-amount
+						color: $black
+			&-amount
+				color: $black
+				font-size: 20px
+				font-weight: 200
+				.currencySymbol
+					font-weight: 200
+			&-count
+				margin-bottom: 2px
+				span
+					color: #8c8c8c
+					font-size: 14px
+	.card-buttons
+		+media-breakpoint-down(md)
+			margin-top: auto
+		.btn-order
+			justify-content: center
+			width: 46px
+			height: 46px
+			padding: 0
+			line-height: 46px
+			.icon
+				margin-right: 0
+			> span
+				display: none
+
+
+/* ==========================================================================
+	 Card «Recipe»
+	 ========================================================================== */
+.card-recipe
+	padding: 0
+	.card-link
+		z-index: 2
+		&:hover
+			~ .overlay
+				visibility: visible
+				opacity: 1
+			~ img
+				transform: scale(1.05)
+	.card-photo
+		border-radius: 10px
+		.overlay
+			visibility: hidden
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			background-color: rgba($orange, 0.65)
+			color: $white
+			opacity: 0
+			transition: $trs-3s
+			.icon
+				font-size: 26px
+		> img
+			transform: scale(1.00001)
+			transition: $trs-3s
+	.card-meta
+		z-index: 1
+		padding: 30px 35px
+		+media-breakpoint-down(xl)
+			padding: 15px 20px
+		.time
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			.icon
+				margin-right: 8px
+				color: $orange
+				font-size: 18px
+			span
+				color: $textcolor
+				font-size: 14px
+		.title
+			font-size: 18px
 
 
 /* ==========================================================================
@@ -340,3 +356,52 @@
 			padding-left: 0
 			&::before
 				display: none
+
+
+/* ==========================================================================
+	 Card «Category»
+	 ========================================================================== */
+.card-category
+	height: 100%
+	padding: 30px 30px 40px
+	border-radius: 6px
+	border: 1px solid $trsp
+	background-color: $c-f9
+	transition: $trs-3s
+	+media-breakpoint-down(xs)
+		padding: 20px 20px 30px
+	&:hover
+		transform: translateY(-6px)
+		// background-color: #fcfcfc
+		// box-shadow: 0 0 0 2px rgba($black, 0.05)
+	.card-link
+		z-index: 3
+		&:hover
+			~ .card-meta
+				.title
+					color: $orange
+	.card-photo
+		height: 220px
+		padding: 0 30px
+		+media-breakpoint-down(xl)
+			height: 140px
+			padding: 0 15px
+		+media-breakpoint-down(lg)
+			height: 100px
+		+media-breakpoint-down(xs)
+			padding: 0
+		> img
+			object-fit: scale-down
+			mix-blend-mode: multiply
+	.card-meta
+		margin-top: 30px
+		text-align: center
+		.title
+			margin-top: 0
+			font-size: 18px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+			.title
+				font-size: 16px
+			.subtitle
+				margin-top: 0
