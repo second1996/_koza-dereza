@@ -1,6 +1,34 @@
 @import '../helpers/helpers'
+@import '../components/breadcrumbs'
+@import 'article'
 
-.main
+main.home
 	position: relative
 	+media-breakpoint-down(lg)
 		padding-top: 80px
+
+main.page
+	padding-top: 80px
+	+media-breakpoint-down(lg)
+		padding-top: 120px
+
+.page-header
+	.title
+		color: $black
+		font-family: $neucha
+		font-size: 46px
+		font-weight: 400
+		+media-breakpoint-down(md)
+			font-size: 38px
+		+media-breakpoint-down(xs)
+			font-size: 32px
+			line-height: 1.2
+		+media-breakpoint-down(xxs)
+			font-size: 28px
+
+.page-content
+	margin-top: 60px
+
+.page-seo
+	margin-top: 80px
+

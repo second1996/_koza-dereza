@@ -1,0 +1,37 @@
+@import '../helpers/helpers'
+
+.breadcrumbs
+	margin-top: 8px
+	&-list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		> li
+			display: inline-flex
+			align-items: center
+			line-height: 1.5
+			&:not(:last-child)
+				&::after
+					content: ''
+					display: inline-block
+					vertical-align: middle
+					width: 15px
+					height: 1px
+					margin: 0 10px
+					background-color: #bbb
+			> a
+				color: #8c8c8c
+				font-size: 15px
+				font-weight: 200
+				&.home
+					width: 16px
+					height: 16px
+					background: url('../../images/dest/icons/home.svg') no-repeat center/16px
+					&:hover
+						opacity: 0.75
+				&:hover
+					color: $orange
+			> span
+				color: #8c8c8c
+				font-size: 15px
+				font-weight: 200

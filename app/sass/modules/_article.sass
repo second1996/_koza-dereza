@@ -1,0 +1,24 @@
+@import '../helpers/helpers'
+
+article
+	h1, h2, h3, h4, h5, h6
+		font-size: 22px
+		margin-bottom: 20px
+		&:not(:first-of-type)
+			margin-top: 40px
+		+media-breakpoint-down(md)
+			font-size: 20px
+		+media-breakpoint-down(xs)
+			font-size: 18px
+	p, img, ul, ol, blockquote, table
+		margin-bottom: 10px
+	b, strong
+		font-weight: 500
+	p, ul > li, ul > li > a
+		+media-breakpoint-down(xs)
+			font-size: 15px
+	a
+		color: $textcolor
+		font-weight: 500
+		&:hover
+			color: $orange
