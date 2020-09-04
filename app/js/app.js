@@ -60,4 +60,9 @@ jQuery(document).ready(function($) {
 			$('#m-menu-search').focus()
 		}, 100);
 	})
+
+	/**
+	 * Quantity Cart triggers
+	 */
+	
 })

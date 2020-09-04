@@ -292,7 +292,10 @@
 	&-simple
 		.card-review-header
 			padding-left: 0
+			.photo
+				border: 0
 		.card-review-body
+			padding-left: 0
 			&::before
 				display: none
 	&-header
@@ -306,6 +309,7 @@
 			flex-wrap: wrap
 		.photo
 			overflow: hidden
+			flex: 0 0 auto
 			width: 70px
 			height: 70px
 			border-radius: 50%
@@ -414,3 +418,49 @@
 				font-size: 16px
 			.subtitle
 				margin-top: 0
+
+
+/* ==========================================================================
+	 Card «Contacts»
+	 ========================================================================== */
+.card-contacts
+	display: flex
+	flex-direction: column
+	align-items: center
+	height: 100%
+	padding: 45px
+	border-radius: 10px
+	border: 1px solid $border
+	background-color: $white
+	text-align: center
+	.picture
+		.icon
+			fill: $green
+			font-size: 100px
+	.title
+		margin-top: 30px
+		font-size: 20px
+		line-height: 1.35
+		+media-breakpoint-down(sm)
+			font-size: 18px
+		> a
+			color: $black
+			&:hover
+				color: $orange
+		> span
+			color: $black
+	.subtitle
+		margin-top: 15px
+		font-weight: 200
+		line-height: 1.5
+	+media-breakpoint-down(xl)
+		.picture .icon
+			font-size: 80px
+	+media-breakpoint-down(lg)
+		padding: 30px
+	+media-breakpoint-down(sm)
+		.picture .icon
+			font-size: 60px
+		.subtitle
+			margin-top: 10px
+			font-size: 15px
