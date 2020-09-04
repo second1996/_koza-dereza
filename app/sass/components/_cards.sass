@@ -74,18 +74,19 @@
 	border-radius: 4px
 	border: 1px solid $trsp
 	transition: $trs-3s
-	+media-breakpoint-down(sm)
-		padding: 25px
-	+media-breakpoint-down(xs)
-		padding: 10px
 	&:hover
 		border-color: #f4f4f4
 		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
 		background-color: $white
-		+media-breakpoint-down(md)
-			border-color: $trsp
+	+media-breakpoint-down(lg)
+		padding: 25px
+	+media-breakpoint-down(md)
+		border: 0
+		&:hover
 			box-shadow: none
 			background-color: $trsp
+	+media-breakpoint-down(xs)
+		padding: 10px
 	.card-labels
 		position: absolute
 		top: 0
@@ -117,10 +118,16 @@
 		> img
 			padding: 20px 0
 			object-fit: scale-down
+		+media-breakpoint-down(xl)
+			height: 230px
+		+media-breakpoint-down(md)
+			height: 280px
+		+media-breakpoint-down(sm)
+			height: 230px
 		+media-breakpoint-down(xs)
 			height: 180px
 			> img
-				padding: 0
+				padding: 10px 0
 	.card-meta
 		.sku
 			display: block
@@ -130,8 +137,19 @@
 			line-height: 1
 		.title
 			+media-breakpoint-down(xs)
-				height: 40px
+				overflow: hidden
+				max-height: 20px
 				font-size: 15px
+				white-space: nowrap
+				text-overflow: ellipsis
+			// +media-breakpoint-down(xs)
+			// 	overflow: hidden
+			// 	display: -webkit-box
+			// 	max-height: 40px
+			// 	font-size: 15px
+			// 	-webkit-line-clamp: 2
+			// 	-webkit-box-orient: vertical
+			// 	text-decoration: none
 		.stock
 			display: block
 			margin-top: 15px
@@ -198,8 +216,9 @@
 					color: #8c8c8c
 					font-size: 14px
 	.card-buttons
-		+media-breakpoint-down(md)
-			margin-top: auto
+		margin-top: auto
+		+media-breakpoint-down(xl)
+			padding-top: 15px
 		.btn-order
 			justify-content: center
 			width: 46px

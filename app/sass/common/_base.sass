@@ -85,6 +85,23 @@ hr
 	stroke: currentColor
 	fill: currentColor
 
+.products-grid
+	margin-bottom: 75px
+	> [class*="col"]
+		margin-bottom: -75px
+	+media-breakpoint-down(md)
+		margin-left: -25px
+		margin-right: -25px
+		margin-bottom: 15px
+		> [class*="col"]
+			margin-bottom: -15px
+	+media-breakpoint-down(xs)
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: 0
+		> [class*="col"]
+			margin-bottom: 15px
+
 
 /* ==========================================================================
    Animations
