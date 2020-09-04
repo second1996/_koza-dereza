@@ -1,0 +1,38 @@
+@import '../helpers/helpers'
+
+.star-rating
+	display: inline-flex
+	> fieldset
+		position: relative
+		display: inline-block
+		margin-left: -5px
+		border: none
+		&:not(:checked)
+			> label
+				float: right
+				padding: 0 5px
+				overflow: hidden
+				white-space: nowrap
+				cursor: pointer
+				font-size: 0
+				&::before
+					content: ''
+					display: inline-block
+					width: 30px
+					height: 30px
+					background-image: url('../../images/dest/icons/star.svg')
+					background-size: cover
+					background-position: center center
+				&:hover:before,
+				&:hover ~ label:before
+					background-image: url('../../images/dest/icons/star-fill.svg')
+			> input
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				clip: rect(0,0,0,0)
+		> label
+			margin-bottom: 0
+		input:checked ~ label:before
+			background-image: url('../../images/dest/icons/star-fill.svg')

@@ -272,6 +272,7 @@
 	 Card «Review»
 	 ========================================================================== */
 .card-review
+	height: 100%
 	padding: 40px
 	border-radius: 6px
 	border: 1px solid $trsp
@@ -288,6 +289,12 @@
 			border-color: $trsp
 			box-shadow: none
 			background-color: $trsp
+	&-simple
+		.card-review-header
+			padding-left: 0
+		.card-review-body
+			&::before
+				display: none
 	&-header
 		display: flex
 		align-items: center
@@ -356,6 +363,10 @@
 			padding-left: 0
 			&::before
 				display: none
+		> p
+			margin-bottom: 0
+			&:not(:first-of-type)
+				margin-top: 10px
 
 
 /* ==========================================================================
@@ -372,8 +383,6 @@
 		padding: 20px 20px 30px
 	&:hover
 		transform: translateY(-6px)
-		// background-color: #fcfcfc
-		// box-shadow: 0 0 0 2px rgba($black, 0.05)
 	.card-link
 		z-index: 3
 		&:hover

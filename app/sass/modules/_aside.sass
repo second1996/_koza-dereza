@@ -1,0 +1,22 @@
+@import '../helpers/helpers'
+
+.sidebar
+	&-widget
+		margin-bottom: 30px
+		.widget
+			&-title
+				color: $black
+				font-size: 22px
+			&-content
+				margin-top: 30px
+				.product-categories
+					> li
+						line-height: 1.35
+						&:not(:last-child)
+							margin-bottom: 15px
+						> a
+							display: inline-block
+							color: #555
+							font-weight: 200
+							&:hover
+								color: $orange

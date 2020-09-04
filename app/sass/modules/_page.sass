@@ -1,6 +1,7 @@
 @import '../helpers/helpers'
 @import '../components/breadcrumbs'
 @import 'article'
+@import 'aside'
 
 main.home
 	position: relative
@@ -28,9 +29,11 @@ main.page
 
 .page-content
 	margin-top: 60px
-	+media-breakpoint-down(xs)
+	+media-breakpoint-down(sm)
 		margin-top: 40px
 
 .page-seo
 	margin-top: 80px
+	+media-breakpoint-down(sm)
+		margin-top: 40px
 
