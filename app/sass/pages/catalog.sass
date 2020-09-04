@@ -54,57 +54,57 @@
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #602727
-			.catalog-list > li > a:hover
-				border-bottom-color: #602727
+			.catalog-list > li > a:hover::after
+				background-color: #602727
 		&--lightblue
 			background-color: #ecfcff
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #1c4b54
-			.catalog-list > li > a:hover
-				border-bottom-color: #1c4b54
+			.catalog-list > li > a:hover::after
+				background-color: #1c4b54
 		&--yellow
 			background-color: #fffaec
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #64552a
-			.catalog-list > li > a:hover
-				border-bottom-color: #64552a
+			.catalog-list > li > a:hover::after
+				background-color: #64552a
 		&--green
 			background-color: #f0ffef
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #295826
-			.catalog-list > li > a:hover
-				border-bottom-color: #295826
+			.catalog-list > li > a:hover::after
+				background-color: #295826
 		&--orange
 			background-color: #fffaf4
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #5e4426
-			.catalog-list > li > a:hover
-				border-bottom-color: #5e4426
+			.catalog-list > li > a:hover::after
+				background-color: #5e4426
 		&--lightgreen
 			background-color: #f8ffef
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #5c753d
-			.catalog-list > li > a:hover
-				border-bottom-color: #5c753d
+			.catalog-list > li > a:hover::after
+				background-color: #5c753d
 		&--blue
 			background-color: #eff7ff
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #26425f
-			.catalog-list > li > a:hover
-				border-bottom-color: #26425f
+			.catalog-list > li > a:hover::after
+				background-color: #26425f
 		&--purple
 			background-color: #f8f6ff
 			.catalog-title > a,
 			.catalog-list > li > a:hover
 				color: #3b2e67
-			.catalog-list > li > a:hover
-				border-bottom-color: #3b2e67
+			.catalog-list > li > a:hover::after
+				background-color: #3b2e67
 	&-title
 		margin-bottom: 20px
 		+media-breakpoint-down(xs)
@@ -141,14 +141,27 @@
 				+media-breakpoint-down(xs)
 					margin-bottom: 8px
 			> a
+				position: relative
 				display: inline-block
-				border-bottom: 1px solid $trsp
 				color: $textcolor
 				font-weight: 200
+				&::after
+					content: ''
+					position: absolute
+					top: 100%
+					left: 0
+					right: 0
+					height: 1px
+					background-color: $textcolor
+					transform: scaleX(0)
+					transform-origin: left center
+					transition: .45s ease
 				+media-breakpoint-down(xs)
 					font-size: 15px
 				&:hover
 					color: $black
+					&::after
+						transform: scaleX(1)
 	&-photo
 		pointer-events: none
 		user-select: none

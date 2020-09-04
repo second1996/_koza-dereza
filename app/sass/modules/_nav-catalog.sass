@@ -120,7 +120,21 @@
 				margin-top: 20px
 				line-height: 1.25
 				> a
-					display: block
+					position: relative
+					display: inline-block
 					color: $textcolor
+					&::after
+						content: ''
+						position: absolute
+						top: 100%
+						left: 0
+						right: 0
+						height: 1px
+						background-color: $textcolor
+						transform: scaleX(0)
+						transform-origin: left center
+						transition: .45s ease
 					&:hover
 						color: $black
+						&::after
+							transform: scaleX(1)

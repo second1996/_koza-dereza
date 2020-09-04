@@ -148,7 +148,7 @@
 			&-in
 				color: #555
 				&::before
-					background-color: $green-2
+					background-color: $green-accent
 			&-out
 				color: #aaa
 				&::before
@@ -421,9 +421,9 @@
 
 
 /* ==========================================================================
-	 Card «Contacts»
+	 Card «White/Base»
 	 ========================================================================== */
-.card-contacts
+.card-white
 	display: flex
 	flex-direction: column
 	align-items: center
@@ -441,7 +441,7 @@
 		margin-top: 30px
 		font-size: 20px
 		line-height: 1.35
-		+media-breakpoint-down(sm)
+		&-small
 			font-size: 18px
 		> a
 			color: $black
@@ -459,8 +459,11 @@
 	+media-breakpoint-down(lg)
 		padding: 30px
 	+media-breakpoint-down(sm)
+		padding: 25px 20px
 		.picture .icon
 			font-size: 60px
+		.title
+			font-size: 18px
 		.subtitle
 			margin-top: 10px
 			font-size: 15px
