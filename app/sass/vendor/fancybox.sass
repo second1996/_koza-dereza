@@ -1,0 +1,25 @@
+@import '../helpers/helpers'
+
+@function max($numbers...)
+	@return m#{a}x(#{$numbers})
+
+@function min($numbers...)
+	@return m#{i}n(#{$numbers})
+
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min'
+
+.fancybox-is-open
+	.fancybox-bg
+		opacity: 0.5
+
+.fancybox-infobar
+	color: $white
+
+.fancybox-button
+	background-color: $white
+.fancybox-button,
+.fancybox-button:link,
+.fancybox-button:visited
+	color: $textcolor
+.fancybox-button:hover
+	color: $orange

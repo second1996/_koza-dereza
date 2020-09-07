@@ -8,6 +8,20 @@
 		padding-right: 60px
 		> img
 			border-radius: 10px
+		+media-breakpoint-down(xl)
+			height: 600px
+			> img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		+media-breakpoint-down(lg)
+			padding-right: 40px
+		+media-breakpoint-down(md)
+			height: 400px
+			margin-bottom: 40px
+			padding-right: 0
+		+media-breakpoint-down(sm)
+			height: 300px
 	&-content
 		.title
 			margin-bottom: 0
@@ -29,6 +43,8 @@
 				display: block
 				margin-top: 6px
 				line-height: 1.4
+				+media-breakpoint-down(xs)
+					margin-bottom: 30px
 
 
 /* ==========================================================================
@@ -40,7 +56,7 @@
 		position: absolute
 		left: 0
 		right: 0
-		bottom: -40px
+		bottom: -50px
 		z-index: -1
 		display: block
 		width: 100%
@@ -50,6 +66,9 @@
 		margin: 0 auto
 		background: url('../../images/dest/bg-pattern-2.png') no-repeat center/cover
 		opacity: 0.1
+	+media-breakpoint-down(lg)
+		.section-header
+			margin-bottom: 20px
 	&-item
 		padding: 35px 30px
 		border: 1px solid $trsp
@@ -68,6 +87,12 @@
 		.descr
 			margin-top: 10px
 			margin-bottom: 0
+		+media-breakpoint-down(md)
+			padding: 20px 10px
+			border: 0
+			&:hover
+				box-shadow: none
+				background: none
 
 
 /* ==========================================================================
@@ -100,13 +125,23 @@
 			z-index: -1
 			display: block
 			background: url('../../images/dest/bg-item-1.png') no-repeat center/cover
+		+media-breakpoint-down(sm)
+			&::before,
+			&::after
+				display: none
 	&-item
+		+media-breakpoint-down(sm)
+			margin: 15px 0
+		+media-breakpoint-down(xs)
+			text-align: center
 		.title
 			display: block
 			color: $white
 			font-family: $neucha
 			font-size: 60px
 			line-height: 1
+			+media-breakpoint-down(lg)
+				font-size: 52px
 		.descr
 			margin-top: 6px
 			margin-bottom: 0
@@ -119,8 +154,8 @@
 	 ========================================================================== */
 .gallery
 	&-item
-		border-radius: 10px
 		overflow: hidden
+		border-radius: 10px
 		.card-overlay
 			.btn
 				height: 75px
@@ -129,7 +164,11 @@
 				border: 0
 				color: $green
 				font-size: 20px
+				line-height: 1
 				transform: translateY(10px)
+				+media-breakpoint-down(lg)
+					width: 60px
+					height: 60px
 				&:hover
 					background-color: $white
 					color: $green
@@ -139,6 +178,12 @@
 				opacity: 1
 				.btn
 					transform: translateY(0)
+		+media-breakpoint-down(xl)
+			.card-photo
+				height: 220px
+		+media-breakpoint-down(md)
+			.card-photo
+				height: 180px
 
 
 /* ==========================================================================
@@ -197,13 +242,48 @@
 		justify-content: center
 		max-width: 20%
 		height: 100px
-		&:hover
-			transform: translateY(-4px)
 		> img
 			max-width: 85%
 		+media-breakpoint-down(sm)
 			flex-basis: 50%
 			max-width: 50%
 			height: 80px
-			&:hover
-				transform: none
+
+
+/* ==========================================================================
+	 Section: Certificates
+	 ========================================================================== */
+.certificates
+	&-item
+		overflow: hidden
+		height: 100%
+		padding: 30px
+		border-radius: 10px
+		border: 1px solid $border
+		background-color: $white
+		+media-breakpoint-down(xl)
+			padding: 20px
+		+media-breakpoint-down(sm)
+			padding: 10px
+		.card-overlay
+			.btn
+				height: 75px
+				width: 75px
+				padding: 0
+				border: 0
+				color: $green
+				font-size: 20px
+				transform: translateY(10px)
+				&:hover
+					background-color: $white
+					color: $green
+		.card-photo
+			height: 100%
+			> img
+				object-fit: scale-down
+		&:hover
+			.card-overlay
+				visibility: visible
+				opacity: 1
+				.btn
+					transform: translateY(0)
