@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			clickable: true,
 		},
 		breakpoints: {
-			// when window width is >= 320px
 			1240: {
 				slidesPerView: 2,
 				spaceBetween: 20,
@@ -36,6 +35,22 @@ document.addEventListener("DOMContentLoaded", function() {
 				autoplay: {
 					delay: 6500
 				}
+			}
+		}
+	})
+	var productSlider = new Swiper('.product-slider', {
+		slidesPerView: 1,
+		// allowTouchMove: false,
+		loop: true,
+		// effect: 'fade',
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
+		thumbs: {
+			swiper: {
+				el: '.product-thumbs',
+				allowTouchMove: false,
+				slidesPerView: 'auto',
 			}
 		}
 	})

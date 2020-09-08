@@ -1,0 +1,67 @@
+@import '../helpers/helpers'
+
+.quantity
+	display: flex
+	align-items: center
+	width: 100px
+	height: 40px
+	padding: 8px
+	border-radius: 40px
+	background-color: $c-f3
+	&-field
+		height: 100%
+		padding: 0 10px
+		margin-bottom: 0
+		background-color: $trsp
+		font-weight: 500
+		text-align: center
+		line-height: 1
+		&:focus
+			background-color: $trsp
+			box-shadow: none
+	.minus,
+	.plus
+		position: relative
+		flex: 0 0 auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		padding: 0
+		font-size: 0
+		line-height: 1
+		cursor: pointer
+		transition: $trs-3s
+		&::before,
+		&::after
+			content: ''
+			display: block
+			width: 10px
+			height: 2px
+			border-radius: 2px
+			transition: $trs-3s
+	.minus
+		background-color: $white
+		color: $green
+		&::before
+			background-color: $green
+		&::after
+			display: none
+		&:hover
+			background-color: $orange
+			&::before
+				background-color: $white
+	.plus
+		background-color: $green
+		color: $white
+		&::before,
+		&::after
+			background-color: $white
+		&::after
+			margin-top: -2px
+			transform: rotate(90deg)
+		&:hover
+			background-color: $green-accent
