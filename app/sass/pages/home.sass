@@ -192,10 +192,32 @@
 	 ========================================================================== */
 .h-advantages
 	margin-top: 60px
+	[class*="col"]
+		&:nth-child(1)
+			.h-advantages-item
+				background-color: #f0ffef
+				.icon
+					fill: #517159
+		&:nth-child(2)
+			.h-advantages-item
+				background-color: #faf4ef
+				.icon
+					fill: #c69c72
+		&:nth-child(3)
+			.h-advantages-item
+				background-color: #eff7ff
+				.icon
+					fill: #64748d
+		&:nth-child(4)
+			.h-advantages-item
+				background-color: #f7f2fd
+				.icon
+					fill: #9a8aaE
 	&-item
 		height: 100%
 		padding: 30px
 		border-radius: 6px
+		
 	&-icon
 		margin-bottom: 20px
 		.icon
