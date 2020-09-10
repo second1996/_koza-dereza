@@ -191,9 +191,9 @@
 					flex-direction: column
 					align-items: flex-start
 					margin-right: 6px
-				> del
+				del
 					text-decoration: none
-					> .price-amount
+					.amount
 						position: relative
 						margin-right: 6px
 						color: #bbb
@@ -205,15 +205,16 @@
 							width: 100%
 							height: 1px
 							background-color: #bbb
-				> ins
+				ins
 					text-decoration: none
-					> .price-amount
+					.amount
 						color: $black
-			&-amount
+			.amount
 				color: $black
 				font-size: 20px
 				font-weight: 200
-				.currencySymbol
+				.currencySymbol,
+				.woocommerce-Price-currencySymbol
 					font-weight: 200
 			&-count
 				margin-bottom: 2px
@@ -234,6 +235,8 @@
 				margin-right: 0
 			> span
 				display: none
+		.added_to_cart
+			display: none
 
 
 /* ==========================================================================
