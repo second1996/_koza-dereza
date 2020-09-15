@@ -6,3 +6,37 @@
 	background-color: #ecfcff
 	color: #1c4b54
 	line-height: 1.3
+
+.blockOverlay
+	z-index: 340 !important
+	background-image: none !important
+	background-color: none !important
+	opacity: 0.85 !important
+	// animation: kd-FadeInLoader .6s ease forwards
+	&::before
+		content: '' !important
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		width: 100%
+		height: 100%
+		background-color: $white
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 1
+		display: inline-block
+		vertical-align: middle
+		width: 26px
+		height: 26px
+		margin-top: -13px
+		margin-left: -13px
+		border-radius: 50%
+		border: 2px solid rgba($black, 0.15)
+		border-left-color: $orange
+		will-change: transform
+		transform: translate3d(0,0,0)
+		animation: kd-rotate .5s infinite linear

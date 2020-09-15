@@ -530,146 +530,26 @@
 
 	<!-- Shopping Cart-->
 	<div class="modal cart-widget fade" id="shopCart" tabindex="-1" aria-labelledby="shopCartLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-dialog ">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
-					<div class="modal-close btn-close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</div>
-				</div>
-				<div class="modal-body">
-					<ul class="cart-list">
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-3.jpg" alt="">
-								</a>
+				<div class="widget woocommerce widget_shopping_cart">
+					<div class="widget_shopping_cart_content" style="opacity: 1;">
+						<div class="modal-header">
+							<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
+							<div class="modal-close btn-close" data-dismiss="modal">
+								<span aria-hidden="true"></span>
+								<span aria-hidden="true"></span>
 							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Помідори рожевий гігант за 10 кільограм</span>
-									<div class="price">
-										<span class="amount">42,30<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="2" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
+						</div><!-- /.modal-header -->
+						<div class="modal-body">
+							<div class="woocommerce-mini-cart__empty">
+								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
+								<p class="woocommerce-mini-cart__empty-message">Немає товарів у кошику.</p>
 							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-4.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Цибуля зелена (10 шт.)</span>
-									<div class="price">
-										<span class="amount">7,82<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 уп.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-2.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Біле куряче яйце</span>
-									<div class="price">
-										<span class="amount">12,05<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 10 шт.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-1.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Курятина для прожарки</span>
-									<div class="price">
-										<span class="amount">49,90<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-					</ul>
-				</div>
-				<div class="modal-footer">
-					<div class="cart-total">
-						<div class="cart-min-order">
-							<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
-							<span>Сума мінімального замовлення <b>450,00 ₴</b></span>
-						</div>
-						<div class="cart-subtotal">
-							<span class="title">Загальна сума</span>
-							<span class="amount">421,20<span class="currencySymbol"> ₴</span></span>
-						</div>
-						<a href="page-cart.html" class="cart-btn-checkout btn btn-green">Оформити замовлення</a>
+						</div><!-- /.modal-body -->
+						<div class="modal-footer">
+							<button class="cart-btn-empty btn btn-orange" data-dismiss="modal">Повернутися до магазину</button>
+						</div><!-- /.modal-footer -->
 					</div>
 				</div>
 			</div>
