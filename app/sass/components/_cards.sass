@@ -168,11 +168,20 @@
 				height: 10px
 				border-radius: 50%
 				margin-right: 8px
-			&-in
+			&.in-stock
 				color: #555
 				&::before
 					background-color: $green-accent
-			&-out
+			&.low-stock
+				color: #555
+				> b,
+				> strong
+					padding: 2px 4px
+					border-radius: 4px
+					background-color: $border
+				&::before
+					background-color: #fdb522
+			&.out-of-stock
 				color: #aaa
 				&::before
 					background-color: #e0e0e0

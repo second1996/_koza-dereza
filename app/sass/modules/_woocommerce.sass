@@ -1,5 +1,17 @@
 @import '../helpers/helpers'
 
+.post-edit-link
+	display: inline-block
+	padding: 4px 8px
+	border-radius: 4px
+	background-color: $green-accent
+	color: $white
+	font-size: 13px
+	text-transform: uppercase
+	&:hover
+		background-color: $black
+		color: $white
+
 .woocommerce-info
 	padding: 16px 22px
 	border-radius: 10px
@@ -40,3 +52,48 @@
 		will-change: transform
 		transform: translate3d(0,0,0)
 		animation: kd-rotate .5s infinite linear
+
+.pswp__caption__center
+	text-align: center
+
+.woocommerce-notices-wrapper
+	margin-bottom: 30px
+	.woocommerce-error
+		> li
+			display: block
+			padding: 12px 24px
+			border-radius: 6px
+			background-color: #fff3f3
+			color: #602727
+			line-height: 1.45
+			+media-breakpoint-down(xs)
+				border-radius: 0
+			&:not(:last-child)
+				margin-bottom: 10px
+			.button
+				margin-right: 10px
+				padding: 5px 10px
+				border-radius: 4px
+				background-color: darken(#fff3f3, 5%)
+				color: #602727
+				&:hover
+					background-color: darken(#fff3f3, 10%)
+	.woocommerce-message
+		display: block
+		padding: 12px 24px
+		border-radius: 6px
+		background-color: #eff7ff
+		color: #26425f
+		line-height: 1.45
+		+media-breakpoint-down(xs)
+			border-radius: 0
+		&:not(:last-child)
+			margin-bottom: 10px
+		.button
+			margin-right: 10px
+			padding: 5px 10px
+			border-radius: 4px
+			background-color: darken(#eff7ff, 5%)
+			color: #26425f
+			&:hover
+				background-color: darken(#eff7ff, 10%)

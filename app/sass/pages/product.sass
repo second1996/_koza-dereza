@@ -61,6 +61,59 @@
 					color: $black
 		&-slider
 			overflow: hidden
+			position: relative
+			margin-top: 30px
+			.woocommerce-product-gallery
+				&__trigger
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					z-index: 2
+					height: 390px
+					opacity: 0
+					+media-breakpoint-down(lg)
+						height: 320px
+					+media-breakpoint-down(xxs)
+						height: 220px
+				&__image
+					height: 390px
+					+media-breakpoint-down(lg)
+						height: 320px
+					+media-breakpoint-down(xxs)
+						height: 220px
+					> a
+						display: block
+						width: 100%
+						height: 100%
+						> img
+							width: 100%
+							height: 100%
+							object-fit: scale-down
+			.flex-control-thumbs
+				list-style: none
+				display: flex
+				justify-content: center
+				margin-top: 32px
+				+media-breakpoint-down(xs)
+					margin-top: 16px
+				> li
+					user-select: none
+					cursor: pointer
+					width: 100px
+					margin-right: 10px
+					+media-breakpoint-down(md)
+						width: 70px
+					+media-breakpoint-down(xxs)
+						width: 40px
+					> img
+						width: 100%
+						height: 100%
+						object-fit: scale-down
+						opacity: 0.25
+						transition: $trs-3s
+						&.flex-active
+							opacity: 1
 		.product-slider
 			&-item
 				user-select: none
@@ -109,6 +162,7 @@
 					object-fit: scale-down
 	// Product Meta
 	&-meta
+		position: relative
 		padding: 40px
 		+media-breakpoint-down(xl)
 			padding: 30px
@@ -117,6 +171,10 @@
 			border-radius: 0 0 10px 10px
 		+media-breakpoint-down(xs)
 			padding: 20px 20px 30px
+		.post-edit-link
+			position: absolute
+			top: 30px
+			right: 30px
 		.sku
 			display: block
 			margin-bottom: 10px
@@ -135,19 +193,20 @@
 				font-size: 32px
 		.price
 			display: flex
-			align-items: flex-end
 			flex-wrap: wrap
+			align-items: flex-end
 			margin-top: 15px
 			line-height: 1
 			&-wrapper
 				display: flex
-				align-items: flex-end
+				flex-direction: row-reverse
 				flex-wrap: wrap
+				align-items: flex-end
 				margin-right: 10px
-				// +media-breakpoint-down(xs)
-				// 	flex-direction: column
-				// 	align-items: flex-start
-				// 	margin-right: 6px
+				+media-breakpoint-down(xs)
+					flex-direction: column
+					align-items: flex-start
+					margin-right: 0
 				> del
 					text-decoration: none
 					> .amount
@@ -157,6 +216,8 @@
 						font-weight: 200
 						+media-breakpoint-down(lg)
 							font-size: 20px
+						+media-breakpoint-down(xs)
+							font-size: 18px
 						&::after
 							content: ''
 							position: absolute
@@ -200,10 +261,40 @@
 					margin-top: 10px
 				+media-breakpoint-down(lg)
 					font-size: 15px
+		.stock
+			display: block
+			margin-top: 30px
+			font-size: 14px
+			font-weight: 200
+			line-height: 1
+			&::before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				margin-right: 8px
+			&.in-stock
+				color: #555
+				&::before
+					background-color: $green-accent
+			&.low-stock
+				color: #555
+				> b,
+				> strong
+					padding: 2px 4px
+					border-radius: 4px
+					background-color: $border
+				&::before
+					background-color: #fdb522
+			&.out-of-stock
+				color: #aaa
+				&::before
+					background-color: #e0e0e0
 		.actions
 			display: flex
 			flex-wrap: wrap
-			margin-top: 30px
+			margin-top: 20px
 			&-btn
 				&:not(:last-child)
 					margin-right: 10px
@@ -221,6 +312,19 @@
 				height: 54px
 				line-height: 54px
 				padding: 0 30px
+				.added_to_cart_button_text
+					display: none
+				&.loading
+					flex-direction: row-reverse
+					&::after
+						position: static
+						margin-top: 0
+						margin-left: 0
+				&.added
+					.add_to_cart_button_text
+						display: none
+					.added_to_cart_button_text
+						display: block
 				+media-breakpoint-down(xs)
 					padding: 0 18px
 					.icon
@@ -231,6 +335,8 @@
 					height: 46px
 					padding: 0 14px
 					line-height: 46px
+			.added_to_cart
+				display: none
 			.btn-wishlist
 				width: 54px
 				height: 54px
@@ -288,8 +394,3 @@
 				b, strong
 					color: $black
 					font-weight: 400
-
-
-
-// .upsells
-// 	&-list

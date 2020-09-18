@@ -411,6 +411,20 @@
 		<div class="page-content">
 			<div class="container-fluid">
 
+				<div class="woocommerce-notices-wrapper">
+					<ul class="woocommerce-error" role="alert">
+						<li>
+							<a href="http://koza-dereza/cart/" class="button wc-forward">Переглянути кошик</a> Не можна додати таку кількість до кошика — у нас є 10 в наявності, і з них вже 10 у Вашому кошику.
+						</li>
+						<li>
+							<a href="http://koza-dereza/cart/" class="button wc-forward">Переглянути кошик</a> Не можна додати таку кількість до кошика — у нас є 10 в наявності, і з них вже 10 у Вашому кошику.
+						</li>
+					</ul>
+					<div class="woocommerce-message" role="alert">
+						<a href="http://koza-dereza/cart/" tabindex="1" class="button wc-forward">Переглянути кошик</a> “Банан” додано до кошика.
+					</div>
+				</div>
+
 				<div class="product">
 					<div class="container">
 						<div class="row">
@@ -466,12 +480,12 @@
 									<h1 class="title">Салат Дубовий лист зелений</h1>
 									<div class="price">
 										<div class="price-wrapper">
-											<ins>
-												<span class="amount">19,00<span class="currencySymbol"> ₴</span></span>
-											</ins>
 											<del>
 												<span class="amount">25,00<span class="currencySymbol"> ₴</span></span>
 											</del>
+											<ins>
+												<span class="amount">19,00<span class="currencySymbol"> ₴</span></span>
+											</ins>
 										</div>
 										<div class="price-count">
 											<span>за 1 уп.</span>
@@ -480,6 +494,9 @@
 									<div class="description">
 										<p>Салат дубовий лист своєю назвою говорить про схожість з дубовим листям. Листя салату зібраний у щільну розетку діаметром до 30 см.</p>
 									</div>
+									<div class="stock in-stock">В наявності</div>
+									<div class="stock low-stock">В наявності залишилось <b>4 товари</b></div>
+									<div class="stock out-of-stock">Товар відсутній</div>
 									<div class="actions">
 										<div class="actions-btn">
 											<div class="quantity">
@@ -489,6 +506,7 @@
 											</div>
 										</div>
 										<div class="actions-btn">
+											<!-- <a href="#" class="btn btn-green btn-order btn-icon add_to_cart_button ajax_add_to_cart loading"> -->
 											<a href="#" class="btn btn-green btn-order btn-icon">
 												<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
 												<span>В кошик</span>
@@ -516,13 +534,13 @@
 					</div><!-- /.container -->
 				</div><!-- /.product -->
 
-				<!-- Section: Upsells -->
-				<section class="upsells section">
+				<!-- Section: Related products -->
+				<section class="related section">
 					<div class="container">
 						<div class="section-header">
 							<h2 class="section-title">Товари, які можуть Вас зацікавити</h2>
 						</div>
-						<div class="upsells-list products-grid row no-gutters">
+						<div class="related-list products-grid row no-gutters">
 							<div class="col-6 col-lg-3">
 								<div class="card card-product">
 									<div class="card-photo">
@@ -535,8 +553,8 @@
 									<div class="card-meta">
 										<span class="sku">Арт.: D98186A4</span>
 										<a href="page-product-single.html" class="title">Біле куряче яйце</a>
-										<span class="stock stock-in">В наявності</span>
-										<!-- <span class="stock stock-out">Відсутній</span> -->
+										<span class="stock in-stock">В наявності</span>
+										<!-- <span class="stock out-of-stock">Відсутній</span> -->
 										<div class="price">
 											<div class="price-wrapper">
 												<del>
@@ -575,8 +593,8 @@
 									<div class="card-meta">
 										<span class="sku">Арт.: F4687DA</span>
 										<a href="page-product-single.html" class="title">Вода Боржомі скло</a>
-										<span class="stock stock-in">В наявності</span>
-										<!-- <span class="stock stock-out">Відсутній</span> -->
+										<span class="stock in-stock">В наявності</span>
+										<!-- <span class="stock out-of-stock">Відсутній</span> -->
 										<div class="price">
 											<div class="price-wrapper">
 												<del>
@@ -615,8 +633,8 @@
 									<div class="card-meta">
 										<span class="sku">Арт.: RT3786A5</span>
 										<a href="page-product-single.html" class="title">Коров’яче молоко</a>
-										<span class="stock stock-in">В наявності</span>
-										<!-- <span class="stock stock-out">Відсутній</span> -->
+										<span class="stock in-stock">В наявності</span>
+										<!-- <span class="stock out-of-stock">Відсутній</span> -->
 										<div class="price">
 											<div class="price-wrapper">
 												<span class="amount">26,00<span class="currencySymbol"> ₴</span></span>
@@ -650,8 +668,8 @@
 									<div class="card-meta">
 										<span class="sku">Арт.: 163F7P8</span>
 										<a href="page-product-single.html" class="title">Скаморца</a>
-										<span class="stock stock-in">В наявності</span>
-										<!-- <span class="stock stock-out">Відсутній</span> -->
+										<span class="stock in-stock">В наявності</span>
+										<!-- <span class="stock out-of-stock">Відсутній</span> -->
 										<div class="price">
 											<div class="price-wrapper">
 												<span class="amount">36,50<span class="currencySymbol"> ₴</span></span>
