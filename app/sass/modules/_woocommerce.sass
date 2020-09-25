@@ -12,13 +12,6 @@
 		background-color: $black
 		color: $white
 
-.woocommerce-info
-	padding: 16px 22px
-	border-radius: 10px
-	background-color: #ecfcff
-	color: #1c4b54
-	line-height: 1.3
-
 .blockOverlay
 	z-index: 340 !important
 	background-image: none !important
@@ -56,13 +49,35 @@
 .pswp__caption__center
 	text-align: center
 
-.woocommerce-notices-wrapper
+.woocommerce-info
+	display: block
+	margin-bottom: 30px
+	padding: 16px 22px
+	border-radius: 10px
+	background-color: #ecfcff
+	color: #1c4b54
+	line-height: 1.45
+	.button
+		margin-right: 10px
+		padding: 5px 10px
+		border-radius: 4px
+		background-color: darken(#ecfcff, 5%)
+		color: #1c4b54
+		&:hover
+			background-color: darken(#ecfcff, 10%)
+
+
+/* ==========================================================================
+	 WooCommerce Notices
+	 ========================================================================== */
+.woocommerce-notices-wrapper,
+.woocommerce-NoticeGroup
 	margin-bottom: 30px
 	.woocommerce-error
 		> li
 			display: block
 			padding: 12px 24px
-			border-radius: 6px
+			border-radius: 10px
 			background-color: #fff3f3
 			color: #602727
 			line-height: 1.45
@@ -70,6 +85,8 @@
 				border-radius: 0
 			&:not(:last-child)
 				margin-bottom: 10px
+			b, strong
+				font-weight: 500
 			.button
 				margin-right: 10px
 				padding: 5px 10px
@@ -81,7 +98,7 @@
 	.woocommerce-message
 		display: block
 		padding: 12px 24px
-		border-radius: 6px
+		border-radius: 10px
 		background-color: #eff7ff
 		color: #26425f
 		line-height: 1.45
@@ -89,6 +106,8 @@
 			border-radius: 0
 		&:not(:last-child)
 			margin-bottom: 10px
+		b, strong
+			font-weight: 500
 		.button
 			margin-right: 10px
 			padding: 5px 10px
@@ -97,3 +116,322 @@
 			color: #26425f
 			&:hover
 				background-color: darken(#eff7ff, 10%)
+	.woocommerce-info
+		display: block
+		margin-bottom: 30px
+		padding: 16px 22px
+		border-radius: 10px
+		background-color: #ecfcff
+		color: #1c4b54
+		line-height: 1.45
+		b, strong
+			font-weight: 500
+
+
+/* ==========================================================================
+	 WooCommerce Cart
+	 ========================================================================== */
+.woocommerce-cart
+	&-wrapper
+		display: flex
+	&-form
+		flex: 1 1 auto
+		margin-right: 30px
+		button[name="update_cart"],
+		input[name="update_cart"]
+			display: none
+	&-item
+		position: relative
+		display: flex
+		align-items: center
+		padding: 0 15px
+		border-radius: 6px
+		border-bottom: 1px solid $border
+		background-color: $white
+		transition: $trs-3s
+		&:hover
+			z-index: 1
+			// box-shadow: 0 0 0 3px rgba($black, 0.05)
+			.product-subtotal
+				.amount
+					color: $green-accent
+			.product-remove
+				opacity: 1
+		&-meta,
+		&-actions
+			display: flex
+			align-items: center
+		&-meta
+			width: 66%
+		&-actions
+			width: 34%
+			margin-left: auto
+		.product-thumbnail
+			margin-right: 30px
+			a
+				display: block
+				width: 100px
+				height: 100px
+			img
+				width: 100%
+				height: 100%
+				object-fit: scale-down
+		.product-name
+			a
+				color: $black
+				&:hover
+					color: $orange
+		.product-price
+			.amount
+				color: $textcolor
+				font-size: 18px
+				font-weight: 400
+			.piece
+				margin-left: 6px
+				font-weight: 200
+		.product-quantity
+			margin-left: 30px
+			.quantity
+				background-color: $white
+		.product-subtotal
+			margin-left: auto
+			.amount
+				color: $orange
+				font-family: $neucha
+				font-size: 26px
+				font-weight: 400
+				transition: color .35s
+				+media-breakpoint-down(lg)
+					font-size: 20px
+				.woocommerce-Price-currencySymbol
+					font-weight: 400
+		.product-remove
+			margin-left: 30px
+			opacity: 0
+			transition: $trs-3s
+	// Cart Info (Cart totals)
+	&-info
+		overflow: hidden
+		position: relative
+		z-index: 1
+		flex: 0 0 350px
+		padding: 50px 30px
+		border-radius: 10px
+		background-color: #f8ffef
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: url('../../images/dest/bg-item-2.png') no-repeat right bottom
+			opacity: 0.5
+		.cart-totals
+			height: 100%
+			&-title
+				margin-bottom: 20px
+				font-size: 30px
+				font-family: $neucha
+				font-weight: 400
+				text-align: center
+			&-head
+				display: flex
+				justify-content: space-between
+			&-info
+				display: flex
+				flex-direction: column
+				height: 100%
+				.title
+					color: #1c4b54
+				.amount
+					color: #1c4b54
+					font-weight: 500
+				.descr
+					display: block
+					margin-top: 8px
+					font-size: 14px
+					font-weight: 200
+					line-height: 1.4
+				.cart-subtotal
+					margin-bottom: 20px
+				.cart-delivery
+					margin-bottom: 20px
+				.cart-total
+					margin-top: auto
+					.cart-order-total
+						display: flex
+						align-items: center
+						justify-content: space-between
+						font-family: $neucha
+						.title
+							display: block
+							font-size: 30px
+							font-weight: 400
+						.amount
+							display: block
+							font-size: 26px
+					.checkout-button
+						width: 100%
+						margin-top: 20px
+						text-align: center
+
+
+/* ==========================================================================
+	 WooCommerce Checkout
+	 ========================================================================== */
+.woocommerce-checkout
+	// Select2 Plugin
+	.select2
+		&-container
+			height: 60px
+		&-selection
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			height: 100%
+			padding: 0 32px
+			margin-bottom: 20px
+			color: $black
+			font-size: 14px
+			font-weight: 400
+			line-height: 60px
+			border-radius: 6px
+			border: 0
+			background-color: $c-f5
+			background-clip: padding-box
+			outline: none
+			&__rendered
+				padding-left: 0 !important
+			&__clear
+				display: none
+			&__arrow
+				top: 50% !important
+				right: 16px !important
+				transform: translateY(-50%)
+		&-dropdown
+			padding: 16px
+			border: 1px solid $border
+		&-search
+			padding: 0 !important
+			margin-bottom: 16px
+			&__field
+				height: 40px
+				padding: 0 15px !important
+				border-radius: 6px
+				border: 1px solid $border !important
+				line-height: 40px
+		&-results
+			&__option
+				padding: 8px 16px
+				border-radius: 6px
+				outline: none
+				&[data-selected="true"]
+					background-color: $c-f7 !important
+					color: $black !important
+				&--highlighted
+					background-color: $orange !important
+	// Customize form
+	&-wrapper
+		display: flex
+	&-details
+		flex: 1 1 auto
+		margin-right: 30px
+	&-section-title
+		margin-bottom: 30px
+		font-family: $neucha
+		font-size: 32px
+		font-weight: 400
+	&-billing-wrapper
+	&-notes-wrapper
+		margin-top: 45px
+		.form-row.notes,
+		.form-textarea
+			margin-bottom: 0
+	.wc-ukr-shipping-np-fields
+		margin-top: 30px
+		h3
+			margin-bottom: 12px
+			color: $black
+			font-size: 15px
+	// Fields
+	.woocommerce-billing-fields
+		&__field-wrapper
+			display: flex
+			flex-wrap: wrap
+			.form-row
+				flex: 0 0 100%
+				&-first
+					flex: 0 0 50%
+					padding-right: 10px
+				&-last
+					flex: 0 0 50%
+					padding-left: 10px
+			.form-group
+				margin-top: 0
+				&:not(:first-child)
+					margin-top: 0
+	// Order
+	&-review-order
+		overflow: hidden
+		position: relative
+		z-index: 1
+		flex: 0 0 auto
+		width: 100%
+		max-width: 600px
+		height: 100%
+		padding: 50px 30px
+		border-radius: 10px
+		background-color: #fffaec
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: url('../../images/dest/bg-item-2.png') no-repeat right bottom
+			opacity: 0.5
+		.checkout-btn-complete
+			width: 100%
+		.woocommerce-checkout-section-title
+			text-align: center
+		&-table
+			margin-bottom: 30px
+			border-radius: 10px
+			background-color: $white
+			thead
+				border-bottom: 1px solid $border
+				th
+					padding: 15px 30px
+					color: $black
+					font-weight: 500
+					line-height: 1.3
+					&.product-name
+						width: 60%
+					&.product-total
+						width: 40%
+			tbody
+				tr:not(:last-child)
+					border-bottom: 1px solid $border
+				td
+					padding: 15px 30px
+					color: $textcolor
+					line-height: 1.3
+					.product-quantity
+						display: block
+						font-size: 14px
+						font-weight: 500
+						line-height: 1
+			tfoot
+				th
+					width: 60%
+					padding: 15px 30px
+					color: $black
+					font-weight: 500
+					line-height: 1.3
+				td
+					width: 40%

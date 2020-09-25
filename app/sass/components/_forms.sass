@@ -2,6 +2,9 @@
 
 .form
 	position: relative
+	abbr[data-original-title], abbr[title]
+		color: red
+		text-decoration: none
 	&-group
 		position: relative
 		display: flex
@@ -44,18 +47,22 @@
 		display: block
 		width: 100%
 		margin-bottom: 20px
-		color: $textcolor
+		color: $black
 		font-size: 14px
 		font-weight: 400
 		border-radius: 6px
 		border: 0
 		background-color: $c-f5
 		background-clip: padding-box
-		color: $black
 		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
 		&:focus
 			box-shadow: 0 0 0 2px $green
 			background-color: $white
+		&:read-only
+			cursor: default
+			user-select: none
+			box-shadow: none
+			background-color: $c-f5
 	&-control
 		height: 60px
 		padding: 0 32px
@@ -68,7 +75,8 @@
 				margin: 0
 	&-textarea
 		resize: none
-		padding: 8px 16px
+		min-height: 200px
+		padding: 16px 32px
 	&-link
 		margin-top: 10px
 		text-align: right

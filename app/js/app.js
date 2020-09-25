@@ -59,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
 // jQuery scripts
 jQuery(document).ready(function($) {
 
-	// $('#callbackModal').modal('show')
-
 	$('.burger-btn').on('click', function(e) {
 		e.preventDefault()
 		$('body').toggleClass('lock-scroll')

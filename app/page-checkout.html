@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
 
 	<meta charset="utf-8">
-	<title>Відгуки &bull; Koza-Дереza</title>
+	<title>Сторінка &bull; Koza-Дереza</title>
 	<meta name="description" content="Доставка фермерських продуктів додому">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="images/favicon.png">
@@ -35,7 +36,9 @@
 					<div class="col-auto">
 						<div class="user">
 							<div class="user-login">
-								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+								<svg class="icon icon-user">
+									<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+								</svg>
 								<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 								<span class="dot">&bull;</span>
 								<a href="#" class="link">Реєстрація</a>
@@ -67,7 +70,9 @@
 							</div>
 							<div class="search-btn">
 								<button class="search-btn-trigger">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</div>
 						</div>
@@ -75,7 +80,9 @@
 							<form action="" method="POST" class="form form-search">
 								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 								<button class="btn btn-search">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</form>
 						</div>
@@ -86,7 +93,9 @@
 								<a href="#" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">3</span>
-										<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+										<svg class="icon icon-wishlist">
+											<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+										</svg>
 									</figure>
 								</a>
 							</div>
@@ -94,7 +103,9 @@
 								<a href="#shopCart" data-toggle="modal" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">5</span>
-										<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+										<svg class="icon icon-shopping-cart">
+											<use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use>
+										</svg>
 									</figure>
 									<span class="total">543 <span class="total-symbol">₴</span></span>
 								</a>
@@ -113,7 +124,9 @@
 				<div class="row align-items-center">
 					<div class="col-auto">
 						<a href="page-catalog.html" class="btn btn-catalog">
-							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							<svg class="icon icon-catalog">
+								<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+							</svg>
 							<span>Каталог продуктів</span>
 						</a>
 						<nav class="nav nav--catalog">
@@ -394,11 +407,11 @@
 
 		<div class="page-header">
 			<div class="container">
-				<h1 class="title">Відгуки</h1>
+				<h1 class="title">Кошик</h1>
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs-list">
 						<li><a href="index.html" class="home"></a></li>
-						<li><span>Відгуки</span></li>
+						<li><span>Кошик</span></li>
 					</ul>
 				</div>
 			</div>
@@ -407,193 +420,238 @@
 		<div class="page-content">
 			<div class="container">
 
-				<div class="alert alert--purple mb-40">
-					<div class="alert-content">
-						<h3 class="alert-title">Поділіться своїми враженнями про “Koza-Дереza” 👍</h3>
-						<p class="alert-text">Ми завжди цікавимося думкою наших клієнтів, відкриті до критики і негайно реагуємо на кожну проблему. Ось що кажуть люди, які хоча б раз купували нашу продукцію.<br> <strong>Ви також можете залишити свій відгук!</strong></p>
-					</div>
-					<div class="alert-button">
-						<button class="btn btn-green" data-toggle="modal" data-target="#reviewModal">Залишити відгук</button>
-					</div>
-				</div>
-	
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-1.jpg" alt="">
+				<div class="woocommerce">
+					<div class="woocommerce-notices-wrapper"></div>
+					<form name="checkout" method="post" class="checkout woocommerce-checkout form"
+						action="http://koza-dereza/checkout/" enctype="multipart/form-data" novalidate="novalidate">
+						<div class="woocommerce-checkout-wrapper">
+							<div class="woocommerce-checkout-details" id="customer_details">
+								<div class="woocommerce-checkout-billing-wrapper">
+									<div class="woocommerce-billing-fields">
+										<h3 class="woocommerce-checkout-section-title">Оплата та доставка</h3>
+										<div class="woocommerce-billing-fields__field-wrapper">
+											<p class="form-row form-row-first validate-required" id="billing_first_name_field"
+												data-priority="10"><label for="billing_first_name" class="">Ім'я&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="text" class="form-control input-text " name="billing_first_name" id="billing_first_name"
+														placeholder="" value="" autocomplete="given-name"></span></p>
+											<p class="form-row form-row-last validate-required" id="billing_last_name_field"
+												data-priority="20"><label for="billing_last_name" class="">Прізвище&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="text" class="form-control input-text " name="billing_last_name" id="billing_last_name"
+														placeholder="" value="" autocomplete="family-name"></span></p>
+											<p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label
+													for="billing_company" class="">Назва компанії&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
+														name="billing_company" id="billing_company" placeholder="" value=""
+														autocomplete="organization"></span></p>
+											<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
+												id="billing_country_field" data-priority="40"><label for="billing_country"
+													class="">Країна/Регіон&nbsp;<abbr class="required" title="обов'язкове">*</abbr></label><span
+													class="woocommerce-input-wrapper"><select name="billing_country" id="billing_country"
+														class="country_to_state country_select select2-hidden-accessible" autocomplete="country"
+														tabindex="-1" aria-hidden="true">
+														<option value="default">Select a country / region…</option>
+														<option value="AF">Афганістан</option>
+														<option value="MN">Монголія</option>
+														<option value="PN">Піткерн</option>
+														<option value="PL" selected="selected">Польща</option>
+														<option value="PT">Португалія</option>
+														<option value="LY">Лівія</option>
+														<option value="ID">Індонезія</option>
+														<option value="PM">Сен-П'єр і Мікелон</option>
+														<option value="AX">Åland Islands</option>
+													</select><span class="select2 select2-container select2-container--default" dir="ltr"
+														style="width: 100%;"><span class="selection"><span
+																class="select2-selection select2-selection--single" aria-haspopup="true"
+																aria-expanded="false" tabindex="0" aria-labelledby="select2-billing_country-container"
+																role="combobox"><span class="select2-selection__rendered"
+																	id="select2-billing_country-container" role="textbox" aria-readonly="true"
+																	title="Польща">Польща</span><span class="select2-selection__arrow"
+																	role="presentation"><b role="presentation"></b></span></span></span><span
+															class="dropdown-wrapper" aria-hidden="true"></span></span><noscript><button type="submit"
+															name="woocommerce_checkout_update_totals" value="Оновити Країну/Регіон">Оновити
+															Країну/Регіон</button></noscript></span></p>
+											<p class="form-row address-field validate-required form-row-wide" id="billing_address_1_field"
+												data-priority="50"><label for="billing_address_1" class="">Назва вулиці&nbsp;<abbr
+														class="required" title="обов'язкове">*</abbr></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
+														name="billing_address_1" id="billing_address_1" placeholder="Номер будинку на назва вулиці"
+														value="" autocomplete="address-line1"
+														data-placeholder="Номер будинку на назва вулиці"></span></p>
+											<p class="form-row address-field form-row-wide" id="billing_address_2_field" data-priority="60">
+												<label for="billing_address_2" class="screen-reader-text">Квартира, офіс, блок, тощо
+													(опціонально)&nbsp;<span class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
+														name="billing_address_2" id="billing_address_2"
+														placeholder="Квартира, офіс, блок, тощо (опціонально)" value="" autocomplete="address-line2"
+														data-placeholder="Квартира, офіс, блок, тощо (опціонально)"></span></p>
+											<p class="form-row address-field validate-required validate-postcode form-row-wide"
+												id="billing_postcode_field" data-priority="65"
+												data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label
+													for="billing_postcode" class="">Поштовий код / ZIP&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="text" class="form-control input-text " name="billing_postcode" id="billing_postcode" placeholder=""
+														value="" autocomplete="postal-code"></span></p>
+											<p class="form-row address-field validate-required form-row-wide" id="billing_city_field"
+												data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label
+													for="billing_city" class="">Місто / Село&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="text" class="form-control input-text " name="billing_city" id="billing_city" placeholder=""
+														value="" autocomplete="address-level2"></span></p>
+											<p class="form-row address-field validate-state form-row-wide" id="billing_state_field"
+												style="display: none" data-o_class="form-row form-row-wide address-field validate-state"><label
+													for="billing_state" class="">Область / Округ&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="hidden" id="billing_state" name="billing_state"
+														placeholder="" data-input-classes="" class="hidden"></span></p>
+											<p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field"
+												data-priority="100"><label for="billing_phone" class="">Телефон&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="tel" class="form-control input-text " name="billing_phone" id="billing_phone" placeholder=""
+														value="" autocomplete="tel"></span></p>
+											<p class="form-row form-row-wide validate-required validate-email" id="billing_email_field"
+												data-priority="110"><label for="billing_email" class="">Адреса електронної пошти&nbsp;<abbr
+														class="required" title="обов'язкове">*</abbr></label><span
+													class="woocommerce-input-wrapper"><input type="email" class="form-control input-text " name="billing_email"
+														id="billing_email" placeholder="" value="vital10012@gmail.com"
+														autocomplete="email username"></span></p>
+										</div>
+									</div>
 								</div>
-								<div class="author">
-									<span class="name">Оксана Дмитрів</span>
-									<span class="date">24 травня 2020</span>
+								<div class="woocommerce-checkout-notes-wrapper">
+									<div class="woocommerce-shipping-fields">
+									</div>
+									<div class="woocommerce-additional-fields">
+										<h3 class="woocommerce-checkout-section-title">Додаткова інформація</h3>
+										<div class="woocommerce-additional-fields__field-wrapper">
+											<p class="form-row notes" id="order_comments_field" data-priority=""><label for="order_comments"
+													class="">Примітки до замовлень&nbsp;<span class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><textarea name="order_comments" class="form-textarea input-text "
+														id="order_comments"
+														placeholder="Нотатки до вашого замовлення, наприклад спеціальні примітки для доставки."
+														rows="2" cols="5"></textarea></span></p>
+										</div>
+									</div>
 								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
+							</div>
+
+							<div id="order_review" class="woocommerce-checkout-review-order">
+								<h3 class="woocommerce-checkout-section-title" id="order_review_heading">Ваше замовлення</h3>
+								<table class="shop_table woocommerce-checkout-review-order-table">
+										<thead>
+											<tr>
+												<th class="product-name">Товар</th>
+												<th class="product-total">Проміжний підсумок</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="cart_item">
+												<td class="product-name">
+													Банан&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>224,99&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+													Авокадо&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>26,05&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+													Персик&nbsp; <strong class="product-quantity">×&nbsp;3</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>48,00&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+													Лимон&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>36,10&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+													Виноград кишмиш пальчиками&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>90,00&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+										</tbody>
+										<tfoot>
+
+											<tr class="cart-subtotal">
+												<th>Проміжний підсумок</th>
+												<td><span class="woocommerce-Price-amount amount"><bdi>425,14&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span></td>
+											</tr>
+
+
+
+
+											<tr class="woocommerce-shipping-totals shipping">
+												<th>Доставка</th>
+												<td data-title="Доставка">
+													Введіть свою адресу, щоб переглянути варіанти доставки.
+
+												</td>
+											</tr>
+
+
+
+
+
+
+											<tr class="order-total">
+												<th>Загалом</th>
+												<td><strong><span class="woocommerce-Price-amount amount"><bdi>425,14&nbsp;<span
+																	class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong> </td>
+											</tr>
+
+
+										</tfoot>
+								</table>
+								<div id="payment" class="woocommerce-checkout-payment">
+									<ul class="wc_payment_methods payment_methods methods">
+										<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">Вибачте, але здається, у
+											нас відсутні доступні способи оплати для Вашого місця розташування. Будь ласка, зв'яжіться з нами,
+											якщо Вам потрібна допомога або Ви хочете скористатись альтернативними способами оплати.</li>
 									</ul>
+									<div class="form-row place-order">
+										<noscript>
+											Оскільки ваш браузер не підтримує JavaScript (або він вимкнений), будь ласка, натисніть кнопку
+											<em>Оновлення підсумку</em> перед розміщенням замовлення. Інакше ви можете отримати рахунок на
+											більшу суму, ніж очікуєте, якщо не зробите цього. <br /><button type="submit" class="button alt"
+												name="woocommerce_checkout_update_totals" value="Оновити підсумки">Оновити підсумки</button>
+										</noscript>
+
+										<div class="woocommerce-terms-and-conditions-wrapper">
+											<div class="woocommerce-privacy-policy-text">
+												<p>Ваші особисті дані будуть використані для обробки вашого замовлення, підтримки вашого досвіду
+													на цьому веб-сайті та інших цілях, описаних у нашому <a href="http://koza-dereza/?page_id=3"
+														class="woocommerce-privacy-policy-link" target="_blank">політика конфіденційності</a>.</p>
+											</div>
+										</div>
+
+
+										<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
+											value="Підтвердити замовлення" data-value="Підтвердити замовлення">Підтвердити замовлення</button>
+
+										<input type="hidden" id="woocommerce-process-checkout-nonce"
+											name="woocommerce-process-checkout-nonce" value="98aa6cdf51"><input type="hidden"
+											name="_wp_http_referer" value="/?wc-ajax=update_order_review">
+									</div>
 								</div>
 							</div>
-							<div class="card-review-body">
-								<p>До речі, хто бачив Сторіс, я замовила продукти з ферми Коза-Дереза, знаходиться в Франківську. Доставка 4 рази в тиждень. Кому цікаво залишаю їх аккаунт @koza-dereza.com. Моїми фаворитами тепер стали домашня бурата і масло вершкове, звичайно зовсім не така, як продається в магазинах.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-2.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Світлана Волкова</span>
-									<span class="date">13 квітня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Замовляла перший раз. Дуже задоволена покупкою, приємний менеджер допомогла мені оформити замовлення на подарунок подрузі, товар приїхав в презентабельною коробці, фрукти дуже свіжі і красиві.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-3.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Євген Самойлов</span>
-									<span class="date">9 квітня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Дуже зручний сервіс, швидка доставка. Все дуже свіже і смачне) Більше не купую овочі та фрукти в супермаркеті. Особливо дуже радує зелень, завжди свіжа, ніби тільки зірвана. І здорово, що можна замовити упаковку без пластику, все буде расфасовно в паперові пакети.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-4.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Аліна Лойченко</span>
-									<span class="date">3 березня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Замовила продукти. Все свіже. А ось кавун ніколи не їла такий смачний, солодкий, великий. Рекомендую!!!</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-5.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Аліна Лойченко</span>
-									<span class="date">3 березня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Замовляла овочі та фрукти в перший раз, залишилася дуже задоволена і сервісом, і доставкою. Продукти теж вище всяких похвал, добірні і свіжі.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-				</div>
+
+						</div><!-- /.woocommerce-checkout-wrapper -->
+					</form>
+				</div><!-- /.woocommerce -->
 
 			</div>
 		</div>
@@ -607,30 +665,40 @@
 				<div class="footer-brand">
 					<div class="about">
 						<a href="index.html">
-							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
+							<img class="about-logo" src="images/dest/logotype-light.svg"
+								alt="Koza-Дереza — Доставка продуктів по Україні">
 						</a>
-						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
+						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з
+							виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
 					</div>
 					<div class="social">
 						<ul class="social-list">
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-messenger"><use xlink:href="images/symbol-defs.svg#icon-messenger"></use></svg>
+									<svg class="icon icon-messenger">
+										<use xlink:href="images/symbol-defs.svg#icon-messenger"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#icon-instagram"></use></svg>
+									<svg class="icon icon-instagram">
+										<use xlink:href="images/symbol-defs.svg#icon-instagram"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://viber.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-viber"><use xlink:href="images/symbol-defs.svg#icon-viber"></use></svg>
+									<svg class="icon icon-viber">
+										<use xlink:href="images/symbol-defs.svg#icon-viber"></use>
+									</svg>
 								</a>
 							</li>
 						</ul>
@@ -665,24 +733,35 @@
 					<div class="callback">
 						<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 							<span>Зворотній зв’язок</span>
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 						</button>
 					</div>
 					<div class="contacts">
 						<div class="contacts-item">
-							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#icon-phone"></use></svg>
+							<svg class="icon icon-phone">
+								<use xlink:href="images/symbol-defs.svg#icon-phone"></use>
+							</svg>
 							<a href="tel:+380952030777">+38 (095) 20-30-777</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 							<a href="mailto:kozadereza.if@gmail.com">kozadereza.if@gmail.com</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#icon-location"></use></svg>
-							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових Стрільців, 54</a>
+							<svg class="icon icon-location">
+								<use xlink:href="images/symbol-defs.svg#icon-location"></use>
+							</svg>
+							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових
+								Стрільців, 54</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-hours"><use xlink:href="images/symbol-defs.svg#icon-hours"></use></svg>
+							<svg class="icon icon-hours">
+								<use xlink:href="images/symbol-defs.svg#icon-hours"></use>
+							</svg>
 							<span>Пн-Сб з 10:00 до 21:00</span>
 						</div>
 					</div>
@@ -697,7 +776,8 @@
 						<img src="images/dest/payment.svg" alt="Ми приймаємо">
 					</div>
 					<div class="madeby col-md">
-						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with  ❤️  by A Prostir</a>
+						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with ❤️ by A
+							Prostir</a>
 					</div>
 				</div><!-- /.row -->
 			</div><!-- /.footer-copyright -->
@@ -706,200 +786,29 @@
 
 	<!-- Shopping Cart-->
 	<div class="modal cart-widget fade" id="shopCart" tabindex="-1" aria-labelledby="shopCartLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-dialog ">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
-					<div class="modal-close btn-close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
+				<div class="widget woocommerce widget_shopping_cart">
+					<div class="widget_shopping_cart_content" style="opacity: 1;">
+						<div class="modal-header">
+							<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
+							<div class="modal-close btn-close" data-dismiss="modal">
+								<span aria-hidden="true"></span>
+								<span aria-hidden="true"></span>
+							</div>
+						</div><!-- /.modal-header -->
+						<div class="modal-body">
+							<div class="woocommerce-mini-cart__empty">
+								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag">
+									<use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use>
+								</svg>
+								<p class="woocommerce-mini-cart__empty-message">Немає товарів у кошику.</p>
+							</div>
+						</div><!-- /.modal-body -->
+						<div class="modal-footer">
+							<button class="cart-btn-empty btn btn-orange" data-dismiss="modal">Повернутися до магазину</button>
+						</div><!-- /.modal-footer -->
 					</div>
-				</div>
-				<div class="modal-body">
-					<ul class="cart-list">
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-3.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Помідори рожевий гігант за 10 кільограм</span>
-									<div class="price">
-										<span class="amount">42,30<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="2" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-4.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Цибуля зелена (10 шт.)</span>
-									<div class="price">
-										<span class="amount">7,82<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 уп.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-2.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Біле куряче яйце</span>
-									<div class="price">
-										<span class="amount">12,05<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 10 шт.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-1.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Курятина для прожарки</span>
-									<div class="price">
-										<span class="amount">49,90<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-					</ul>
-				</div>
-				<div class="modal-footer">
-					<div class="cart-total">
-						<div class="cart-min-order">
-							<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
-							<span>Сума мінімального замовлення <b>450,00 ₴</b></span>
-						</div>
-						<div class="cart-subtotal">
-							<span class="title">Загальна сума</span>
-							<span class="amount">421,20<span class="currencySymbol"> ₴</span></span>
-						</div>
-						<a href="page-cart.html" class="cart-btn-checkout btn btn-green">Оформити замовлення</a>
-					</div>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-
-	<!-- Review Modal-->
-	<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="reviewModalLabel">Залишити відгук</h5>
-					<div class="modal-close btn-close btn-close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</div>
-				</div>
-				<div class="modal-body">
-					<span class="modal-descr">Кілька слів або пропозицій про команду Koza-Дереza. Що сподобалося, що не сподобалося, і до чого нам прагнути.</span>
-					<form action="" method="POST" class="form">
-						<div class="form-group">
-							<label class="form-label">Оцініть компанію <sup>*</sup></label>
-							<div class="star-rating">
-								<fieldset>
-										<input id="ytReview_rating" type="hidden" value="" name="Review[rating]">
-										<input id="Review_rating_0" value="5" type="radio" name="Review[rating]">
-										<label for="Review_rating_0"></label>
-										<input id="Review_rating_1" value="4" type="radio" name="Review[rating]">
-										<label for="Review_rating_1"></label>
-										<input id="Review_rating_2" value="3" type="radio" name="Review[rating]">
-										<label for="Review_rating_2"></label>
-										<input id="Review_rating_3" value="2" type="radio" name="Review[rating]">
-										<label for="Review_rating_3"></label>
-										<input id="Review_rating_4" value="1" type="radio" name="Review[rating]">
-										<label for="Review_rating_4"></label>
-								</fieldset>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="form-label" for="review-name">Ваше ім'я <sup>*</sup></label>
-							<input type="text" id="review-name" class="form-control" value="Євген Самойлов" readonly>
-						</div>
-						<div class="form-group">
-							<label class="form-label" for="review-message">Текст відгуку <sup>*</sup></label>
-							<textarea id="review-message" class="form-textarea" rows="6" required></textarea>
-						</div>
-						<button type="submit" class="form-submit btn btn-green">Надіслати</button>
-					</form>
-					<!-- <div class="modal-alert">
-						<svg class="icon icon-quote"><use xlink:href="images/symbol-defs.svg#icon-quote"></use></svg>
-						<h5 class="title w-regular">Залишити відгук можуть тільки зареєстровані користувачі.</h5>
-					</div> -->
 				</div>
 			</div>
 			<!-- /.modal-content -->
@@ -908,7 +817,8 @@
 	</div>
 
 	<!-- Authorization Modal-->
-	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1"
+		aria-labelledby="userProfileModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -942,13 +852,17 @@
 						<ul class="auth-socials-list">
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--facebook">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 									<span>Facebook</span>
 								</a>
 							</li>
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--google">
-									<svg class="icon icon-google"><use xlink:href="images/symbol-defs.svg#icon-google"></use></svg>
+									<svg class="icon icon-google">
+										<use xlink:href="images/symbol-defs.svg#icon-google"></use>
+									</svg>
 									<span>Google</span>
 								</a>
 							</li>
@@ -1007,9 +921,12 @@
 				<div class="m-menu-search">
 					<div class="container">
 						<form action="" method="POST" class="form form-search">
-							<input type="text" id="m-menu-search" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
+							<input type="text" id="m-menu-search" class="form-control"
+								placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 							<button class="btn btn-search">
-								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								<svg class="icon icon-search">
+									<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+								</svg>
 							</button>
 						</form>
 					</div>
@@ -1019,15 +936,21 @@
 						<ul class="nav-list">
 							<li class="nav-item">
 								<a href="#">Список бажаного</a>
-								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+								<svg class="icon icon-wishlist">
+									<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+								</svg>
 							</li>
 							<li class="nav-item">
 								<a href="#">Каталог товарів</a>
-								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+								<svg class="icon icon-catalog">
+									<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+								</svg>
 							</li>
 							<li class="nav-item nav-item--login">
 								<div class="user-login">
-									<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+									<svg class="icon icon-user">
+										<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+									</svg>
 									<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 									<span class="dot">&bull;</span>
 									<a href="#" class="link">Реєстрація</a>
@@ -1062,7 +985,9 @@
 						<div class="callback">
 							<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 								<span>Зворотній зв’язок</span>
-								<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+								<svg class="icon icon-email">
+									<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+								</svg>
 							</button>
 						</div>
 					</div>
@@ -1074,4 +999,5 @@
 	<script src="js/app.min.js"></script>
 
 </body>
+
 </html>

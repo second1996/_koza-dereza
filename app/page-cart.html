@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
 
 	<meta charset="utf-8">
-	<title>Відгуки &bull; Koza-Дереza</title>
+	<title>Сторінка &bull; Koza-Дереza</title>
 	<meta name="description" content="Доставка фермерських продуктів додому">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="images/favicon.png">
@@ -35,7 +36,9 @@
 					<div class="col-auto">
 						<div class="user">
 							<div class="user-login">
-								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+								<svg class="icon icon-user">
+									<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+								</svg>
 								<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 								<span class="dot">&bull;</span>
 								<a href="#" class="link">Реєстрація</a>
@@ -67,7 +70,9 @@
 							</div>
 							<div class="search-btn">
 								<button class="search-btn-trigger">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</div>
 						</div>
@@ -75,7 +80,9 @@
 							<form action="" method="POST" class="form form-search">
 								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 								<button class="btn btn-search">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</form>
 						</div>
@@ -86,7 +93,9 @@
 								<a href="#" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">3</span>
-										<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+										<svg class="icon icon-wishlist">
+											<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+										</svg>
 									</figure>
 								</a>
 							</div>
@@ -94,7 +103,9 @@
 								<a href="#shopCart" data-toggle="modal" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">5</span>
-										<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+										<svg class="icon icon-shopping-cart">
+											<use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use>
+										</svg>
 									</figure>
 									<span class="total">543 <span class="total-symbol">₴</span></span>
 								</a>
@@ -113,7 +124,9 @@
 				<div class="row align-items-center">
 					<div class="col-auto">
 						<a href="page-catalog.html" class="btn btn-catalog">
-							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							<svg class="icon icon-catalog">
+								<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+							</svg>
 							<span>Каталог продуктів</span>
 						</a>
 						<nav class="nav nav--catalog">
@@ -394,11 +407,11 @@
 
 		<div class="page-header">
 			<div class="container">
-				<h1 class="title">Відгуки</h1>
+				<h1 class="title">Кошик</h1>
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs-list">
 						<li><a href="index.html" class="home"></a></li>
-						<li><span>Відгуки</span></li>
+						<li><span>Кошик</span></li>
 					</ul>
 				</div>
 			</div>
@@ -407,193 +420,204 @@
 		<div class="page-content">
 			<div class="container">
 
-				<div class="alert alert--purple mb-40">
-					<div class="alert-content">
-						<h3 class="alert-title">Поділіться своїми враженнями про “Koza-Дереza” 👍</h3>
-						<p class="alert-text">Ми завжди цікавимося думкою наших клієнтів, відкриті до критики і негайно реагуємо на кожну проблему. Ось що кажуть люди, які хоча б раз купували нашу продукцію.<br> <strong>Ви також можете залишити свій відгук!</strong></p>
-					</div>
-					<div class="alert-button">
-						<button class="btn btn-green" data-toggle="modal" data-target="#reviewModal">Залишити відгук</button>
-					</div>
-				</div>
+				<div class="woocommerce">
+					<div class="woocommerce-notices-wrapper"></div>
+					<div class="woocommerce-cart-wrapper">
+
+						<form class="woocommerce-cart-form" action="http://koza-dereza/cart/" method="post">
+							<div class="woocommerce-cart-item">
+								<div class="woocommerce-cart-item-meta">
+									<div class="product-thumbnail">
+										<a href="page-product-single.html">
+											<img src="images/dest/products/product-3.jpg" alt="">
+										</a>
+									</div>
+									<div class="product-name">
+										<a href="page-product-single.html">Помідори рожевий гігант</a>
+										<div class="product-price">
+											<span class="woocommerce-Price-amount amount">
+												<bdi>39,50&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+											<span class="piece">за 1 кг.</span>
+										</div>
+									</div>
+								</div>
+								<div class="woocommerce-cart-item-actions">
+									<div class="product-quantity">
+										<div class="quantity">
+											<label class="screen-reader-text" for="quantity_5f6846b132c3b">Помідори рожевий гігант кількість</label>
+											<span class="minus"></span>
+											<input type="number" id="quantity_5f6846b132c3b" class="form-control form-control--number quantity-field input-text qty text" step="1" min="0" max="" name="cart[6ea9ab1baa0efb9e19094440c317e21b][qty]" value="2" title="К-ть" size="4" placeholder="" inputmode="numeric">
+											<span class="plus"></span>
+										</div>
+									</div>
+									<div class="product-subtotal">
+										<span class="woocommerce-Price-amount amount">
+											<bdi>179,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+										</span>
+									</div>
+									<div class="product-remove">
+										<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
+											<span></span>
+											<span></span>
+										</a>
+									</div>
+								</div>
+							</div><!-- /.woocommerce-cart-item -->
+							<div class="woocommerce-cart-item">
+								<div class="woocommerce-cart-item-meta">
+									<div class="product-thumbnail">
+										<a href="page-product-single.html">
+											<img src="images/dest/products/product-3.jpg" alt="">
+										</a>
+									</div>
+									<div class="product-name">
+										<a href="page-product-single.html">Помідори рожевий гігант</a>
+										<div class="product-price">
+											<span class="woocommerce-Price-amount amount">
+												<bdi>39,50&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+											<span class="piece">за 1 кг.</span>
+										</div>
+									</div>
+								</div>
+								<div class="woocommerce-cart-item-actions">
+									<div class="product-quantity">
+										<div class="quantity">
+											<label class="screen-reader-text" for="quantity_5f6846b132c3b">Помідори рожевий гігант кількість</label>
+											<span class="minus"></span>
+											<input type="number" id="quantity_5f6846b132c3b" class="form-control form-control--number quantity-field input-text qty text" step="1" min="0" max="" name="cart[6ea9ab1baa0efb9e19094440c317e21b][qty]" value="2" title="К-ть" size="4" placeholder="" inputmode="numeric">
+											<span class="plus"></span>
+										</div>
+									</div>
+									<div class="product-subtotal">
+										<span class="woocommerce-Price-amount amount">
+											<bdi>79,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+										</span>
+									</div>
+									<div class="product-remove">
+										<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
+											<span></span>
+											<span></span>
+										</a>
+									</div>
+								</div>
+							</div><!-- /.woocommerce-cart-item -->
+							<div class="woocommerce-cart-item">
+								<div class="woocommerce-cart-item-meta">
+									<div class="product-thumbnail">
+										<a href="page-product-single.html">
+											<img src="images/dest/products/product-3.jpg" alt="">
+										</a>
+									</div>
+									<div class="product-name">
+										<a href="page-product-single.html">Помідори рожевий гігант</a>
+										<div class="product-price">
+											<span class="woocommerce-Price-amount amount">
+												<bdi>39,50&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+											<span class="piece">за 1 кг.</span>
+										</div>
+									</div>
+								</div>
+								<div class="woocommerce-cart-item-actions">
+									<div class="product-quantity">
+										<div class="quantity">
+											<label class="screen-reader-text" for="quantity_5f6846b132c3b">Помідори рожевий гігант кількість</label>
+											<span class="minus"></span>
+											<input type="number" id="quantity_5f6846b132c3b" class="form-control form-control--number quantity-field input-text qty text" step="1" min="0" max="" name="cart[6ea9ab1baa0efb9e19094440c317e21b][qty]" value="2" title="К-ть" size="4" placeholder="" inputmode="numeric">
+											<span class="plus"></span>
+										</div>
+									</div>
+									<div class="product-subtotal">
+										<span class="woocommerce-Price-amount amount">
+											<bdi>179,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+										</span>
+									</div>
+									<div class="product-remove">
+										<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
+											<span></span>
+											<span></span>
+										</a>
+									</div>
+								</div>
+							</div><!-- /.woocommerce-cart-item -->
+							<div class="woocommerce-cart-item">
+								<div class="woocommerce-cart-item-meta">
+									<div class="product-thumbnail">
+										<a href="page-product-single.html">
+											<img src="images/dest/products/product-3.jpg" alt="">
+										</a>
+									</div>
+									<div class="product-name">
+										<a href="page-product-single.html">Помідори рожевий гігант</a>
+										<div class="product-price">
+											<span class="woocommerce-Price-amount amount">
+												<bdi>39,50&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+											<span class="piece">за 1 кг.</span>
+										</div>
+									</div>
+								</div>
+								<div class="woocommerce-cart-item-actions">
+									<div class="product-quantity">
+										<div class="quantity">
+											<label class="screen-reader-text" for="quantity_5f6846b132c3b">Помідори рожевий гігант кількість</label>
+											<span class="minus"></span>
+											<input type="number" id="quantity_5f6846b132c3b" class="form-control form-control--number quantity-field input-text qty text" step="1" min="0" max="" name="cart[6ea9ab1baa0efb9e19094440c317e21b][qty]" value="2" title="К-ть" size="4" placeholder="" inputmode="numeric">
+											<span class="plus"></span>
+										</div>
+									</div>
+									<div class="product-subtotal">
+										<span class="woocommerce-Price-amount amount">
+											<bdi>79,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+										</span>
+									</div>
+									<div class="product-remove">
+										<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
+											<span></span>
+											<span></span>
+										</a>
+									</div>
+								</div>
+							</div><!-- /.woocommerce-cart-item -->
+						</form><!-- /.woocommerce-cart-form -->
 	
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-1.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Оксана Дмитрів</span>
-									<span class="date">24 травня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>До речі, хто бачив Сторіс, я замовила продукти з ферми Коза-Дереза, знаходиться в Франківську. Доставка 4 рази в тиждень. Кому цікаво залишаю їх аккаунт @koza-dereza.com. Моїми фаворитами тепер стали домашня бурата і масло вершкове, звичайно зовсім не така, як продається в магазинах.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-2.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Світлана Волкова</span>
-									<span class="date">13 квітня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
+						<div class="woocommerce-cart-info">
+							<div class="cart-totals">
+								<div class="cart-totals-info">
+									<div class="cart-subtotal">
+										<div class="cart-totals-head">
+											<span class="title">Продукти:</span>
+											<span class="woocommerce-Price-amount amount">
+												<bdi>260,60&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+										</div>
+									</div>
+									<div class="cart-delivery">
+										<div class="cart-totals-head">
+											<span class="title">Доставка:</span>
+											<span class="woocommerce-Price-amount amount">
+												<bdi>50&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+										</div>
+										<span class="descr">Вартість доставки розраховується при оформленні замовлення.</span>
+									</div>
+									<div class="cart-total">
+										<div class="cart-order-total">
+											<span class="title">Загалом</span>
+											<span class="woocommerce-Price-amount amount">
+												<bdi>260,60&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi>
+											</span>
+										</div>
+										<a href="#" class="btn btn-green checkout-button">Оформити замовлення</a>
+									</div>
 								</div>
 							</div>
-							<div class="card-review-body">
-								<p>Замовляла перший раз. Дуже задоволена покупкою, приємний менеджер допомогла мені оформити замовлення на подарунок подрузі, товар приїхав в презентабельною коробці, фрукти дуже свіжі і красиві.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-3.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Євген Самойлов</span>
-									<span class="date">9 квітня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Дуже зручний сервіс, швидка доставка. Все дуже свіже і смачне) Більше не купую овочі та фрукти в супермаркеті. Особливо дуже радує зелень, завжди свіжа, ніби тільки зірвана. І здорово, що можна замовити упаковку без пластику, все буде расфасовно в паперові пакети.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-4.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Аліна Лойченко</span>
-									<span class="date">3 березня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Замовила продукти. Все свіже. А ось кавун ніколи не їла такий смачний, солодкий, великий. Рекомендую!!!</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-					<div class="col-lg-6">
-						<div class="card-review card-review-simple">
-							<div class="card-review-header">
-								<div class="photo">
-									<img src="images/dest/reviews/photo-5.jpg" alt="">
-								</div>
-								<div class="author">
-									<span class="name">Аліна Лойченко</span>
-									<span class="date">3 березня 2020</span>
-								</div>
-								<div class="rating">
-									<ul class="rating-list">
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star rating-star--checked">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-										<li class="rating-star">
-											<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#icon-star"></use></svg>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-review-body">
-								<p>Замовляла овочі та фрукти в перший раз, залишилася дуже задоволена і сервісом, і доставкою. Продукти теж вище всяких похвал, добірні і свіжі.</p>
-							</div>
-						</div>
-					</div><!-- /.col -->
-				</div>
+						</div><!-- /.woocommerce-cart-info -->
+
+					</div><!-- /.woocommerce-cart-wrapper -->
+				</div><!-- /.woocommerce -->
 
 			</div>
 		</div>
@@ -607,30 +631,40 @@
 				<div class="footer-brand">
 					<div class="about">
 						<a href="index.html">
-							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
+							<img class="about-logo" src="images/dest/logotype-light.svg"
+								alt="Koza-Дереza — Доставка продуктів по Україні">
 						</a>
-						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
+						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з
+							виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
 					</div>
 					<div class="social">
 						<ul class="social-list">
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-messenger"><use xlink:href="images/symbol-defs.svg#icon-messenger"></use></svg>
+									<svg class="icon icon-messenger">
+										<use xlink:href="images/symbol-defs.svg#icon-messenger"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#icon-instagram"></use></svg>
+									<svg class="icon icon-instagram">
+										<use xlink:href="images/symbol-defs.svg#icon-instagram"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://viber.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-viber"><use xlink:href="images/symbol-defs.svg#icon-viber"></use></svg>
+									<svg class="icon icon-viber">
+										<use xlink:href="images/symbol-defs.svg#icon-viber"></use>
+									</svg>
 								</a>
 							</li>
 						</ul>
@@ -665,24 +699,35 @@
 					<div class="callback">
 						<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 							<span>Зворотній зв’язок</span>
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 						</button>
 					</div>
 					<div class="contacts">
 						<div class="contacts-item">
-							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#icon-phone"></use></svg>
+							<svg class="icon icon-phone">
+								<use xlink:href="images/symbol-defs.svg#icon-phone"></use>
+							</svg>
 							<a href="tel:+380952030777">+38 (095) 20-30-777</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 							<a href="mailto:kozadereza.if@gmail.com">kozadereza.if@gmail.com</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#icon-location"></use></svg>
-							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових Стрільців, 54</a>
+							<svg class="icon icon-location">
+								<use xlink:href="images/symbol-defs.svg#icon-location"></use>
+							</svg>
+							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових
+								Стрільців, 54</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-hours"><use xlink:href="images/symbol-defs.svg#icon-hours"></use></svg>
+							<svg class="icon icon-hours">
+								<use xlink:href="images/symbol-defs.svg#icon-hours"></use>
+							</svg>
 							<span>Пн-Сб з 10:00 до 21:00</span>
 						</div>
 					</div>
@@ -697,7 +742,8 @@
 						<img src="images/dest/payment.svg" alt="Ми приймаємо">
 					</div>
 					<div class="madeby col-md">
-						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with  ❤️  by A Prostir</a>
+						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with ❤️ by A
+							Prostir</a>
 					</div>
 				</div><!-- /.row -->
 			</div><!-- /.footer-copyright -->
@@ -706,200 +752,29 @@
 
 	<!-- Shopping Cart-->
 	<div class="modal cart-widget fade" id="shopCart" tabindex="-1" aria-labelledby="shopCartLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-dialog ">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
-					<div class="modal-close btn-close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
+				<div class="widget woocommerce widget_shopping_cart">
+					<div class="widget_shopping_cart_content" style="opacity: 1;">
+						<div class="modal-header">
+							<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
+							<div class="modal-close btn-close" data-dismiss="modal">
+								<span aria-hidden="true"></span>
+								<span aria-hidden="true"></span>
+							</div>
+						</div><!-- /.modal-header -->
+						<div class="modal-body">
+							<div class="woocommerce-mini-cart__empty">
+								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag">
+									<use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use>
+								</svg>
+								<p class="woocommerce-mini-cart__empty-message">Немає товарів у кошику.</p>
+							</div>
+						</div><!-- /.modal-body -->
+						<div class="modal-footer">
+							<button class="cart-btn-empty btn btn-orange" data-dismiss="modal">Повернутися до магазину</button>
+						</div><!-- /.modal-footer -->
 					</div>
-				</div>
-				<div class="modal-body">
-					<ul class="cart-list">
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-3.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Помідори рожевий гігант за 10 кільограм</span>
-									<div class="price">
-										<span class="amount">42,30<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="2" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-4.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Цибуля зелена (10 шт.)</span>
-									<div class="price">
-										<span class="amount">7,82<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 уп.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-2.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Біле куряче яйце</span>
-									<div class="price">
-										<span class="amount">12,05<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 10 шт.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-						<li class="cart-item">
-							<div class="cart-photo">
-								<a href="page-single-product.html" class="cart-photo-link">
-									<img src="images/dest/products/product-1.jpg" alt="">
-								</a>
-							</div>
-							<div class="cart-body">
-								<div class="cart-info">
-									<span class="product-title">Курятина для прожарки</span>
-									<div class="price">
-										<span class="amount">49,90<span class="currencySymbol"> ₴</span></span>
-										<span class="price-count">за 1 кг.</span>
-									</div>
-								</div>
-								<div class="cart-quantity">
-									<div class="quantity">
-										<span class="minus"></span>
-										<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="1" title="Кількість">
-										<span class="plus"></span>
-									</div>
-								</div>
-							</div>
-							<div class="cart-remove">
-								<a href="#" class="btn-close remove_from_cart_button" aria-label="Видалити з корзини">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</li><!-- /.cart-item -->
-					</ul>
-				</div>
-				<div class="modal-footer">
-					<div class="cart-total">
-						<div class="cart-min-order">
-							<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
-							<span>Сума мінімального замовлення <b>450,00 ₴</b></span>
-						</div>
-						<div class="cart-subtotal">
-							<span class="title">Загальна сума</span>
-							<span class="amount">421,20<span class="currencySymbol"> ₴</span></span>
-						</div>
-						<a href="page-cart.html" class="cart-btn-checkout btn btn-green">Оформити замовлення</a>
-					</div>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-
-	<!-- Review Modal-->
-	<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="reviewModalLabel">Залишити відгук</h5>
-					<div class="modal-close btn-close btn-close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</div>
-				</div>
-				<div class="modal-body">
-					<span class="modal-descr">Кілька слів або пропозицій про команду Koza-Дереza. Що сподобалося, що не сподобалося, і до чого нам прагнути.</span>
-					<form action="" method="POST" class="form">
-						<div class="form-group">
-							<label class="form-label">Оцініть компанію <sup>*</sup></label>
-							<div class="star-rating">
-								<fieldset>
-										<input id="ytReview_rating" type="hidden" value="" name="Review[rating]">
-										<input id="Review_rating_0" value="5" type="radio" name="Review[rating]">
-										<label for="Review_rating_0"></label>
-										<input id="Review_rating_1" value="4" type="radio" name="Review[rating]">
-										<label for="Review_rating_1"></label>
-										<input id="Review_rating_2" value="3" type="radio" name="Review[rating]">
-										<label for="Review_rating_2"></label>
-										<input id="Review_rating_3" value="2" type="radio" name="Review[rating]">
-										<label for="Review_rating_3"></label>
-										<input id="Review_rating_4" value="1" type="radio" name="Review[rating]">
-										<label for="Review_rating_4"></label>
-								</fieldset>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="form-label" for="review-name">Ваше ім'я <sup>*</sup></label>
-							<input type="text" id="review-name" class="form-control" value="Євген Самойлов" readonly>
-						</div>
-						<div class="form-group">
-							<label class="form-label" for="review-message">Текст відгуку <sup>*</sup></label>
-							<textarea id="review-message" class="form-textarea" rows="6" required></textarea>
-						</div>
-						<button type="submit" class="form-submit btn btn-green">Надіслати</button>
-					</form>
-					<!-- <div class="modal-alert">
-						<svg class="icon icon-quote"><use xlink:href="images/symbol-defs.svg#icon-quote"></use></svg>
-						<h5 class="title w-regular">Залишити відгук можуть тільки зареєстровані користувачі.</h5>
-					</div> -->
 				</div>
 			</div>
 			<!-- /.modal-content -->
@@ -908,7 +783,8 @@
 	</div>
 
 	<!-- Authorization Modal-->
-	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1"
+		aria-labelledby="userProfileModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -942,13 +818,17 @@
 						<ul class="auth-socials-list">
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--facebook">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 									<span>Facebook</span>
 								</a>
 							</li>
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--google">
-									<svg class="icon icon-google"><use xlink:href="images/symbol-defs.svg#icon-google"></use></svg>
+									<svg class="icon icon-google">
+										<use xlink:href="images/symbol-defs.svg#icon-google"></use>
+									</svg>
 									<span>Google</span>
 								</a>
 							</li>
@@ -1007,9 +887,12 @@
 				<div class="m-menu-search">
 					<div class="container">
 						<form action="" method="POST" class="form form-search">
-							<input type="text" id="m-menu-search" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
+							<input type="text" id="m-menu-search" class="form-control"
+								placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 							<button class="btn btn-search">
-								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								<svg class="icon icon-search">
+									<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+								</svg>
 							</button>
 						</form>
 					</div>
@@ -1019,15 +902,21 @@
 						<ul class="nav-list">
 							<li class="nav-item">
 								<a href="#">Список бажаного</a>
-								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+								<svg class="icon icon-wishlist">
+									<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+								</svg>
 							</li>
 							<li class="nav-item">
 								<a href="#">Каталог товарів</a>
-								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+								<svg class="icon icon-catalog">
+									<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+								</svg>
 							</li>
 							<li class="nav-item nav-item--login">
 								<div class="user-login">
-									<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+									<svg class="icon icon-user">
+										<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+									</svg>
 									<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 									<span class="dot">&bull;</span>
 									<a href="#" class="link">Реєстрація</a>
@@ -1062,7 +951,9 @@
 						<div class="callback">
 							<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 								<span>Зворотній зв’язок</span>
-								<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+								<svg class="icon icon-email">
+									<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+								</svg>
 							</button>
 						</div>
 					</div>
@@ -1074,4 +965,5 @@
 	<script src="js/app.min.js"></script>
 
 </body>
+
 </html>
