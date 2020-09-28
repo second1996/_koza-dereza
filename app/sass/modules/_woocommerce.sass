@@ -1,6 +1,7 @@
 @import '../helpers/helpers'
 
-.post-edit-link
+.post-edit-link,
+.comment-edit-link
 	display: inline-block
 	padding: 4px 8px
 	border-radius: 4px
@@ -58,13 +59,16 @@
 	color: #1c4b54
 	line-height: 1.45
 	.button
+		display: inline-flex
+		align-items: center
 		margin-right: 10px
-		padding: 5px 10px
+		padding: 8px 10px
 		border-radius: 4px
-		background-color: darken(#ecfcff, 5%)
+		background-color: darken(#ecfcff, 10%)
 		color: #1c4b54
+		line-height: 1
 		&:hover
-			background-color: darken(#ecfcff, 10%)
+			background-color: darken(#ecfcff, 20%)
 
 
 /* ==========================================================================
@@ -89,12 +93,12 @@
 				font-weight: 500
 			.button
 				margin-right: 10px
-				padding: 5px 10px
+				padding: 8px 10px
 				border-radius: 4px
-				background-color: darken(#fff3f3, 5%)
+				background-color: darken(#fff3f3, 10%)
 				color: #602727
 				&:hover
-					background-color: darken(#fff3f3, 10%)
+					background-color: darken(#fff3f3, 20%)
 	.woocommerce-message
 		display: block
 		padding: 12px 24px
@@ -110,12 +114,12 @@
 			font-weight: 500
 		.button
 			margin-right: 10px
-			padding: 5px 10px
+			padding: 8px 10px
 			border-radius: 4px
-			background-color: darken(#eff7ff, 5%)
+			background-color: darken(#eff7ff, 10%)
 			color: #26425f
 			&:hover
-				background-color: darken(#eff7ff, 10%)
+				background-color: darken(#eff7ff, 20%)
 	.woocommerce-info
 		display: block
 		margin-bottom: 30px
@@ -134,21 +138,45 @@
 .woocommerce-cart
 	&-wrapper
 		display: flex
+		padding: 30px
+		border-radius: 10px
+		background-color: $c-f9
 	&-form
 		flex: 1 1 auto
 		margin-right: 30px
 		button[name="update_cart"],
 		input[name="update_cart"]
 			display: none
+		.coupon
+			display: inline-flex
+			align-items: center
+			margin-top: 30px
+			padding: 10px
+			border-radius: 48px
+			background-color: $white
+			label
+				display: none
+			.form-control
+				height: 48px
+				margin-bottom: 0
+				border-radius: 48px 0 0 48px
+				background-color: $white
+				line-height: 48px
+				&:focus
+					box-shadow: none
+			.btn
+				height: 48px
+				line-height: 48px
 	&-item
 		position: relative
-		display: flex
-		align-items: center
-		padding: 0 15px
-		border-radius: 6px
-		border-bottom: 1px solid $border
+		padding: 10px 60px 10px 15px
+		// border-bottom: 1px solid $border
 		background-color: $white
 		transition: $trs-3s
+		&:first-child
+			border-radius: 6px 6px 0 0
+		&:last-child
+			border-radius: 0 0 6px 6px
 		&:hover
 			z-index: 1
 			// box-shadow: 0 0 0 3px rgba($black, 0.05)
@@ -157,15 +185,9 @@
 					color: $green-accent
 			.product-remove
 				opacity: 1
-		&-meta,
-		&-actions
+		&-meta
 			display: flex
 			align-items: center
-		&-meta
-			width: 66%
-		&-actions
-			width: 34%
-			margin-left: auto
 		.product-thumbnail
 			margin-right: 30px
 			a
@@ -179,45 +201,61 @@
 		.product-name
 			a
 				color: $black
+				font-size: 18px
 				&:hover
 					color: $orange
+		.product-seller
+			display: block
+			margin-top: 4px
+			font-size: 14px
+			font-weight: 200
 		.product-price
 			.amount
-				color: $textcolor
+				display: block
+				color: $black
 				font-size: 18px
-				font-weight: 400
+				font-weight: 500
 			.piece
-				margin-left: 6px
+				display: block
+				font-size: 15px
 				font-weight: 200
+				line-height: 1
 		.product-quantity
-			margin-left: 30px
-			.quantity
-				background-color: $white
 		.product-subtotal
-			margin-left: auto
+			padding-left: 40px
 			.amount
-				color: $orange
-				font-family: $neucha
-				font-size: 26px
-				font-weight: 400
+				display: block
+				color: $black
+				font-size: 18px
+				font-weight: 500
 				transition: color .35s
 				+media-breakpoint-down(lg)
 					font-size: 20px
-				.woocommerce-Price-currencySymbol
-					font-weight: 400
+				&-descr
+					display: block
+					color: $textcolor
+					font-size: 15px
+					font-weight: 200
+					line-height: 1
 		.product-remove
+			position: absolute
+			top: 50%
+			right: 20px
 			margin-left: 30px
 			opacity: 0
+			transform: translateY(-50%)
 			transition: $trs-3s
 	// Cart Info (Cart totals)
 	&-info
 		overflow: hidden
-		position: relative
+		position: sticky
+		top: 0
 		z-index: 1
 		flex: 0 0 350px
+		height: 100%
 		padding: 50px 30px
 		border-radius: 10px
-		background-color: #f8ffef
+		background-color: #EDF8EC
 		&::before
 			content: ''
 			position: absolute
@@ -226,10 +264,9 @@
 			right: 0
 			bottom: 0
 			z-index: -1
-			background: url('../../images/dest/bg-item-2.png') no-repeat right bottom
+			background: url('../../images/dest/bg-item-1.png') no-repeat right bottom
 			opacity: 0.5
 		.cart-totals
-			height: 100%
 			&-title
 				margin-bottom: 20px
 				font-size: 30px
@@ -242,11 +279,10 @@
 			&-info
 				display: flex
 				flex-direction: column
-				height: 100%
 				.title
-					color: #1c4b54
+					color: #1c542b
 				.amount
-					color: #1c4b54
+					color: #1c542b
 					font-weight: 500
 				.descr
 					display: block
@@ -258,8 +294,16 @@
 					margin-bottom: 20px
 				.cart-delivery
 					margin-bottom: 20px
+					.descr
+						.amount
+							color: $textcolor
+							font-weight: 200
+				.cart-coupon
+					&-label
+					&-content
 				.cart-total
-					margin-top: auto
+					// margin-top: auto
+					margin-top: 60px
 					.cart-order-total
 						display: flex
 						align-items: center
