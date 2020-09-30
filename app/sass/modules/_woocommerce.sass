@@ -14,10 +14,12 @@
 		color: $white
 
 .blockOverlay
+	overflow: hidden
 	z-index: 340 !important
+	border-radius: 10px
 	background-image: none !important
 	background-color: none !important
-	opacity: 0.85 !important
+	opacity: 0.8 !important
 	// animation: kd-FadeInLoader .6s ease forwards
 	&::before
 		content: '' !important
@@ -57,6 +59,7 @@
 	border-radius: 10px
 	background-color: #ecfcff
 	color: #1c4b54
+	font-weight: 400
 	line-height: 1.45
 	.button
 		display: inline-flex
@@ -69,6 +72,14 @@
 		line-height: 1
 		&:hover
 			background-color: darken(#ecfcff, 20%)
+	+media-breakpoint-down(xs)
+		font-size: 14px
+		text-align: center
+		.button
+			display: block
+			margin-right: 0
+			margin-bottom: 10px
+			text-align: center
 
 
 /* ==========================================================================
@@ -87,6 +98,7 @@
 			line-height: 1.45
 			+media-breakpoint-down(xs)
 				border-radius: 0
+				font-size: 14px
 			&:not(:last-child)
 				margin-bottom: 10px
 			b, strong
@@ -99,6 +111,11 @@
 				color: #602727
 				&:hover
 					background-color: darken(#fff3f3, 20%)
+				+media-breakpoint-down(xs)
+					display: block
+					margin-right: 0
+					margin-bottom: 10px
+					text-align: center
 	.woocommerce-message
 		display: block
 		padding: 12px 24px
@@ -106,8 +123,6 @@
 		background-color: #eff7ff
 		color: #26425f
 		line-height: 1.45
-		+media-breakpoint-down(xs)
-			border-radius: 0
 		&:not(:last-child)
 			margin-bottom: 10px
 		b, strong
@@ -120,6 +135,14 @@
 			color: #26425f
 			&:hover
 				background-color: darken(#eff7ff, 20%)
+		+media-breakpoint-down(xs)
+			font-size: 14px
+			text-align: center
+			.button
+				display: block
+				margin-right: 0
+				margin-bottom: 10px
+				text-align: center
 	.woocommerce-info
 		display: block
 		margin-bottom: 30px
@@ -141,12 +164,21 @@
 		padding: 30px
 		border-radius: 10px
 		background-color: $c-f9
+		+media-breakpoint-down(lg)
+			flex-wrap: wrap
+		+media-breakpoint-down(sm)
+			padding: 20px
+		+media-breakpoint-down(xs)
+			padding: 0
+			background-color: $trsp
 	&-form
 		flex: 1 1 auto
 		margin-right: 30px
 		button[name="update_cart"],
 		input[name="update_cart"]
 			display: none
+		+media-breakpoint-down(lg)
+			margin-right: 0
 		.coupon
 			display: inline-flex
 			align-items: center
@@ -154,6 +186,16 @@
 			padding: 10px
 			border-radius: 48px
 			background-color: $white
+			+media-breakpoint-down(sm)
+				width: 100%
+				margin-top: 15px
+				box-shadow: 0 0 0 2px rgba($black, 0.015)
+			+media-breakpoint-down(xs)
+				box-shadow: 0 0 0 2px rgba($black, 0.045)
+			+media-breakpoint-down(xxs)
+				flex-direction: column
+				border-radius: 6px
+				padding-bottom: 15px
 			label
 				display: none
 			.form-control
@@ -164,6 +206,14 @@
 				line-height: 48px
 				&:focus
 					box-shadow: none
+				+media-breakpoint-down(xs)
+					padding-left: 20px
+					padding-right: 20px
+				+media-breakpoint-down(xxs)
+					margin-bottom: 10px
+					height: 40px
+					line-height: 40px
+					text-align: center
 			.btn
 				height: 48px
 				line-height: 48px
@@ -185,9 +235,28 @@
 					color: $green-accent
 			.product-remove
 				opacity: 1
+		+media-breakpoint-down(md)
+			padding-right: 85px
+		+media-breakpoint-down(sm)
+			padding-right: 45px
+			padding-bottom: 20px
+			border-radius: 6px
+			box-shadow: 0 0 0 2px rgba($black, 0.015)
+			&:first-child
+				border-radius: 6px
+			&:last-child
+				border-radius: 6px
+			&:not(:last-child)
+				margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			box-shadow: 0 0 0 2px rgba($black, 0.045)
+			padding-right: 15px
 		&-meta
 			display: flex
 			align-items: center
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				align-items: flex-start
 		.product-thumbnail
 			margin-right: 30px
 			a
@@ -198,10 +267,23 @@
 				width: 100%
 				height: 100%
 				object-fit: scale-down
+			+media-breakpoint-down(xl)
+				margin-right: 15px
+				a
+					width: 70px
+					height: 70px
+			+media-breakpoint-down(sm)
+				a
+					width: 50px
+					height: 50px
 		.product-name
 			a
+				display: inline-block
 				color: $black
 				font-size: 18px
+				line-height: 1.2
+				+media-breakpoint-down(xl)
+					font-size: 15px
 				&:hover
 					color: $orange
 		.product-seller
@@ -209,34 +291,57 @@
 			margin-top: 4px
 			font-size: 14px
 			font-weight: 200
+			line-height: 1.3
+			+media-breakpoint-down(xl)
+				margin-top: 0
+				font-size: 13px
+		&-details
+			+media-breakpoint-down(sm)
+				margin-top: 10px
+				padding-left: 75px
+			+media-breakpoint-down(xs)
+				padding-left: 10px
 		.product-price
 			.amount
 				display: block
 				color: $black
 				font-size: 18px
 				font-weight: 500
+				+media-breakpoint-down(xl)
+					font-size: 16px
 			.piece
 				display: block
 				font-size: 15px
 				font-weight: 200
 				line-height: 1
+				+media-breakpoint-down(xl)
+						font-size: 14px
 		.product-quantity
+			+media-breakpoint-down(xxs)
+				margin-top: 20px
+				.quantity
+					width: 100%
 		.product-subtotal
 			padding-left: 40px
+			+media-breakpoint-down(sm)
+				padding-left: 0
+				text-align: right
 			.amount
 				display: block
 				color: $black
 				font-size: 18px
 				font-weight: 500
 				transition: color .35s
-				+media-breakpoint-down(lg)
-					font-size: 20px
+				+media-breakpoint-down(xl)
+					font-size: 16px
 				&-descr
 					display: block
 					color: $textcolor
 					font-size: 15px
 					font-weight: 200
 					line-height: 1
+					+media-breakpoint-down(xl)
+						font-size: 14px
 		.product-remove
 			position: absolute
 			top: 50%
@@ -245,17 +350,30 @@
 			opacity: 0
 			transform: translateY(-50%)
 			transition: $trs-3s
+			+media-breakpoint-down(xl)
+				right: 12px
+			+media-breakpoint-down(sm)
+				top: 15px
+				transform: none
+				opacity: 1
 	// Cart Info (Cart totals)
 	&-info
+		flex: 0 0 350px
 		overflow: hidden
 		position: sticky
 		top: 0
 		z-index: 1
-		flex: 0 0 350px
 		height: 100%
 		padding: 50px 30px
 		border-radius: 10px
 		background-color: #EDF8EC
+		+media-breakpoint-down(xl)
+			flex: 0 0 300px
+		+media-breakpoint-down(lg)
+			flex: 1 1 100%
+			margin-top: 30px
+		+media-breakpoint-down(xs)
+			padding: 20px
 		&::before
 			content: ''
 			position: absolute
@@ -298,9 +416,27 @@
 						.amount
 							color: $textcolor
 							font-weight: 200
-				.cart-coupon
+				.cart-discount
+					display: flex
+					justify-content: space-between
 					&-label
+						flex: 1 1 auto
+						margin-right: 15px
 					&-content
+						flex: 1 1 auto
+						text-align: right
+						.woocommerce-remove-coupon
+							display: inline-block
+							margin-left: 6px
+							padding: 4px 6px
+							border-radius: 16px
+							background-color: #f95959
+							color: $white
+							font-size: 13px
+							font-weight: 500
+							line-height: 1
+							&:hover
+								background-color: darken(#f95959, 15%)
 				.cart-total
 					// margin-top: auto
 					margin-top: 60px
