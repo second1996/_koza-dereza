@@ -419,8 +419,25 @@
 
 		<div class="page-content">
 			<div class="container">
-
 				<div class="woocommerce">
+					<div class="woocommerce-notices-wrapper"></div>
+					<div class="woocommerce-form-coupon-toggle">
+						<div class="woocommerce-info">
+							Маєте промокод знижки? <a href="#" class="showcoupon">Натисніть тут, щоб ввести промокод знижки</a> </div>
+					</div>
+					<form class="checkout_coupon woocommerce-form-coupon" method="post">
+						<div class="coupon-wrapper">
+							<p>Якщо у вас є промокод, будь ласка, застосуйте його нижче.</p>
+							<div class="coupon">
+								<label for="coupon_code">Промокод:</label>
+								<input type="text" name="coupon_code" class="form-control input-text" id="coupon_code" value=""
+									placeholder="Код промокоду" autocomplete="off">
+								<button type="submit" class="btn btn-orange button" name="apply_coupon"
+									value="Застосувати промокод">Застосувати промокод</button>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</form>
 					<div class="woocommerce-notices-wrapper"></div>
 					<form name="checkout" method="post" class="checkout woocommerce-checkout form"
 						action="http://koza-dereza/checkout/" enctype="multipart/form-data" novalidate="novalidate">
@@ -430,93 +447,164 @@
 									<div class="woocommerce-billing-fields">
 										<h3 class="woocommerce-checkout-section-title">Оплата та доставка</h3>
 										<div class="woocommerce-billing-fields__field-wrapper">
-											<p class="form-row form-row-first validate-required" id="billing_first_name_field"
-												data-priority="10"><label for="billing_first_name" class="">Ім'я&nbsp;<abbr class="required"
-														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
-														type="text" class="form-control input-text " name="billing_first_name" id="billing_first_name"
-														placeholder="" value="" autocomplete="given-name"></span></p>
-											<p class="form-row form-row-last validate-required" id="billing_last_name_field"
-												data-priority="20"><label for="billing_last_name" class="">Прізвище&nbsp;<abbr class="required"
-														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
-														type="text" class="form-control input-text " name="billing_last_name" id="billing_last_name"
-														placeholder="" value="" autocomplete="family-name"></span></p>
-											<p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label
-													for="billing_company" class="">Назва компанії&nbsp;<span
-														class="optional">(необов'язково)</span></label><span
-													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
-														name="billing_company" id="billing_company" placeholder="" value=""
-														autocomplete="organization"></span></p>
-											<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
-												id="billing_country_field" data-priority="40"><label for="billing_country"
-													class="">Країна/Регіон&nbsp;<abbr class="required" title="обов'язкове">*</abbr></label><span
-													class="woocommerce-input-wrapper"><select name="billing_country" id="billing_country"
-														class="country_to_state country_select select2-hidden-accessible" autocomplete="country"
-														tabindex="-1" aria-hidden="true">
-														<option value="default">Select a country / region…</option>
-														<option value="AF">Афганістан</option>
-														<option value="MN">Монголія</option>
-														<option value="PN">Піткерн</option>
-														<option value="PL" selected="selected">Польща</option>
-														<option value="PT">Португалія</option>
-														<option value="LY">Лівія</option>
-														<option value="ID">Індонезія</option>
-														<option value="PM">Сен-П'єр і Мікелон</option>
-														<option value="AX">Åland Islands</option>
-													</select><span class="select2 select2-container select2-container--default" dir="ltr"
-														style="width: 100%;"><span class="selection"><span
-																class="select2-selection select2-selection--single" aria-haspopup="true"
-																aria-expanded="false" tabindex="0" aria-labelledby="select2-billing_country-container"
-																role="combobox"><span class="select2-selection__rendered"
-																	id="select2-billing_country-container" role="textbox" aria-readonly="true"
-																	title="Польща">Польща</span><span class="select2-selection__arrow"
-																	role="presentation"><b role="presentation"></b></span></span></span><span
-															class="dropdown-wrapper" aria-hidden="true"></span></span><noscript><button type="submit"
-															name="woocommerce_checkout_update_totals" value="Оновити Країну/Регіон">Оновити
-															Країну/Регіон</button></noscript></span></p>
-											<p class="form-row address-field validate-required form-row-wide" id="billing_address_1_field"
-												data-priority="50"><label for="billing_address_1" class="">Назва вулиці&nbsp;<abbr
+											<p class="form-row form-row-first form-group validate-required" id="billing_first_name_field"
+												data-priority="10"><label for="billing_first_name" class="form-label">Ім'я&nbsp;<abbr
 														class="required" title="обов'язкове">*</abbr></label><span
-													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
-														name="billing_address_1" id="billing_address_1" placeholder="Номер будинку на назва вулиці"
-														value="" autocomplete="address-line1"
-														data-placeholder="Номер будинку на назва вулиці"></span></p>
-											<p class="form-row address-field form-row-wide" id="billing_address_2_field" data-priority="60">
-												<label for="billing_address_2" class="screen-reader-text">Квартира, офіс, блок, тощо
-													(опціонально)&nbsp;<span class="optional">(необов'язково)</span></label><span
-													class="woocommerce-input-wrapper"><input type="text" class="form-control input-text "
-														name="billing_address_2" id="billing_address_2"
-														placeholder="Квартира, офіс, блок, тощо (опціонально)" value="" autocomplete="address-line2"
-														data-placeholder="Квартира, офіс, блок, тощо (опціонально)"></span></p>
-											<p class="form-row address-field validate-required validate-postcode form-row-wide"
-												id="billing_postcode_field" data-priority="65"
-												data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label
-													for="billing_postcode" class="">Поштовий код / ZIP&nbsp;<abbr class="required"
-														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
-														type="text" class="form-control input-text " name="billing_postcode" id="billing_postcode" placeholder=""
-														value="" autocomplete="postal-code"></span></p>
-											<p class="form-row address-field validate-required form-row-wide" id="billing_city_field"
-												data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label
-													for="billing_city" class="">Місто / Село&nbsp;<abbr class="required"
-														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
-														type="text" class="form-control input-text " name="billing_city" id="billing_city" placeholder=""
-														value="" autocomplete="address-level2"></span></p>
-											<p class="form-row address-field validate-state form-row-wide" id="billing_state_field"
-												style="display: none" data-o_class="form-row form-row-wide address-field validate-state"><label
-													for="billing_state" class="">Область / Округ&nbsp;<span
-														class="optional">(необов'язково)</span></label><span
-													class="woocommerce-input-wrapper"><input type="hidden" id="billing_state" name="billing_state"
-														placeholder="" data-input-classes="" class="hidden"></span></p>
-											<p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field"
-												data-priority="100"><label for="billing_phone" class="">Телефон&nbsp;<abbr class="required"
-														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
-														type="tel" class="form-control input-text " name="billing_phone" id="billing_phone" placeholder=""
-														value="" autocomplete="tel"></span></p>
-											<p class="form-row form-row-wide validate-required validate-email" id="billing_email_field"
-												data-priority="110"><label for="billing_email" class="">Адреса електронної пошти&nbsp;<abbr
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_first_name" id="billing_first_name" placeholder="" value="Koza"
+														autocomplete="given-name"></span></p>
+											<p class="form-row form-row-last form-group validate-required" id="billing_last_name_field"
+												data-priority="20"><label for="billing_last_name" class="form-label">Прізвище&nbsp;<abbr
 														class="required" title="обов'язкове">*</abbr></label><span
-													class="woocommerce-input-wrapper"><input type="email" class="form-control input-text " name="billing_email"
-														id="billing_email" placeholder="" value="vital10012@gmail.com"
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_last_name" id="billing_last_name" placeholder="" value="Дереza"
+														autocomplete="family-name"></span></p>
+											<p class="form-row form-row-first form-group validate-required validate-phone"
+												id="billing_phone_field" data-priority="30"><label for="billing_phone"
+													class="form-label">Телефон&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="tel" class="input-text form-control" name="billing_phone" id="billing_phone"
+														placeholder="+38 (XXX) XX-XX-XXX" value="+380979066449" autocomplete="tel"
+														pattern="^(8|+?d{1,3})?[ -]?(?(d{3}))?[ -]?(d{3})[ -]?(d{2})[ -]?(d{2})$"></span></p>
+											<p class="form-row form-row-last form-group validate-required validate-email"
+												id="billing_email_field" data-priority="40"><label for="billing_email" class="form-label">Адреса
+													електронної пошти&nbsp;<abbr class="required" title="обов'язкове">*</abbr></label><span
+													class="woocommerce-input-wrapper"><input type="email" class="input-text form-control"
+														name="billing_email" id="billing_email" placeholder="" value="vital10012@gmail.com"
 														autocomplete="email username"></span></p>
+											<p class="form-row form-group validate-required" id="billing_client_city_field"
+												data-priority="41"><label for="billing_client_city" class="form-label">Місто / Село&nbsp;<abbr
+														class="required" title="обов'язкове">*</abbr></label><span
+													class="woocommerce-input-wrapper"><select name="billing_client_city" id="billing_client_city"
+														class="select form-control select2-hidden-accessible" data-plugin="select2"
+														data-allow-clear="true" aria-hidden="true" data-placeholder="" tabindex="-1">
+														<option value="Івано-Франківськ" selected="selected">Івано-Франківськ</option>
+														<option value="Хриплин">Хриплин</option>
+														<option value="Угринів">Угринів</option>
+														<option value="Угорники">Угорники</option>
+														<option value="Черніїв">Черніїв</option>
+														<option value="Ямниця">Ямниця</option>
+													</select><span class="select2 select2-container select2-container--default" dir="ltr"
+														style="width: 870px;"><span class="selection"><span
+																class="select2-selection select2-selection--single" aria-haspopup="true"
+																aria-expanded="false" tabindex="0"
+																aria-labelledby="select2-billing_client_city-container" role="combobox"><span
+																	class="select2-selection__rendered" id="select2-billing_client_city-container"
+																	role="textbox" aria-readonly="true" title="Івано-Франківськ"><span
+																		class="select2-selection__clear">×</span>Івано-Франківськ</span><span
+																	class="select2-selection__arrow" role="presentation"><b
+																		role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+															aria-hidden="true"></span></span></span></p>
+											<p class="form-row form-row-wide address-field form-group validate-required"
+												id="billing_address_1_field" data-priority="42" style="display: block;"><label
+													for="billing_address_1" class="form-label">Назва вулиці&nbsp;<abbr class="required"
+														title="обов'язкове">*</abbr></label><span class="woocommerce-input-wrapper"><input
+														type="text" class="input-text form-control" name="billing_address_1" id="billing_address_1"
+														placeholder="Назва вулиці та номер будинку" value="Січових стрільців, 13"
+														autocomplete="address-line1"></span></p>
+											<p class="form-row form-row-first form-group" id="billing_client_entrance_field"
+												data-priority="43"><label for="billing_client_entrance" class="form-label">Під'їзд&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_client_entrance" id="billing_client_entrance" placeholder="" value="1"></span>
+											</p>
+											<p class="form-row form-row-last form-group" id="billing_client_domofon_field" data-priority="44">
+												<label for="billing_client_domofon" class="form-label">Домофон&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_client_domofon" id="billing_client_domofon" placeholder="" value="3"></span>
+											</p>
+											<p class="form-row form-row-first form-group" id="billing_client_floor_field" data-priority="45">
+												<label for="billing_client_floor" class="form-label">Поверх&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_client_floor" id="billing_client_floor" placeholder="" value="4"></span></p>
+											<p class="form-row form-row-last form-group" id="billing_client_flat_field" data-priority="46">
+												<label for="billing_client_flat" class="form-label">Квартира&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><input type="text" class="input-text form-control"
+														name="billing_client_flat" id="billing_client_flat" placeholder="" value="13"></span></p>
+										</div>
+										<div id="wcus_np_billing_fields" class="wc-ukr-shipping-np-fields" style="display: none;">
+											<h3>Вкажіть адресу доставки Нової Пошти</h3>
+											<p class="form-row" id="wcus_np_billing_area_field">
+												<span class="woocommerce-input-wrapper">
+													<select name="wcus_np_billing_area" id="wcus_np_billing_area"
+														class="select wc-ukr-shipping-select j-wcus-select-2 select2-hidden-accessible"
+														data-mirror="wcus_np_shipping_area" tabindex="-1" aria-hidden="true">
+														<option value="" selected="">Оберіть область</option>
+														<option value="71508128-9b87-11de-822f-000c2965ae0e">АРК</option>
+														<option value="71508129-9b87-11de-822f-000c2965ae0e">Вінницька</option>
+														<option value="7150812a-9b87-11de-822f-000c2965ae0e">Волинська</option>
+														<option value="7150812b-9b87-11de-822f-000c2965ae0e">Дніпропетровська</option>
+														<option value="7150812c-9b87-11de-822f-000c2965ae0e">Донецька</option>
+														<option value="7150812d-9b87-11de-822f-000c2965ae0e">Житомирська</option>
+														<option value="7150812e-9b87-11de-822f-000c2965ae0e">Закарпатська</option>
+														<option value="7150812f-9b87-11de-822f-000c2965ae0e">Запорізька</option>
+														<option value="71508130-9b87-11de-822f-000c2965ae0e">Івано-Франківська</option>
+														<option value="71508131-9b87-11de-822f-000c2965ae0e">Київська</option>
+														<option value="71508132-9b87-11de-822f-000c2965ae0e">Кіровоградська</option>
+														<option value="71508133-9b87-11de-822f-000c2965ae0e">Луганська</option>
+														<option value="71508134-9b87-11de-822f-000c2965ae0e">Львівська</option>
+														<option value="71508135-9b87-11de-822f-000c2965ae0e">Миколаївська</option>
+														<option value="71508136-9b87-11de-822f-000c2965ae0e">Одеська</option>
+														<option value="71508137-9b87-11de-822f-000c2965ae0e">Полтавська</option>
+														<option value="71508138-9b87-11de-822f-000c2965ae0e">Рівненська</option>
+														<option value="71508139-9b87-11de-822f-000c2965ae0e">Сумська</option>
+														<option value="7150813a-9b87-11de-822f-000c2965ae0e">Тернопільська</option>
+														<option value="7150813b-9b87-11de-822f-000c2965ae0e">Харківська</option>
+														<option value="7150813c-9b87-11de-822f-000c2965ae0e">Херсонська</option>
+														<option value="7150813d-9b87-11de-822f-000c2965ae0e">Хмельницька</option>
+														<option value="7150813e-9b87-11de-822f-000c2965ae0e">Черкаська</option>
+														<option value="7150813f-9b87-11de-822f-000c2965ae0e">Чернівецька</option>
+														<option value="71508140-9b87-11de-822f-000c2965ae0e">Чернігівська</option>
+													</select><span class="select2 select2-container select2-container--default" dir="ltr"
+														style="width: auto;"><span class="selection"><span
+																class="select2-selection select2-selection--single" aria-haspopup="true"
+																aria-expanded="false" tabindex="0"
+																aria-labelledby="select2-wcus_np_billing_area-container" role="combobox"><span
+																	class="select2-selection__rendered" id="select2-wcus_np_billing_area-container"
+																	role="textbox" aria-readonly="true" title="Оберіть область">Оберіть
+																	область</span><span class="select2-selection__arrow" role="presentation"><b
+																		role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+															aria-hidden="true"></span></span> </span>
+											</p>
+											<p class="form-row" id="wcus_np_billing_city_field">
+												<span class="woocommerce-input-wrapper">
+													<select name="wcus_np_billing_city" id="wcus_np_billing_city"
+														class="select wc-ukr-shipping-select j-wcus-select-2 select2-hidden-accessible"
+														data-mirror="wcus_np_shipping_city" tabindex="-1" aria-hidden="true">
+														<option value="" selected="">Населений пункт</option>
+													</select><span class="select2 select2-container select2-container--default" dir="ltr"
+														style="width: auto;"><span class="selection"><span
+																class="select2-selection select2-selection--single" aria-haspopup="true"
+																aria-expanded="false" tabindex="0"
+																aria-labelledby="select2-wcus_np_billing_city-container" role="combobox"><span
+																	class="select2-selection__rendered" id="select2-wcus_np_billing_city-container"
+																	role="textbox" aria-readonly="true" title="Населений пункт">Населений
+																	пункт</span><span class="select2-selection__arrow" role="presentation"><b
+																		role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+															aria-hidden="true"></span></span> </span>
+											</p>
+											<div class="j-wcus-warehouse-block">
+												<p class="form-row" id="wcus_np_billing_warehouse_field">
+													<span class="woocommerce-input-wrapper">
+														<select name="wcus_np_billing_warehouse" id="wcus_np_billing_warehouse"
+															class="select wc-ukr-shipping-select j-wcus-select-2 select2-hidden-accessible"
+															data-mirror="wcus_np_shipping_warehouse" tabindex="-1" aria-hidden="true">
+															<option value="" selected="">Оберіть відділення</option>
+														</select><span class="select2 select2-container select2-container--default" dir="ltr"
+															style="width: auto;"><span class="selection"><span
+																	class="select2-selection select2-selection--single" aria-haspopup="true"
+																	aria-expanded="false" tabindex="0"
+																	aria-labelledby="select2-wcus_np_billing_warehouse-container" role="combobox"><span
+																		class="select2-selection__rendered" id="select2-wcus_np_billing_warehouse-container"
+																		role="textbox" aria-readonly="true" title="Оберіть відділення">Оберіть
+																		відділення</span><span class="select2-selection__arrow" role="presentation"><b
+																			role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+																aria-hidden="true"></span></span> </span>
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -527,100 +615,98 @@
 										<h3 class="woocommerce-checkout-section-title">Додаткова інформація</h3>
 										<div class="woocommerce-additional-fields__field-wrapper">
 											<p class="form-row notes" id="order_comments_field" data-priority=""><label for="order_comments"
-													class="">Примітки до замовлень&nbsp;<span class="optional">(необов'язково)</span></label><span
-													class="woocommerce-input-wrapper"><textarea name="order_comments" class="form-textarea input-text "
-														id="order_comments"
+													class="form-label">Примітки до замовлень&nbsp;<span
+														class="optional">(необов'язково)</span></label><span
+													class="woocommerce-input-wrapper"><textarea name="order_comments"
+														class="input-text form-textarea" id="order_comments"
 														placeholder="Нотатки до вашого замовлення, наприклад спеціальні примітки для доставки."
 														rows="2" cols="5"></textarea></span></p>
 										</div>
 									</div>
 								</div>
 							</div>
-
 							<div id="order_review" class="woocommerce-checkout-review-order">
 								<h3 class="woocommerce-checkout-section-title" id="order_review_heading">Ваше замовлення</h3>
 								<table class="shop_table woocommerce-checkout-review-order-table">
-										<thead>
-											<tr>
-												<th class="product-name">Товар</th>
-												<th class="product-total">Проміжний підсумок</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="cart_item">
-												<td class="product-name">
-													Банан&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
-												<td class="product-total">
-													<span class="woocommerce-Price-amount amount"><bdi>224,99&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-											</tr>
-											<tr class="cart_item">
-												<td class="product-name">
-													Авокадо&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
-												<td class="product-total">
-													<span class="woocommerce-Price-amount amount"><bdi>26,05&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-											</tr>
-											<tr class="cart_item">
-												<td class="product-name">
-													Персик&nbsp; <strong class="product-quantity">×&nbsp;3</strong> </td>
-												<td class="product-total">
-													<span class="woocommerce-Price-amount amount"><bdi>48,00&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-											</tr>
-											<tr class="cart_item">
-												<td class="product-name">
-													Лимон&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
-												<td class="product-total">
-													<span class="woocommerce-Price-amount amount"><bdi>36,10&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-											</tr>
-											<tr class="cart_item">
-												<td class="product-name">
-													Виноград кишмиш пальчиками&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
-												<td class="product-total">
-													<span class="woocommerce-Price-amount amount"><bdi>90,00&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-											</tr>
-										</tbody>
-										<tfoot>
-
-											<tr class="cart-subtotal">
-												<th>Проміжний підсумок</th>
-												<td><span class="woocommerce-Price-amount amount"><bdi>425,14&nbsp;<span
-																class="woocommerce-Price-currencySymbol">₴</span></bdi></span></td>
-											</tr>
-
-
-
-
-											<tr class="woocommerce-shipping-totals shipping">
-												<th>Доставка</th>
-												<td data-title="Доставка">
-													Введіть свою адресу, щоб переглянути варіанти доставки.
-
-												</td>
-											</tr>
-
-
-
-
-
-
-											<tr class="order-total">
-												<th>Загалом</th>
-												<td><strong><span class="woocommerce-Price-amount amount"><bdi>425,14&nbsp;<span
-																	class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong> </td>
-											</tr>
-
-
-										</tfoot>
+									<thead>
+										<tr>
+											<th class="product-name">Товар</th>
+											<th class="product-total">Проміжний підсумок</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="cart_item">
+											<td class="product-name">
+												Цибуля зелена (10 шт.)&nbsp; <strong class="product-quantity">×&nbsp;8</strong> </td>
+											<td class="product-total">
+												<span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
+															class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="cart-subtotal">
+											<th>Проміжний підсумок</th>
+											<td><span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
+															class="woocommerce-Price-currencySymbol">₴</span></bdi></span></td>
+										</tr>
+										<tr class="cart-discount coupon-kozadereza15">
+											<th>Промокод: kozadereza15</th>
+											<td>-<span class="woocommerce-Price-amount amount">9,38&nbsp;<span
+														class="woocommerce-Price-currencySymbol">₴</span></span> <a
+													href="http://koza-dereza/checkout/?remove_coupon=kozadereza15"
+													class="woocommerce-remove-coupon" data-coupon="kozadereza15">Видалити</a></td>
+										</tr>
+										<tr class="woocommerce-shipping-totals shipping">
+											<th>Доставка</th>
+											<td data-title="Доставка">
+												<ul id="shipping_method" class="woocommerce-shipping-methods">
+													<li>
+														<input type="radio" name="shipping_method[0]" data-index="0"
+															id="shipping_method_0_flat_rate-2" value="flat_rate:2" class="shipping_method"
+															checked="checked"><label for="shipping_method_0_flat_rate-2">Приміська зона: <span
+																class="woocommerce-Price-amount amount"><bdi>40,00&nbsp;<span
+																		class="woocommerce-Price-currencySymbol">₴</span></bdi></span></label> </li>
+													<li>
+														<input type="radio" name="shipping_method[0]" data-index="0"
+															id="shipping_method_0_nova_poshta_shipping-4" value="nova_poshta_shipping:4"
+															class="shipping_method"><label for="shipping_method_0_nova_poshta_shipping-4"><span
+																id="wcus-shipping-cost">Доставка: <span
+																	class="woocommerce-Price-amount amount"><bdi>60,00&nbsp;<span
+																			class="woocommerce-Price-currencySymbol">₴</span></bdi></span></span></label><input
+															id="wcus-shipping-name" type="hidden" value="Доставка"> </li>
+												</ul>
+											</td>
+										</tr>
+										<tr class="order-total">
+											<th>Загалом</th>
+											<td><span id="wcus-order-total"><strong><span
+															class="woocommerce-Price-amount amount"><bdi>93,18&nbsp;<span
+																	class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong> </span></td>
+										</tr>
+									</tfoot>
 								</table>
-								<div id="payment" class="woocommerce-checkout-payment">
+								<div id="payment" class="woocommerce-checkout-payment" style="position: static; zoom: 1;">
 									<ul class="wc_payment_methods payment_methods methods">
-										<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">Вибачте, але здається, у
-											нас відсутні доступні способи оплати для Вашого місця розташування. Будь ласка, зв'яжіться з нами,
-											якщо Вам потрібна допомога або Ви хочете скористатись альтернативними способами оплати.</li>
+										<li class="wc_payment_method payment_method_bacs">
+											<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method"
+												value="bacs" checked="checked" data-order_button_text="">
+											<label for="payment_method_bacs">
+												Прямий банківський переказ </label>
+											<div class="payment_box payment_method_bacs">
+												<p>Проведіть платіж безпосередньо на наш банківський рахунок. Будь ласка, вкажіть номер Вашого
+													замовлення в описі переказу. Ваше замовлення не буде виконано, доки кошти не будуть зараховані
+													на наш рахунок.</p>
+											</div>
+										</li>
+										<li class="wc_payment_method payment_method_cod">
+											<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod"
+												data-order_button_text="">
+											<label for="payment_method_cod">
+												Готівка при отриманні </label>
+											<div class="payment_box payment_method_cod" style="display:none;">
+												<p>Оплата готівкою при отриманні.</p>
+											</div>
+										</li>
 									</ul>
 									<div class="form-row place-order">
 										<noscript>
@@ -629,7 +715,6 @@
 											більшу суму, ніж очікуєте, якщо не зробите цього. <br /><button type="submit" class="button alt"
 												name="woocommerce_checkout_update_totals" value="Оновити підсумки">Оновити підсумки</button>
 										</noscript>
-
 										<div class="woocommerce-terms-and-conditions-wrapper">
 											<div class="woocommerce-privacy-policy-text">
 												<p>Ваші особисті дані будуть використані для обробки вашого замовлення, підтримки вашого досвіду
@@ -637,22 +722,19 @@
 														class="woocommerce-privacy-policy-link" target="_blank">політика конфіденційності</a>.</p>
 											</div>
 										</div>
-
-
-										<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
-											value="Підтвердити замовлення" data-value="Підтвердити замовлення">Підтвердити замовлення</button>
+										<button type="submit" class="btn btn-green checkout-btn-complete button alt"
+											name="woocommerce_checkout_place_order" id="place_order" value="Підтвердити замовлення"
+											data-value="Підтвердити замовлення">Підтвердити замовлення</button>
 
 										<input type="hidden" id="woocommerce-process-checkout-nonce"
-											name="woocommerce-process-checkout-nonce" value="98aa6cdf51"><input type="hidden"
+											name="woocommerce-process-checkout-nonce" value="f894205ecd"><input type="hidden"
 											name="_wp_http_referer" value="/?wc-ajax=update_order_review">
 									</div>
 								</div>
 							</div>
-
 						</div><!-- /.woocommerce-checkout-wrapper -->
 					</form>
-				</div><!-- /.woocommerce -->
-
+				</div>
 			</div>
 		</div>
 

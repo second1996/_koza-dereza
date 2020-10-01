@@ -26,6 +26,46 @@ main.page
 			line-height: 1.2
 		+media-breakpoint-down(xxs)
 			font-size: 28px
+	.checkout-steps
+		&-list
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		&-item
+			position: relative
+			display: inline-flex
+			align-items: center
+			margin: 0 10px
+			font-family: $neucha
+			font-size: 32px
+			+media-breakpoint-down(lg)
+				font-size: 28px
+			+media-breakpoint-down(md)
+				font-size: 24px
+			+media-breakpoint-down(xs)
+				margin: 0
+				&:not(:first-child)
+					display: none
+			&:not(:last-child)
+				&::after
+					content: ''
+					position: relative
+					display: block
+					width: 16px
+					height: 16px
+					margin-left: 20px
+					background: url('../../images/dest/icons/arrow-right-gray.svg') no-repeat center/100%
+					+media-breakpoint-down(xs)
+						display: none
+			a, span
+				color: rgba($black, 0.85)
+			a:hover
+				color: $orange
+			&--active
+				a, span
+					color: $green-accent
+					+media-breakpoint-down(xs)
+						color: rgba($black, 0.85)
 
 .page-content
 	margin-top: 60px

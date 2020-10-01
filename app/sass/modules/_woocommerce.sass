@@ -52,15 +52,76 @@
 .pswp__caption__center
 	text-align: center
 
+
+/* ==========================================================================
+	 WooCommerce Notices
+	 ========================================================================== */
+.woocommerce-notices-wrapper,
+.woocommerce-NoticeGroup
+	margin-bottom: 30px
+.woocommerce-error
+	> li
+		display: block
+		margin-bottom: 15px
+		padding: 12px 24px
+		border-radius: 10px
+		background-color: #fff3f3
+		color: #602727
+		line-height: 1.45
+		+media-breakpoint-down(xs)
+			border-radius: 0
+			font-size: 14px
+		b, strong
+			font-weight: 500
+		.button
+			margin-right: 10px
+			padding: 8px 10px
+			border-radius: 4px
+			background-color: darken(#fff3f3, 10%)
+			color: #602727
+			&:hover
+				background-color: darken(#fff3f3, 20%)
+			+media-breakpoint-down(xs)
+				display: block
+				margin-right: 0
+				margin-bottom: 10px
+				text-align: center
+.woocommerce-message
+	display: block
+	margin-bottom: 15px
+	padding: 12px 24px
+	border-radius: 10px
+	background-color: #eff7ff
+	color: #26425f
+	line-height: 1.45
+	b, strong
+		font-weight: 500
+	.button
+		margin-right: 10px
+		padding: 8px 10px
+		border-radius: 4px
+		background-color: darken(#eff7ff, 10%)
+		color: #26425f
+		&:hover
+			background-color: darken(#eff7ff, 20%)
+	+media-breakpoint-down(xs)
+		font-size: 14px
+		text-align: center
+		.button
+			display: block
+			margin-right: 0
+			margin-bottom: 10px
+			text-align: center
 .woocommerce-info
 	display: block
-	margin-bottom: 30px
+	margin-bottom: 15px
 	padding: 16px 22px
 	border-radius: 10px
 	background-color: #ecfcff
 	color: #1c4b54
-	font-weight: 400
 	line-height: 1.45
+	b, strong
+		font-weight: 500
 	.button
 		display: inline-flex
 		align-items: center
@@ -80,79 +141,6 @@
 			margin-right: 0
 			margin-bottom: 10px
 			text-align: center
-
-
-/* ==========================================================================
-	 WooCommerce Notices
-	 ========================================================================== */
-.woocommerce-notices-wrapper,
-.woocommerce-NoticeGroup
-	margin-bottom: 30px
-	.woocommerce-error
-		> li
-			display: block
-			padding: 12px 24px
-			border-radius: 10px
-			background-color: #fff3f3
-			color: #602727
-			line-height: 1.45
-			+media-breakpoint-down(xs)
-				border-radius: 0
-				font-size: 14px
-			&:not(:last-child)
-				margin-bottom: 10px
-			b, strong
-				font-weight: 500
-			.button
-				margin-right: 10px
-				padding: 8px 10px
-				border-radius: 4px
-				background-color: darken(#fff3f3, 10%)
-				color: #602727
-				&:hover
-					background-color: darken(#fff3f3, 20%)
-				+media-breakpoint-down(xs)
-					display: block
-					margin-right: 0
-					margin-bottom: 10px
-					text-align: center
-	.woocommerce-message
-		display: block
-		padding: 12px 24px
-		border-radius: 10px
-		background-color: #eff7ff
-		color: #26425f
-		line-height: 1.45
-		&:not(:last-child)
-			margin-bottom: 10px
-		b, strong
-			font-weight: 500
-		.button
-			margin-right: 10px
-			padding: 8px 10px
-			border-radius: 4px
-			background-color: darken(#eff7ff, 10%)
-			color: #26425f
-			&:hover
-				background-color: darken(#eff7ff, 20%)
-		+media-breakpoint-down(xs)
-			font-size: 14px
-			text-align: center
-			.button
-				display: block
-				margin-right: 0
-				margin-bottom: 10px
-				text-align: center
-	.woocommerce-info
-		display: block
-		margin-bottom: 30px
-		padding: 16px 22px
-		border-radius: 10px
-		background-color: #ecfcff
-		color: #1c4b54
-		line-height: 1.45
-		b, strong
-			font-weight: 500
 
 
 /* ==========================================================================
@@ -366,7 +354,7 @@
 		height: 100%
 		padding: 50px 30px
 		border-radius: 10px
-		background-color: #EDF8EC
+		background-color: #edf8ec
 		+media-breakpoint-down(xl)
 			flex: 0 0 300px
 		+media-breakpoint-down(lg)
@@ -492,22 +480,38 @@
 				right: 16px !important
 				transform: translateY(-50%)
 		&-dropdown
-			padding: 16px
 			border: 1px solid $border
+			box-shadow: 0 5px 15px rgba(0,0,0,0.075)
 		&-search
-			padding: 0 !important
-			margin-bottom: 16px
+			padding: 16px
+			background-color: $c-f9
+			&--dropdown
+				position: relative
+				&::after
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 50%
+					right: 30px
+					width: 16px
+					height: 16px
+					margin-top: -8px
+					background: url('../../images/dest/icons/search.svg') no-repeat center/100%
+					opacity: 0.4
 			&__field
 				height: 40px
-				padding: 0 15px !important
+				padding: 0 42px 0 15px !important
 				border-radius: 6px
 				border: 1px solid $border !important
 				line-height: 40px
 		&-results
+			padding: 16px
 			&__option
 				padding: 8px 16px
 				border-radius: 6px
 				outline: none
+				&:not(:last-child)
+					margin-bottom: 4px
 				&[data-selected="true"]
 					background-color: $c-f7 !important
 					color: $black !important
@@ -531,11 +535,11 @@
 		.form-textarea
 			margin-bottom: 0
 	.wc-ukr-shipping-np-fields
-		margin-top: 30px
 		h3
 			margin-bottom: 12px
 			color: $black
 			font-size: 15px
+			font-weight: 200
 	// Fields
 	.woocommerce-billing-fields
 		&__field-wrapper
@@ -556,25 +560,28 @@
 	// Order
 	&-review-order
 		overflow: hidden
-		position: relative
+		position: sticky
+		top: 0
 		z-index: 1
 		flex: 0 0 auto
 		width: 100%
+		margin-top: 30px
 		max-width: 600px
 		height: 100%
 		padding: 50px 30px
 		border-radius: 10px
-		background-color: #fffaec
-		&::before
+		border: 2px dotted #ccdeca
+		background-color: #edf8ec
+		&::after
 			content: ''
 			position: absolute
-			top: 0
 			left: 0
 			right: 0
 			bottom: 0
-			z-index: -1
-			background: url('../../images/dest/bg-item-2.png') no-repeat right bottom
-			opacity: 0.5
+			z-index: 2
+			height: 23px
+			background: url(../../images/dest/footer-pattern.png) no-repeat center/cover
+			opacity: 0.15
 		.checkout-btn-complete
 			width: 100%
 		.woocommerce-checkout-section-title
@@ -615,3 +622,50 @@
 					line-height: 1.3
 				td
 					width: 40%
+// Customize Coupon
+.woocommerce-form-coupon
+	.coupon-wrapper
+		display: inline-block
+		padding: 30px
+		border-radius: 10px
+		border: 2px dashed $border
+		p
+			text-align: center
+	.coupon
+		display: inline-flex
+		align-items: center
+		padding: 10px
+		border-radius: 48px
+		border: 1px solid $border
+		background-color: $white
+		+media-breakpoint-down(sm)
+			width: 100%
+			margin-top: 15px
+			box-shadow: 0 0 0 2px rgba($black, 0.015)
+		+media-breakpoint-down(xs)
+			box-shadow: 0 0 0 2px rgba($black, 0.045)
+		+media-breakpoint-down(xxs)
+			flex-direction: column
+			border-radius: 6px
+			padding-bottom: 15px
+		label
+			display: none
+		.form-control
+			height: 48px
+			margin-bottom: 0
+			border-radius: 48px 0 0 48px
+			background-color: $white
+			line-height: 48px
+			&:focus
+				box-shadow: none
+			+media-breakpoint-down(xs)
+				padding-left: 20px
+				padding-right: 20px
+			+media-breakpoint-down(xxs)
+				margin-bottom: 10px
+				height: 40px
+				line-height: 40px
+				text-align: center
+		.btn
+			height: 48px
+			line-height: 48px
