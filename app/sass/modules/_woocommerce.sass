@@ -506,6 +506,8 @@
 				line-height: 40px
 		&-results
 			padding: 16px
+			&__options
+				outline: none
 			&__option
 				padding: 8px 16px
 				border-radius: 6px
@@ -565,13 +567,12 @@
 		z-index: 1
 		flex: 0 0 auto
 		width: 100%
-		margin-top: 30px
 		max-width: 600px
 		height: 100%
 		padding: 50px 30px
 		border-radius: 10px
-		border: 2px dotted #ccdeca
-		background-color: #edf8ec
+		border: 2px dashed rgba($green-accent, 0.25)
+		// background-color: #edf8ec
 		&::after
 			content: ''
 			position: absolute
@@ -622,6 +623,63 @@
 					line-height: 1.3
 				td
 					width: 40%
+	// Payment methods
+	.woocommerce-checkout-payment
+		input[type="checkbox"],
+		input[type="radio"]
+			border: 0
+			clip: rect(1px, 1px, 1px, 1px)
+			-webkit-clip-path: inset(50%)
+			clip-path: inset(50%)
+			height: 1px
+			margin: -1px
+			overflow: hidden
+			padding: 0
+			position: absolute
+			width: 1px
+			word-wrap: normal !important
+		.payment_methods
+			overflow: hidden
+			margin-bottom: 30px
+			border-radius: 10px
+			border: 1px solid $border
+			background-color: $white
+			> li
+				position: relative
+				label
+					cursor: pointer
+					overflow: hidden
+					position: relative
+					display: inline-flex
+					align-items: center
+					width: 100%
+					margin-bottom: 0
+					padding: 16px 24px 16px 60px
+					background-color: inherit
+					line-height: 1.15
+					will-change: transition
+					transition: $trs-3s
+					svg
+						position: absolute
+						top: 50%
+						left: 18px
+						width: 24px
+						height: 24px
+						margin-top: -12px
+						fill: $green
+						transition: $trs-3s
+					&:hover
+						background-color: rgba($green, 0.2)
+						color: $textcolor
+						svg
+							fill: $green-accent
+			> li input[type="radio"]:checked + label
+				background-color: $green-accent
+				color: $white
+				svg
+					fill: $white
+
+
 // Customize Coupon
 .woocommerce-form-coupon
 	.coupon-wrapper

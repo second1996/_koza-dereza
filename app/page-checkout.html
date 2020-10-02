@@ -439,7 +439,7 @@
 						<div class="clear"></div>
 					</form>
 					<div class="woocommerce-notices-wrapper"></div>
-					<form name="checkout" method="post" class="checkout woocommerce-checkout form"
+					<form name="checkout" method="post" class="checkout woocommerce-checkout form form-light"
 						action="http://koza-dereza/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 						<div class="woocommerce-checkout-wrapper">
 							<div class="woocommerce-checkout-details" id="customer_details">
@@ -484,17 +484,7 @@
 														<option value="Угорники">Угорники</option>
 														<option value="Черніїв">Черніїв</option>
 														<option value="Ямниця">Ямниця</option>
-													</select><span class="select2 select2-container select2-container--default" dir="ltr"
-														style="width: 870px;"><span class="selection"><span
-																class="select2-selection select2-selection--single" aria-haspopup="true"
-																aria-expanded="false" tabindex="0"
-																aria-labelledby="select2-billing_client_city-container" role="combobox"><span
-																	class="select2-selection__rendered" id="select2-billing_client_city-container"
-																	role="textbox" aria-readonly="true" title="Івано-Франківськ"><span
-																		class="select2-selection__clear">×</span>Івано-Франківськ</span><span
-																	class="select2-selection__arrow" role="presentation"><b
-																		role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-															aria-hidden="true"></span></span></span></p>
+													</select></p>
 											<p class="form-row form-row-wide address-field form-group validate-required"
 												id="billing_address_1_field" data-priority="42" style="display: block;"><label
 													for="billing_address_1" class="form-label">Назва вулиці&nbsp;<abbr class="required"
@@ -688,33 +678,31 @@
 								<div id="payment" class="woocommerce-checkout-payment" style="position: static; zoom: 1;">
 									<ul class="wc_payment_methods payment_methods methods">
 										<li class="wc_payment_method payment_method_bacs">
-											<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method"
+											<input id="payment_method_1" type="radio" class="input-radio" name="payment_method"
 												value="bacs" checked="checked" data-order_button_text="">
-											<label for="payment_method_bacs">
-												Прямий банківський переказ </label>
-											<div class="payment_box payment_method_bacs">
-												<p>Проведіть платіж безпосередньо на наш банківський рахунок. Будь ласка, вкажіть номер Вашого
-													замовлення в описі переказу. Ваше замовлення не буде виконано, доки кошти не будуть зараховані
-													на наш рахунок.</p>
-											</div>
+											<label for="payment_method_1">
+												Онлайн оплата на картку
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m512 163v-27c0-30.928-25.072-56-56-56h-400c-30.928 0-56 25.072-56 56v27c0 2.761 2.239 5 5 5h502c2.761 0 5-2.239 5-5z"/><path d="m0 205v171c0 30.928 25.072 56 56 56h400c30.928 0 56-25.072 56-56v-171c0-2.761-2.239-5-5-5h-502c-2.761 0-5 2.239-5 5zm128 131c0 8.836-7.164 16-16 16h-16c-8.836 0-16-7.164-16-16v-16c0-8.836 7.164-16 16-16h16c8.836 0 16 7.164 16 16z"/></g></svg>
+											</label>
 										</li>
 										<li class="wc_payment_method payment_method_cod">
-											<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod"
+											<input id="payment_method_2" type="radio" class="input-radio" name="payment_method" value="cod"
 												data-order_button_text="">
-											<label for="payment_method_cod">
-												Готівка при отриманні </label>
-											<div class="payment_box payment_method_cod" style="display:none;">
-												<p>Оплата готівкою при отриманні.</p>
-											</div>
+											<label for="payment_method_2">
+												Наложеним платежем
+												<svg height="683" viewBox="0 0 512 512" width="683" xmlns="http://www.w3.org/2000/svg"><path d="M512 135a136 136 0 0 0-238-88l-18-1A201 201 0 0 0 56 267a135 135 0 1 0 194 182h6a201 201 0 0 0 201-205c33-24 55-64 55-109zm-146 17c-14 0-26-12-26-26v-20c0-13 9-24 21-26V70a15 15 0 1 1 30 0v9h7a15 15 0 0 1 0 30h-28v13h16c15 0 27 12 27 27v20c0 13-9 24-22 26v9a15 15 0 0 1-30 0v-9h-6a15 15 0 1 1 0-30h28v-13zM146 363c14 0 26 12 26 27v20c0 13-9 24-21 26v9a15 15 0 1 1-30 1v-9h-7a15 15 0 1 1 0-30h28v-14h-16c-15 0-27-11-27-26v-20c0-13 9-24 22-26v-10a15 15 0 1 1 30 0v9h6a15 15 0 1 1 0 30h-28v13zm119 55A136 136 0 0 0 85 251v-3c0-94 76-171 169-172a136 136 0 0 0 172 185c-6 85-76 153-161 157zm0 0"></path></svg>
+											</label>
+										</li>
+										<li class="wc_payment_method payment_method_cod">
+											<input id="payment_method_3" type="radio" class="input-radio" name="payment_method" value="cod"
+												data-order_button_text="">
+											<label for="payment_method_3">
+												Готівка при отриманні
+												<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 469.341 469.341" style="enable-background:new 0 0 469.341 469.341;" xml:space="preserve"><path d="M437.337,384.007H362.67c-47.052,0-85.333-38.281-85.333-85.333c0-47.052,38.281-85.333,85.333-85.333h74.667 c5.896,0,10.667-4.771,10.667-10.667v-32c0-22.368-17.35-40.559-39.271-42.323l-61.26-107 c-5.677-9.896-14.844-16.969-25.813-19.906c-10.917-2.917-22.333-1.385-32.104,4.302L79.553,128.007H42.67 c-23.531,0-42.667,19.135-42.667,42.667v256c0,23.531,19.135,42.667,42.667,42.667h362.667c23.531,0,42.667-19.135,42.667-42.667 v-32C448.004,388.778,443.233,384.007,437.337,384.007z M360.702,87.411l23.242,40.596h-92.971L360.702,87.411z M121.953,128.007 L300.295,24.184c4.823-2.823,10.458-3.573,15.844-2.135c5.448,1.458,9.99,4.979,12.813,9.906l0.022,0.039l-164.91,96.013H121.953 z"/><path d="M437.337,234.674H362.67c-35.292,0-64,28.708-64,64c0,35.292,28.708,64,64,64h74.667c17.646,0,32-14.354,32-32v-64 C469.337,249.028,454.983,234.674,437.337,234.674z M362.67,320.007c-11.76,0-21.333-9.573-21.333-21.333 c0-11.76,9.573-21.333,21.333-21.333c11.76,0,21.333,9.573,21.333,21.333C384.004,310.434,374.431,320.007,362.67,320.007z"/></svg>
+											</label>
 										</li>
 									</ul>
 									<div class="form-row place-order">
-										<noscript>
-											Оскільки ваш браузер не підтримує JavaScript (або він вимкнений), будь ласка, натисніть кнопку
-											<em>Оновлення підсумку</em> перед розміщенням замовлення. Інакше ви можете отримати рахунок на
-											більшу суму, ніж очікуєте, якщо не зробите цього. <br /><button type="submit" class="button alt"
-												name="woocommerce_checkout_update_totals" value="Оновити підсумки">Оновити підсумки</button>
-										</noscript>
 										<div class="woocommerce-terms-and-conditions-wrapper">
 											<div class="woocommerce-privacy-policy-text">
 												<p>Ваші особисті дані будуть використані для обробки вашого замовлення, підтримки вашого досвіду
