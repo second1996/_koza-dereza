@@ -54,6 +54,7 @@
 		border: 0
 		background-color: $c-f5
 		background-clip: padding-box
+		outline: none
 		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
 		&:focus
 			box-shadow: 0 0 0 2px $green
@@ -77,6 +78,48 @@
 		resize: none
 		min-height: 200px
 		padding: 16px 32px
+	&-radio
+		position: relative
+		input[type="radio"]
+			position: absolute
+			top: 0
+			left: 3px
+			opacity: 0
+		&-label
+			position: relative
+			display: block
+			margin-bottom: 10px
+			padding-left: 28px
+			color: $black
+			font-size: 15px
+			font-weight: 200
+			line-height: 16px
+			cursor: pointer
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 18px
+				height: 18px
+				border-radius: 50%
+				background-color: $border
+				transition: transform .3s ease
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 18px
+				height: 18px
+				border-radius: 50%
+				border: 4px solid $white
+				background-color: $orange
+				opacity: 0
+				transition: opacity .15s ease-in, box-shadow .3s ease
+		input:checked + label::after
+			box-shadow: 0 0 0 1px $orange
+			opacity: 1
 	&-link
 		margin-top: 10px
 		text-align: right

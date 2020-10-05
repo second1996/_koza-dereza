@@ -16,7 +16,6 @@
 .blockOverlay
 	overflow: hidden
 	z-index: 340 !important
-	border-radius: 10px
 	background-image: none !important
 	background-color: none !important
 	opacity: 0.8 !important
@@ -524,7 +523,9 @@
 		display: flex
 	&-details
 		flex: 1 1 auto
-		margin-right: 30px
+		padding-right: 30px
+		border-right: 2px dashed $border
+
 	&-section-title
 		margin-bottom: 30px
 		font-family: $neucha
@@ -569,30 +570,35 @@
 		width: 100%
 		max-width: 600px
 		height: 100%
-		padding: 50px 30px
-		border-radius: 10px
-		border: 2px dashed rgba($green-accent, 0.25)
+		padding: 0 30px 50px 30px
+		// border-radius: 10px
+		// border-left: 2px dashed $border
 		// background-color: #edf8ec
-		&::after
-			content: ''
-			position: absolute
-			left: 0
-			right: 0
-			bottom: 0
-			z-index: 2
-			height: 23px
-			background: url(../../images/dest/footer-pattern.png) no-repeat center/cover
-			opacity: 0.15
+		// &::after
+		// 	content: ''
+		// 	position: absolute
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
+		// 	z-index: 2
+		// 	height: 23px
+		// 	background: url(../../images/dest/footer-pattern.png) no-repeat center/cover
+		// 	opacity: 0.15
 		.checkout-btn-complete
 			width: 100%
 		.woocommerce-checkout-section-title
-			text-align: center
+			padding-left: 18px
+			// text-align: center
 		&-table
-			margin-bottom: 30px
+			overflow: hidden
+			margin-bottom: 20px
 			border-radius: 10px
 			background-color: $white
+			font-size: 15px
 			thead
-				border-bottom: 1px solid $border
+				border-radius: 6px 6px 0 0
+				background-color: $c-f5
+				border-bottom: 1px dashed $border
 				th
 					padding: 15px 30px
 					color: $black
@@ -603,33 +609,147 @@
 					&.product-total
 						width: 40%
 			tbody
+				border-radius: 0 0 6px 6px
 				tr:not(:last-child)
-					border-bottom: 1px solid $border
+					border-bottom: 1px dashed $border
 				td
-					padding: 15px 30px
-					color: $textcolor
-					line-height: 1.3
-					.product-quantity
-						display: block
-						font-size: 14px
-						font-weight: 500
-						line-height: 1
-			tfoot
-				th
-					width: 60%
-					padding: 15px 30px
+					padding: 12px 30px
+				.product-name
 					color: $black
-					font-weight: 500
+					font-weight: 200
 					line-height: 1.3
-				td
-					width: 40%
+				.product-quantity
+					font-size: 14px
+					font-weight: 700
+					line-height: 1
+				.product-total
+					color: $black
+					font-weight: 400
+				.cart-subtotal
+					background-color: $c-f9
+					.title
+						padding: 15px 30px
+						color: $black
+						font-weight: 500
+					.value
+						color: $orange
+						font-size: 20px
+						font-weight: 500
+
+	// Info (shipping, subtotal, total, coupon)
+	.woocommerce-checkout-info
+		margin-top: 30px
+		border-top: 1px dashed $border
+		.cart-discount
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-top: 20px
+			padding: 12px 18px
+			border-radius: 10px
+			background-color: #fff3f3
+			.title
+				color: #602727
+				font-weight: 400
+				font-size: 18px
+			.value
+				color: #602727
+				font-size: 20px
+				font-weight: 400
+				text-align: center
+			.woocommerce-remove-coupon
+				display: block
+				margin-left: 6px
+				padding: 8px 16px
+				border-radius: 16px
+				background-color: #602727
+				color: $white
+				font-size: 13px
+				font-weight: 500
+				line-height: 1
+				text-align: center
+				&:hover
+					background-color: darken(#602727, 15%)
+		.shipping
+			border-bottom: 1px dashed $border
+			padding-top: 20px
+			padding-bottom: 20px
+			.title
+				padding-left: 18px
+				margin-bottom: 10px
+				color: $black
+				font-family: $neucha
+				font-weight: 40
+				font-size: 26px
+			.woocommerce-shipping-methods
+				overflow: hidden
+				display: flex
+				flex-direction: column
+				background-color: $white
+				> li
+					position: relative
+					&:not(:last-child)
+						margin-bottom: 3px
+					label
+						cursor: pointer
+						overflow: hidden
+						position: relative
+						display: inline-flex
+						align-items: center
+						width: 100%
+						margin-bottom: 0
+						padding: 16px 24px 16px 50px
+						border-radius: 6px
+						border: 1px solid $trsp
+						background-color: inherit
+						line-height: 1.15
+						will-change: transition
+						transition: $trs-3s
+						.amount
+							color: $green-accent
+							font-weight: 500
+						&::before,
+						&::after
+							top: 50%
+							margin-top: -9px
+							margin-left: 18px
+						&::before
+							border: 4px solid $trsp
+						&::after
+							background-color: $green-accent
+						&:hover
+							// background-color: $c-f9
+							&::before
+								transform: scale(0.75)
+					input:checked + label::after
+						box-shadow: 0 0 0 1px $green-accent
+				> li input[type="radio"]:checked + label
+					border-color: $c-f2
+					background-color: $c-f9
+		.order-total
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-top: 30px
+			padding: 0 18px
+			border-radius: 6px
+			font-family: $neucha
+			font-size: 26px
+			line-height: 1
+			text-align: center
+			.title
+				color: $black
+			.value
+				color: $orange
+				font-weight: 200
+
+
 	// Payment methods
 	.woocommerce-checkout-payment
 		input[type="checkbox"],
 		input[type="radio"]
 			border: 0
 			clip: rect(1px, 1px, 1px, 1px)
-			-webkit-clip-path: inset(50%)
 			clip-path: inset(50%)
 			height: 1px
 			margin: -1px
@@ -641,11 +761,11 @@
 		.payment_methods
 			overflow: hidden
 			margin-bottom: 30px
-			border-radius: 10px
-			border: 1px solid $border
 			background-color: $white
 			> li
 				position: relative
+				&:not(:last-child)
+					margin-bottom: 3px
 				label
 					cursor: pointer
 					overflow: hidden
@@ -654,8 +774,13 @@
 					align-items: center
 					width: 100%
 					margin-bottom: 0
+					border-radius: 6px
+					border: 1px solid $trsp
 					padding: 16px 24px 16px 60px
 					background-color: inherit
+					color: $black
+					font-size: 15px
+					font-weight: 200
 					line-height: 1.15
 					will-change: transition
 					transition: $trs-3s
@@ -666,18 +791,17 @@
 						width: 24px
 						height: 24px
 						margin-top: -12px
-						fill: $green
+						fill: rgba($black, 0.15)
 						transition: $trs-3s
 					&:hover
-						background-color: rgba($green, 0.2)
-						color: $textcolor
+						// background-color: $c-f9
 						svg
-							fill: $green-accent
+							fill: $green
 			> li input[type="radio"]:checked + label
-				background-color: $green-accent
-				color: $white
+				border-color: $c-f2
+				background-color: $c-f9
 				svg
-					fill: $white
+					fill: $green-accent
 
 
 // Customize Coupon

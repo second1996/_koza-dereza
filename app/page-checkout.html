@@ -617,64 +617,71 @@
 							</div>
 							<div id="order_review" class="woocommerce-checkout-review-order">
 								<h3 class="woocommerce-checkout-section-title" id="order_review_heading">Ваше замовлення</h3>
-								<table class="shop_table woocommerce-checkout-review-order-table">
-									<thead>
-										<tr>
-											<th class="product-name">Товар</th>
-											<th class="product-total">Проміжний підсумок</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="cart_item">
-											<td class="product-name">
-												Цибуля зелена (10 шт.)&nbsp; <strong class="product-quantity">×&nbsp;8</strong> </td>
-											<td class="product-total">
-												<span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
-															class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr class="cart-subtotal">
-											<th>Проміжний підсумок</th>
-											<td><span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
-															class="woocommerce-Price-currencySymbol">₴</span></bdi></span></td>
-										</tr>
-										<tr class="cart-discount coupon-kozadereza15">
-											<th>Промокод: kozadereza15</th>
-											<td>-<span class="woocommerce-Price-amount amount">9,38&nbsp;<span
-														class="woocommerce-Price-currencySymbol">₴</span></span> <a
-													href="http://koza-dereza/checkout/?remove_coupon=kozadereza15"
-													class="woocommerce-remove-coupon" data-coupon="kozadereza15">Видалити</a></td>
-										</tr>
-										<tr class="woocommerce-shipping-totals shipping">
-											<th>Доставка</th>
-											<td data-title="Доставка">
+								<div class="woocommerce-checkout-review-order-table">
+									<table class="shop_table">
+										<thead>
+											<tr>
+												<th class="product-name">Товар</th>
+												<th class="product-total">Проміжний підсумок</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="cart_item">
+												<td class="product-name">
+													Цибуля зелена (10 шт.)&nbsp; <strong class="product-quantity">×&nbsp;8</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+													Цибуля зелена (10 шт.)&nbsp; <strong class="product-quantity">×&nbsp;8</strong> </td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span
+																class="woocommerce-Price-currencySymbol">₴</span></bdi></span> </td>
+											</tr>
+											<tr class="cart-subtotal">
+												<th class="title">Проміжний підсумок</th>
+												<td class="value"><span class="woocommerce-Price-amount amount"><bdi>62,56&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="woocommerce-checkout-info">
+										<div class="cart-discount coupon-kozadereza15">
+											<div class="title">Промокод: kozadereza15</div>
+											<div class="value">-<span class="woocommerce-Price-amount amount">9,38&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></span>
+												<a href="http://koza-dereza/checkout/?remove_coupon=kozadereza15" class="woocommerce-remove-coupon" data-coupon="kozadereza15">Видалити</a>
+											</div>
+										</div>
+										<div class="woocommerce-shipping-totals shipping">
+											<div class="title">Доставка</div>
+											<div class="value" data-title="Доставка">
 												<ul id="shipping_method" class="woocommerce-shipping-methods">
-													<li>
+													<li class="form-radio">
 														<input type="radio" name="shipping_method[0]" data-index="0"
 															id="shipping_method_0_flat_rate-2" value="flat_rate:2" class="shipping_method"
-															checked="checked"><label for="shipping_method_0_flat_rate-2">Приміська зона: <span
+															checked="checked"><label for="shipping_method_0_flat_rate-2" class="form-radio-label">Приміська зона: <span
 																class="woocommerce-Price-amount amount"><bdi>40,00&nbsp;<span
 																		class="woocommerce-Price-currencySymbol">₴</span></bdi></span></label> </li>
-													<li>
+													<li class="form-radio">
 														<input type="radio" name="shipping_method[0]" data-index="0"
 															id="shipping_method_0_nova_poshta_shipping-4" value="nova_poshta_shipping:4"
-															class="shipping_method"><label for="shipping_method_0_nova_poshta_shipping-4"><span
+															class="shipping_method"><label for="shipping_method_0_nova_poshta_shipping-4" class="form-radio-label"><span
 																id="wcus-shipping-cost">Доставка: <span
 																	class="woocommerce-Price-amount amount"><bdi>60,00&nbsp;<span
 																			class="woocommerce-Price-currencySymbol">₴</span></bdi></span></span></label><input
 															id="wcus-shipping-name" type="hidden" value="Доставка"> </li>
 												</ul>
-											</td>
-										</tr>
-										<tr class="order-total">
-											<th>Загалом</th>
-											<td><span id="wcus-order-total"><strong><span
+											</div>
+										</div>
+										<div class="order-total">
+											<div class="title">Загалом</div>
+											<div class="value"><span id="wcus-order-total"><strong><span
 															class="woocommerce-Price-amount amount"><bdi>93,18&nbsp;<span
-																	class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong> </span></td>
-										</tr>
-									</tfoot>
-								</table>
+																	class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong> </span></div>
+										</div>
+									</div>
+								</div>
 								<div id="payment" class="woocommerce-checkout-payment" style="position: static; zoom: 1;">
 									<ul class="wc_payment_methods payment_methods methods">
 										<li class="wc_payment_method payment_method_bacs">
