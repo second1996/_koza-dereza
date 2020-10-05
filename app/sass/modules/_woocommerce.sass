@@ -646,30 +646,42 @@
 			justify-content: space-between
 			margin-top: 20px
 			padding: 12px 18px
-			border-radius: 10px
-			background-color: #fff3f3
+			border-radius: 6px
+			background-color: #eff7ff
 			.title
-				color: #602727
+				color: #26425f
 				font-weight: 400
 				font-size: 18px
 			.value
-				color: #602727
+				display: inline-flex
+				align-items: center
+				color: #26425f
 				font-size: 20px
 				font-weight: 400
 				text-align: center
 			.woocommerce-remove-coupon
-				display: block
-				margin-left: 6px
-				padding: 8px 16px
-				border-radius: 16px
-				background-color: #602727
-				color: $white
-				font-size: 13px
-				font-weight: 500
-				line-height: 1
-				text-align: center
+				position: relative
+				margin-left: 12px
+				padding: 6px
+				font-size: 0
+				will-change: transform
+				transform: scale(1.15)
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					top: 50%
+					right: 0
+					width: 12px
+					height: 1px
+					background-color: #26425f
+					transform: translateY(-50%)
+				&::before
+					transform: rotate(45deg)
+				&::after
+					transform: rotate(-45deg)
 				&:hover
-					background-color: darken(#602727, 15%)
+					transform: scale(1)
 		.shipping
 			border-bottom: 1px dashed $border
 			padding-top: 20px
