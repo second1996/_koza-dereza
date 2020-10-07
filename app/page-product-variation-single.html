@@ -494,30 +494,66 @@
 									<div class="description">
 										<p>Салат дубовий лист своєю назвою говорить про схожість з дубовим листям. Листя салату зібраний у щільну розетку діаметром до 30 см.</p>
 									</div>
-									<div class="stock in-stock">В наявності</div>
-									<div class="stock low-stock">В наявності залишилось <b>4 товари</b></div>
-									<div class="stock out-of-stock">Товар відсутній</div>
-									<div class="actions">
-										<div class="actions-btn">
-											<div class="quantity">
-												<span class="minus"></span>
-												<input type="number" class="form-control form-control--number quantity-field" step="1" min="1" max="99" name="quantity" value="2" title="Кількість">
-												<span class="plus"></span>
+									<form class="variations_form cart" action="#" method="post" enctype="multipart/form-data">
+										<div class="variations" cellspacing="0">
+											<div class="variations-item">
+												<div class="label">
+													<label for="pa_vaha">Вага</label>
+												</div>
+												<div class="value woo-variation-items-wrapper">
+													<ul class="variable-items-wrapper button-variable-wrapper" data-attribute_name="attribute_pa_vaha">
+														<li data-wvstooltip="Розмір M (300 грам)" class="variable-item button-variable-item button-variable-item-rozmir-m-300-hram selected" title="Розмір M (300 грам)" data-value="rozmir-m-300-hram" role="button" tabindex="0">
+															<span class="variable-item-span variable-item-span-button">Розмір M (300 грам)</span>
+														</li>
+														<li data-wvstooltip="Розмір L (350 грам)" class="variable-item button-variable-item button-variable-item-rozmir-l-350-hram" title="Розмір L (350 грам)" data-value="rozmir-l-350-hram" role="button" tabindex="0">
+															<span class="variable-item-span variable-item-span-button">Розмір L (350 грам)</span>
+														</li>
+														<li data-wvstooltip="Розмір XL (400 грам)" class="variable-item button-variable-item button-variable-item-rozmir-xl-400-hram" title="Розмір XL (400 грам)" data-value="rozmir-xl-400-hram" role="button" tabindex="0">
+															<span class="variable-item-span variable-item-span-button">Розмір XL (400 грам)</span>
+														</li>
+													</ul>
+													<a class="reset_variations" href="#">Очистити</a>
+												</div>
 											</div>
 										</div>
-										<div class="actions-btn">
-											<!-- <a href="#" class="btn btn-green btn-order btn-icon add_to_cart_button ajax_add_to_cart loading"> -->
-											<a href="#" class="btn btn-green btn-order btn-icon">
-												<svg class="icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
-												<span>В кошик</span>
-											</a>
+										<div class="single_variation_wrap">
+											<div class="woocommerce-variation single_variation">
+												<div class="woocommerce-variation-description"></div>
+												<div class="woocommerce-variation-price">
+													<span class="price">
+														<del><span class="woocommerce-Price-amount amount"><bdi>126,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span></del>
+														<ins><span class="woocommerce-Price-amount amount"><bdi>120,00&nbsp;<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span></ins>
+													</span>
+												</div>
+												<div class="woocommerce-variation-availability">
+													<p class="stock in-stock">Є в наявності</p>
+												</div>
+											</div>
+											<div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
+												<div class="actions">
+													<div class="actions-btn">
+														<div class="quantity">
+															<label class="screen-reader-text" for="quantity_5f7dc66b245bd">Яловичий стейк кількість</label>
+															<span class="minus"></span>
+															<input type="number" id="quantity_5f7dc66b245bd" class="form-control form-control--number quantity-field input-text qty text" step="1" min="1" max="10" name="quantity" value="1" title="К-ть" size="4" placeholder="" inputmode="numeric">
+															<span class="plus"></span>
+														</div>
+													</div>
+													<div class="actions-btn">
+														<button type="submit" class="single_add_to_cart_button btn btn-green btn-order btn-icon button alt">
+															<svg class="icon icon-check"><use xlink:href="http://koza-dereza/wp-content/themes/koza-dereza/images/symbol-defs.svg#icon-check"></use></svg>
+															<span class="added_to_cart_button_text">В корзині</span>
+															<svg class="icon icon-shopping-bag"><use xlink:href="http://koza-dereza/wp-content/themes/koza-dereza/images/symbol-defs.svg#icon-shopping-bag"></use></svg>
+															<span class="add_to_cart_button_text">Додати в корзину</span>
+														</button>
+													</div>
+												</div>
+												<input type="hidden" name="add-to-cart" value="358">
+												<input type="hidden" name="product_id" value="358">
+												<input type="hidden" name="variation_id" class="variation_id" value="361">
+											</div>
 										</div>
-										<div class="actions-btn">
-											<a href="#" class="btn btn-outline btn-wishlist">
-												<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
-											</a>
-										</div>
-									</div>
+									</form>
 								</div><!-- /.product-meta -->
 								<div class="product-info">
 									<div class="product-info-header">Характеристики</div>

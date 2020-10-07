@@ -8,14 +8,15 @@
 			padding-right: 0
 
 .product
-	padding: 60px 0
-	border-radius: 10px
-	background-color: $c-f8
-	+media-breakpoint-down(lg)
-		padding: 30px 0
-	+media-breakpoint-down(xs)
-		padding: 20px 0
-		border-radius: 0
+	&-wrapper
+		padding: 60px 0
+		border-radius: 10px
+		background-color: $c-f8
+		+media-breakpoint-down(lg)
+			padding: 30px 0
+		+media-breakpoint-down(xs)
+			padding: 20px 0
+			border-radius: 0
 	&-photo,
 	&-meta,
 	&-info
@@ -23,11 +24,14 @@
 		background-color: $white
 	// Product Photo (Slider)
 	&-photo
-		position: relative
+		position: sticky
+		top: 0
 		padding: 40px
 		+media-breakpoint-down(xl)
 			padding: 30px
 		+media-breakpoint-down(lg)
+			position: relative
+			top: auto
 			border-radius: 10px 10px 0 0
 		+media-breakpoint-down(xs)
 			padding: 20px
@@ -191,6 +195,83 @@
 				font-size: 38px
 			+media-breakpoint-down(lg)
 				font-size: 32px
+		
+		// Variation form
+		.variations_form
+			margin-top: 30px
+			.variable-items-wrapper
+				display: flex
+				flex-wrap: wrap
+				> li
+					outline: none
+					display: inline-block
+					padding: 10px 20px
+					border-radius: 32px
+					border: 1px solid $border
+					background-color: $white
+					color: $black
+					font-size: 14px
+					line-height: 1
+					transition: $trs-3s
+					&:not(:last-child)
+						margin-right: 10px
+					&.selected
+						pointer-events: none
+						border-color: $green-accent
+						background-color: $green-accent
+						color: $white
+					&:hover
+					border-color: $green-accent
+			.woocommerce-variation-price
+				display: flex
+				flex-wrap: wrap
+				align-items: flex-end
+				margin-top: 15px
+				line-height: 1
+				.price
+					display: flex
+					flex-direction: row-reverse
+					flex-wrap: wrap
+					align-items: flex-end
+					margin-right: 10px
+					+media-breakpoint-down(xs)
+						flex-direction: column
+						align-items: flex-start
+						margin-right: 0
+					> del
+						text-decoration: none
+						> .amount
+							position: relative
+							color: #bbb
+							font-size: 18px
+							font-weight: 200
+							&::after
+								content: ''
+								position: absolute
+								top: 50%
+								left: 0
+								width: 100%
+								height: 1px
+								background-color: #bbb
+							.currencySymbol
+								font-weight: 200
+					> ins
+						text-decoration: none
+						> .amount
+							margin-right: 15px
+							color: $black
+							font-size: 20px
+							font-weight: 500
+							.currencySymbol
+								font-weight: 500
+					> .amount
+						color: $black
+						font-size: 20px
+						font-weight: 500
+						.currencySymbol
+							font-weight: 500
+		// End Variation form
+
 		.price
 			display: flex
 			flex-wrap: wrap
@@ -239,14 +320,14 @@
 							font-size: 26px
 						.currencySymbol
 							font-weight: 500
-			&-amount
-				color: $orange
-				font-size: 30px
-				font-weight: 500
-				+media-breakpoint-down(lg)
-					font-size: 26px
-				.currencySymbol
+				> .amount
+					color: $orange
+					font-size: 30px
 					font-weight: 500
+					+media-breakpoint-down(lg)
+						font-size: 26px
+					.currencySymbol
+						font-weight: 500
 			&-count
 				margin-bottom: 1px
 				span
