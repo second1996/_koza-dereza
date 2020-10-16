@@ -42,30 +42,30 @@ main.page
 				font-size: 28px
 			+media-breakpoint-down(md)
 				font-size: 24px
-			+media-breakpoint-down(xs)
-				margin: 0
-				&:not(:first-child)
+			&::after
+				content: ''
+				position: relative
+				display: block
+				width: 16px
+				height: 16px
+				margin-left: 20px
+				background: url('../../images/dest/icons/arrow-right-gray.svg') no-repeat center/100%
+				+media-breakpoint-down(xs)
 					display: none
-			&:not(:last-child)
-				&::after
-					content: ''
-					position: relative
-					display: block
-					width: 16px
-					height: 16px
-					margin-left: 20px
-					background: url('../../images/dest/icons/arrow-right-gray.svg') no-repeat center/100%
-					+media-breakpoint-down(xs)
-						display: none
+			&:last-child::after
+				display: none
 			a, span
 				color: rgba($black, 0.85)
 			a:hover
 				color: $orange
-			&--active
+			&.step-active
 				a, span
 					color: $green-accent
 					+media-breakpoint-down(xs)
 						color: rgba($black, 0.85)
+			&.step-inactive
+				+media-breakpoint-down(xs)
+					display: none
 
 .page-content
 	margin-top: 60px

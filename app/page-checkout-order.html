@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
 
 	<meta charset="utf-8">
@@ -35,7 +36,9 @@
 					<div class="col-auto">
 						<div class="user">
 							<div class="user-login">
-								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+								<svg class="icon icon-user">
+									<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+								</svg>
 								<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 								<span class="dot">&bull;</span>
 								<a href="#" class="link">Реєстрація</a>
@@ -67,7 +70,9 @@
 							</div>
 							<div class="search-btn">
 								<button class="search-btn-trigger">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</div>
 						</div>
@@ -75,7 +80,9 @@
 							<form action="" method="POST" class="form form-search">
 								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 								<button class="btn btn-search">
-									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+									<svg class="icon icon-search">
+										<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+									</svg>
 								</button>
 							</form>
 						</div>
@@ -86,7 +93,9 @@
 								<a href="#" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">3</span>
-										<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+										<svg class="icon icon-wishlist">
+											<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+										</svg>
 									</figure>
 								</a>
 							</div>
@@ -94,7 +103,9 @@
 								<a href="#shopCart" data-toggle="modal" class="action-btn">
 									<figure class="action-btn-icon">
 										<span class="count">5</span>
-										<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+										<svg class="icon icon-shopping-cart">
+											<use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use>
+										</svg>
 									</figure>
 									<span class="total">543 <span class="total-symbol">₴</span></span>
 								</a>
@@ -113,7 +124,9 @@
 				<div class="row align-items-center">
 					<div class="col-auto">
 						<a href="page-catalog.html" class="btn btn-catalog">
-							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							<svg class="icon icon-catalog">
+								<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+							</svg>
 							<span>Каталог продуктів</span>
 						</a>
 						<nav class="nav nav--catalog">
@@ -394,11 +407,11 @@
 
 		<div class="page-header">
 			<div class="container">
-				<h1 class="title">Сторінка</h1>
-				<div class="breadcrumbs">
-					<ul class="breadcrumbs-list">
-						<li><a href="index.html" class="home"></a></li>
-						<li><span>Сторінка</span></li>
+				<div class="checkout-steps">
+					<ul class="checkout-steps-list">
+						<li class="checkout-steps-item step-inactive"><a href="http://koza-dereza/cart/">Корзина</a></li>
+						<li class="checkout-steps-item step-inactive"><a href="http://koza-dereza/checkout/">Оформлення замовлення</a></li>
+						<li class="checkout-steps-item step-active"><span>Замовлення оформлено</span></li>
 					</ul>
 				</div>
 			</div>
@@ -407,18 +420,95 @@
 		<div class="page-content">
 			<div class="container">
 
-				Content
+				<div class="woocommerce-order">
 
-			</div>
-		</div>
+					<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">Дякуємо. Ваше замовлення було отримано.</p>
+					<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+						<li class="woocommerce-order-overview__order order">
+							Номер замовлення: <strong>364</strong>
+						</li>
+						<li class="woocommerce-order-overview__date date">
+							Дата: <strong>16.10.2020</strong>
+						</li>
+						<li class="woocommerce-order-overview__email email">
+							Адреса електронної пошти: <strong>vital10012@gmail.com</strong>
+						</li>
+						<li class="woocommerce-order-overview__total total">
+							Всього: <strong><span class="woocommerce-Price-amount amount"><bdi>1049,98&nbsp;
+							<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span></strong>
+						</li>
+						<li class="woocommerce-order-overview__payment-method method">
+							Спосіб оплати: <strong>Оплата карткою онлайн</strong>
+						</li>
+					</ul>
+					<section class="woocommerce-order-details">
+						<h2 class="woocommerce-order-details__title">Подробиці замовлення</h2>
+						<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+							<thead>
+								<tr>
+									<th class="woocommerce-table__product-name product-name">Товар</th>
+									<th class="woocommerce-table__product-table product-total">Загалом</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="woocommerce-table__line-item order_item">
+									<td class="woocommerce-table__product-name product-name">
+										<a href="http://koza-dereza/shop/miaso-ta-kovbasy/ialovychyna/ialovychyj-stejk/?attribute_pa_vaha=rozmir-m-300-hram">Яловичий стейк - Розмір M (300 грам)</a>
+										<strong class="product-quantity">×&nbsp;5</strong>
+									</td>
+									<td class="woocommerce-table__product-total product-total">
+										<span class="woocommerce-Price-amount amount"><bdi>600,00&nbsp;
+										<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span>
+									</td>
+								</tr>
+								<tr class="woocommerce-table__line-item order_item">
+									<td class="woocommerce-table__product-name product-name">
+										<a href="http://koza-dereza/shop/ovochi-ta-frukty/frukty/banan/">Банан</a>
+										<strong class="product-quantity">×&nbsp;2</strong> </td>
+									<td class="woocommerce-table__product-total product-total">
+										<span class="woocommerce-Price-amount amount"><bdi>449,98&nbsp;
+										<span class="woocommerce-Price-currencySymbol">₴</span></bdi></span>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th scope="row">Разом:</th>
+									<td>
+										<span class="woocommerce-Price-amount amount">1049,98&nbsp;
+										<span class="woocommerce-Price-currencySymbol">₴</span></span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Доставка:</th>
+									<td>Безкоштовна доставка кур'єром</td>
+								</tr>
+								<tr>
+									<th scope="row">Спосіб оплати:</th>
+									<td>Оплата карткою онлайн</td>
+								</tr>
+								<tr>
+									<th scope="row">Всього:</th>
+									<td>
+										<span class="woocommerce-Price-amount amount">1049,98&nbsp;
+										<span class="woocommerce-Price-currencySymbol">₴</span></span>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</section>
 
-		<div class="page-seo">
-			<div class="container">
-				<article>
-					<h2>“Koza-Дереza” — замовити фермерські продукти додому в Івано-Франківську та по всій Україні з доставкою</h2>
-					<p>В інтернет-магазині “Koza-Дереza” представлено понад 150 позицій товару, щоб вибрати продукти. Розібратися в різноманітності продуктів допоможе онлайн-консультант. З урахуванням побажань підберемо товари за прийнятною ціною.</p>
-					<p>Вибираючи продукти онлайн, отримаєте консультацію. Для цього залиште заявку на сайті або зателефонуйте. Наша команда цілодобово приймає замовлення, а для зручності по місту та Україні працює доставка.</p>
-				</article>
+					<section class="woocommerce-customer-details">
+						<h2 class="woocommerce-column__title">Платіжна адреса</h2>
+						<address>
+							Koza Дереza<br>Січових стрільців, 13
+							<p class="woocommerce-customer-details--phone">+380979066449</p>
+							<p class="woocommerce-customer-details--email">vital10012@gmail.com</p>
+						</address>
+					</section>
+
+				</div><!-- /.woocommerce-order -->
+
 			</div>
 		</div>
 
@@ -431,30 +521,40 @@
 				<div class="footer-brand">
 					<div class="about">
 						<a href="index.html">
-							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
+							<img class="about-logo" src="images/dest/logotype-light.svg"
+								alt="Koza-Дереza — Доставка продуктів по Україні">
 						</a>
-						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
+						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з
+							виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
 					</div>
 					<div class="social">
 						<ul class="social-list">
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-messenger"><use xlink:href="images/symbol-defs.svg#icon-messenger"></use></svg>
+									<svg class="icon icon-messenger">
+										<use xlink:href="images/symbol-defs.svg#icon-messenger"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#icon-instagram"></use></svg>
+									<svg class="icon icon-instagram">
+										<use xlink:href="images/symbol-defs.svg#icon-instagram"></use>
+									</svg>
 								</a>
 							</li>
 							<li>
 								<a href="https://viber.com" target="_blank" rel="nofollow noopener">
-									<svg class="icon icon-viber"><use xlink:href="images/symbol-defs.svg#icon-viber"></use></svg>
+									<svg class="icon icon-viber">
+										<use xlink:href="images/symbol-defs.svg#icon-viber"></use>
+									</svg>
 								</a>
 							</li>
 						</ul>
@@ -489,24 +589,35 @@
 					<div class="callback">
 						<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 							<span>Зворотній зв’язок</span>
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 						</button>
 					</div>
 					<div class="contacts">
 						<div class="contacts-item">
-							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#icon-phone"></use></svg>
+							<svg class="icon icon-phone">
+								<use xlink:href="images/symbol-defs.svg#icon-phone"></use>
+							</svg>
 							<a href="tel:+380952030777">+38 (095) 20-30-777</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<svg class="icon icon-email">
+								<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+							</svg>
 							<a href="mailto:kozadereza.if@gmail.com">kozadereza.if@gmail.com</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#icon-location"></use></svg>
-							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових Стрільців, 54</a>
+							<svg class="icon icon-location">
+								<use xlink:href="images/symbol-defs.svg#icon-location"></use>
+							</svg>
+							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових
+								Стрільців, 54</a>
 						</div>
 						<div class="contacts-item">
-							<svg class="icon icon-hours"><use xlink:href="images/symbol-defs.svg#icon-hours"></use></svg>
+							<svg class="icon icon-hours">
+								<use xlink:href="images/symbol-defs.svg#icon-hours"></use>
+							</svg>
 							<span>Пн-Сб з 10:00 до 21:00</span>
 						</div>
 					</div>
@@ -521,7 +632,8 @@
 						<img src="images/dest/payment.svg" alt="Ми приймаємо">
 					</div>
 					<div class="madeby col-md">
-						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with  ❤️  by A Prostir</a>
+						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with ❤️ by A
+							Prostir</a>
 					</div>
 				</div><!-- /.row -->
 			</div><!-- /.footer-copyright -->
@@ -543,7 +655,9 @@
 						</div><!-- /.modal-header -->
 						<div class="modal-body">
 							<div class="woocommerce-mini-cart__empty">
-								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
+								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag">
+									<use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use>
+								</svg>
 								<p class="woocommerce-mini-cart__empty-message">Немає товарів у кошику.</p>
 							</div>
 						</div><!-- /.modal-body -->
@@ -559,7 +673,8 @@
 	</div>
 
 	<!-- Authorization Modal-->
-	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1"
+		aria-labelledby="userProfileModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -593,13 +708,17 @@
 						<ul class="auth-socials-list">
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--facebook">
-									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<svg class="icon icon-facebook">
+										<use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
 									<span>Facebook</span>
 								</a>
 							</li>
 							<li class="auth-socials-item">
 								<a href="#" class="auth-socials-link auth-socials-link--google">
-									<svg class="icon icon-google"><use xlink:href="images/symbol-defs.svg#icon-google"></use></svg>
+									<svg class="icon icon-google">
+										<use xlink:href="images/symbol-defs.svg#icon-google"></use>
+									</svg>
 									<span>Google</span>
 								</a>
 							</li>
@@ -658,9 +777,12 @@
 				<div class="m-menu-search">
 					<div class="container">
 						<form action="" method="POST" class="form form-search">
-							<input type="text" id="m-menu-search" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
+							<input type="text" id="m-menu-search" class="form-control"
+								placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
 							<button class="btn btn-search">
-								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								<svg class="icon icon-search">
+									<use xlink:href="images/symbol-defs.svg#icon-search"></use>
+								</svg>
 							</button>
 						</form>
 					</div>
@@ -670,15 +792,21 @@
 						<ul class="nav-list">
 							<li class="nav-item">
 								<a href="#">Список бажаного</a>
-								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+								<svg class="icon icon-wishlist">
+									<use xlink:href="images/symbol-defs.svg#icon-wishlist"></use>
+								</svg>
 							</li>
 							<li class="nav-item">
 								<a href="#">Каталог товарів</a>
-								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+								<svg class="icon icon-catalog">
+									<use xlink:href="images/symbol-defs.svg#icon-catalog"></use>
+								</svg>
 							</li>
 							<li class="nav-item nav-item--login">
 								<div class="user-login">
-									<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+									<svg class="icon icon-user">
+										<use xlink:href="images/symbol-defs.svg#icon-user"></use>
+									</svg>
 									<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
 									<span class="dot">&bull;</span>
 									<a href="#" class="link">Реєстрація</a>
@@ -713,7 +841,9 @@
 						<div class="callback">
 							<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
 								<span>Зворотній зв’язок</span>
-								<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+								<svg class="icon icon-email">
+									<use xlink:href="images/symbol-defs.svg#icon-email"></use>
+								</svg>
 							</button>
 						</div>
 					</div>
@@ -725,4 +855,5 @@
 	<script src="js/app.min.js"></script>
 
 </body>
+
 </html>

@@ -51,6 +51,10 @@
 .pswp__caption__center
 	text-align: center
 
+.return-to-shop
+	margin-top: 20px
+	margin-bottom: 0
+
 
 /* ==========================================================================
 	 WooCommerce Notices
@@ -61,12 +65,14 @@
 .woocommerce-error
 	> li
 		display: block
-		margin-bottom: 15px
-		padding: 12px 24px
-		border-radius: 10px
+		margin-bottom: 10px
+		padding: 16px 22px
+		border-radius: 5px
 		background-color: #fff3f3
 		color: #602727
 		line-height: 1.45
+		&[data-id]
+			padding: 8px 22px
 		+media-breakpoint-down(xs)
 			border-radius: 0
 			font-size: 14px
@@ -87,9 +93,9 @@
 				text-align: center
 .woocommerce-message
 	display: block
-	margin-bottom: 15px
-	padding: 12px 24px
-	border-radius: 10px
+	margin-bottom: 10px
+	padding: 16px 22px
+	border-radius: 5px
 	background-color: #eff7ff
 	color: #26425f
 	line-height: 1.45
@@ -113,9 +119,9 @@
 			text-align: center
 .woocommerce-info
 	display: block
-	margin-bottom: 15px
+	margin-bottom: 10px
 	padding: 16px 22px
-	border-radius: 10px
+	border-radius: 5px
 	background-color: #ecfcff
 	color: #1c4b54
 	line-height: 1.45
@@ -691,7 +697,7 @@
 				margin-bottom: 10px
 				color: $black
 				font-family: $neucha
-				font-weight: 40
+				font-weight: 400
 				font-size: 26px
 			.woocommerce-shipping-methods
 				overflow: hidden
@@ -863,3 +869,125 @@
 		.btn
 			height: 48px
 			line-height: 48px
+
+
+/* ==========================================================================
+	 WooCommerce Order Resume
+	 ========================================================================== */
+.woocommerce-order
+	max-width: 80%
+	margin: 0 auto
+	+media-breakpoint-down(lg)
+		max-width: 100%
+	.woocommerce-notice
+		padding: 50px 20px
+		border-radius: 10px
+		background: #f0ffef url('../../images/dest/vegetables-bg.png') no-repeat center
+		color: #295826
+		font-family: $neucha
+		font-size: 32px
+		font-weight: 400
+		line-height: 1.35
+		text-align: center
+		+media-breakpoint-down(lg)
+			font-size: 28px
+		+media-breakpoint-down(sm)
+			padding: 35px 15px
+			font-size: 24px
+		+media-breakpoint-down(xs)
+			padding: 25px 15px
+	&-overview
+		display: flex
+		flex-wrap: wrap
+		margin: 40px 0
+		> li
+			flex: 1 1 0%
+			margin-bottom: 20px
+			padding: 0 20px
+			border-right: 1px solid $border
+			color: #777
+			text-align: center
+			&:last-child
+				border-right: 0
+			> strong
+				display: block
+				margin-top: 10px
+				color: $black
+				font-weight: 500
+			&.order > strong
+				border-radius: 5px
+				background-color: #eff7ff
+		+media-breakpoint-down(md)
+			> li
+				flex: 0 0 50%
+				margin-bottom: 30px
+				border-right: 0
+				&:nth-child(2n+1)
+					border-right: 1px solid $border
+				&:last-child
+					border-right: 0
+		+media-breakpoint-down(xs)
+			> li
+				flex: 0 0 100%
+				margin-bottom: 20px
+				padding: 0 12px 20px
+				border-right: 0 !important
+				border-bottom: 1px solid $border
+				> strong
+					margin-top: 5px
+	&-details
+		&__title
+			color: $black
+			font-family: $neucha
+			font-size: 32px
+			font-weight: 400
+		.woocommerce-table--order-details
+			width: 100%
+			border-spacing: 0
+			border-collapse: collapse
+			background-color: $white
+			line-height: 1.4
+			tr td:last-child,
+			tr th:last-child
+				text-align: right
+			td,
+			th
+				max-width: 50%
+				width: 50%
+			thead
+				tr
+					border-bottom: 2px solid $border
+				th
+					padding: 15px 12px
+					color: $black
+					font-weight: 500
+			tbody
+				tr
+					&:not(:last-child)
+						border-bottom: 1px solid $border
+				td
+					padding: 10px 12px
+					font-weight: 200
+					a
+						color: $textcolor
+						&:hover
+							color: $green-accent
+					.product-quantity
+						font-size: 14px
+						font-weight: 400
+			tfoot
+				tr
+					border-top: 1px solid $border
+				th
+					padding: 20px 12px
+					color: $black
+					font-weight: 500
+				td
+					padding: 20px 12px
+	.woocommerce-customer-details
+		margin-top: 40px
+		.woocommerce-column__title
+			color: $black
+			font-family: $neucha
+			font-size: 32px
+			font-weight: 400
