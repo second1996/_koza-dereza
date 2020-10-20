@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+
+	<meta charset="utf-8">
+	<title>Список бажань &bull; Koza-Дереza</title>
+	<meta name="description" content="Доставка фермерських продуктів додому">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+
+	<!-- Load CSS -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="css/common/main.css">
+
+</head>
+
+<body>
+
+	<!-- Site Header -->
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-auto">
+						<ul class="nav">
+							<li><a href="#">Про нас</a></li>
+							<li><a href="#">Наші виробники</a></li>
+							<li><a href="#">Каталог рецептів</a></li>
+							<li><a href="#">Доставка, оплата та повернення</a></li>
+							<li><a href="#">Відгуки</a></li>
+							<li><a href="#">Контакти</a></li>
+						</ul>
+					</div><!-- /.col -->
+					<div class="col-auto">
+						<div class="user">
+							<div class="user-login">
+								<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+								<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
+								<span class="dot">&bull;</span>
+								<a href="#" class="link">Реєстрація</a>
+								</a>
+							</div>
+						</div>
+					</div><!-- /.col -->
+				</div>
+			</div>
+		</div>
+		<div class="header-middle">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-auto order-1 order-xl-0">
+						<a href="index.html">
+							<img class="logo" src="images/dest/logotype.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
+						</a>
+					</div><!-- /.col -->
+					<div class="col order-0 order-xl-1">
+						<div class="mobile-triggers d-flex d-xl-none">
+							<div class="burger">
+								<a href="page-catalog.html" class="burger-btn">
+									<figure class="burger-icon">
+										<span></span>
+										<span></span>
+										<span></span>
+									</figure>
+								</a>
+							</div>
+							<div class="search-btn">
+								<button class="search-btn-trigger">
+									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								</button>
+							</div>
+						</div>
+						<div class="search-form">
+							<form action="" method="POST" class="form form-search">
+								<input type="text" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
+								<button class="btn btn-search">
+									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+								</button>
+							</form>
+						</div>
+					</div><!-- /.col -->
+					<div class="col col-xl-auto order-2">
+						<div class="action">
+							<div class="action-favorite">
+								<a href="#" class="action-btn">
+									<figure class="action-btn-icon">
+										<span class="count">3</span>
+										<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+									</figure>
+								</a>
+							</div>
+							<div class="action-cart">
+								<a href="#shopCart" data-toggle="modal" class="action-btn">
+									<figure class="action-btn-icon">
+										<span class="count">5</span>
+										<svg class="icon icon-shopping-cart"><use xlink:href="images/symbol-defs.svg#icon-shopping-cart"></use></svg>
+									</figure>
+									<span class="total">543 <span class="total-symbol">₴</span></span>
+								</a>
+							</div>
+							<div class="action-phone">
+								<a href="tel:+380952030777">+38 (095) 20-30-777</a>
+								<span>Пн-Сб з 11:00 до 20:00</span>
+							</div>
+						</div>
+					</div><!-- /.col -->
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-auto">
+						<a href="page-catalog.html" class="btn btn-catalog">
+							<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							<span>Каталог продуктів</span>
+						</a>
+						<nav class="nav nav--catalog">
+							<div class="nav-inner">
+								<ul class="menu">
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/meat.svg" alt="" class="menu-icon">
+											<span class="menu-title">М’ясо та ковбаси</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/meat.png" alt="">
+											</li>
+											<li class="submenu-title">М’ясо та ковбаси</li>
+											<li class="submenu-item">
+												<a href="#">Свинина</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Кролик</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Яловичина</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Косуля</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Коза</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Кабан</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Баранина</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Олень</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/milk.svg" alt="" class="menu-icon">
+											<span class="menu-title">Молочні продукти</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/milk.png" alt="">
+											</li>
+											<li class="submenu-title">Молочні продукти</li>
+											<li class="submenu-item">
+												<a href="#">З коров'ячого молока</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">З козячого молока</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Йогурт</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Сири</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/bakaliya.svg" alt="" class="menu-icon">
+											<span class="menu-title">Бакалія</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/grocery.png" alt="">
+											</li>
+											<li class="submenu-title">Бакалія</li>
+											<li class="submenu-item">
+												<a href="#">Олія</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Яйця</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Консерви</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Мед</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/fruit-n-vegetables.svg" alt="" class="menu-icon">
+											<span class="menu-title">Овочі та фрукти</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/vegetables.png" alt="">
+											</li>
+											<li class="submenu-title">Овочі та фрукти</li>
+											<li class="submenu-item">
+												<a href="#">Овочі</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Зелень</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Фрукти</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Ягоди</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/bakery.svg" alt="" class="menu-icon">
+											<span class="menu-title">Випічка</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/baking.png" alt="">
+											</li>
+											<li class="submenu-title">Випічка</li>
+											<li class="submenu-item">
+												<a href="#">Хліб</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Пиріжки</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Рулети</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Прянощі</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/desserts.svg" alt="" class="menu-icon">
+											<span class="menu-title">Десерти без цукру</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/desserts.png" alt="">
+											</li>
+											<li class="submenu-title">Десерти без цукру</li>
+											<li class="submenu-item">
+												<a href="#">Морозиво</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Печиво</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Торти</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Тістечка</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/fabricaty.svg" alt="" class="menu-icon">
+											<span class="menu-title">Напівфабрикати</span>
+										</a>
+										<ul class="submenu">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/semi-products.png" alt="">
+											</li>
+											<li class="submenu-title">Напівфабрикати</li>
+											<li class="submenu-item">
+												<a href="#">Вареники</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Пельмені</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Котлети, кебаби та нагетси</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Равіолі</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">
+											<img src="images/dest/icons/catalog/wine.svg" alt="" class="menu-icon">
+											<span class="menu-title">Винотека</span>
+										</a>
+										<ul class="submenu submenu-stretch">
+											<li class="submenu-photo">
+												<img src="images/dest/catalog/wine.png" alt="">
+											</li>
+											<li class="submenu-title">Винотека</li>
+											<li class="submenu-item">
+												<a href="#">Біле</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Біле органічне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Оранжеве органічне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Рожеве</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Червоне</a>
+											</li>
+											<li class="submenu-item">
+												<a href="#">Червоне органічне</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div><!-- /.col -->
+					<div class="col">
+						<ul class="categories">
+							<li class="categories-item">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/meat.svg" alt="" class="categories-icon">
+									<span class="categories-title">М’ясо та ковбаси</span>
+								</a>
+							</li>
+							<li class="categories-item">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/milk.svg" alt="" class="categories-icon">
+									<span class="categories-title">Молочні продукти</span>
+								</a>
+							</li>
+							<li class="categories-item">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/bakaliya.svg" alt="" class="categories-icon">
+									<span class="categories-title">Бакалія</span>
+								</a>
+							</li>
+							<li class="categories-item">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/fruit-n-vegetables.svg" alt="" class="categories-icon">
+									<span class="categories-title">Овочі та фрукти</span>
+								</a>
+							</li>
+							<li class="categories-item d-none d-xxl-block">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/bakery.svg" alt="" class="categories-icon">
+									<span class="categories-title">Випічка</span>
+								</a>
+							</li>
+							<li class="categories-item d-none d-xxl-block">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/desserts.svg" alt="" class="categories-icon">
+									<span class="categories-title">Десерти без цукру</span>
+								</a>
+							</li>
+							<li class="categories-item d-none d-xxl-block">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/fabricaty.svg" alt="" class="categories-icon">
+									<span class="categories-title">Напівфабрикати</span>
+								</a>
+							</li>
+							<li class="categories-item d-none d-xl-block">
+								<a href="#" class="categories-link">
+									<img src="images/dest/icons/catalog/wine.svg" alt="" class="categories-icon">
+									<span class="categories-title">Винотека</span>
+								</a>
+							</li>
+						</ul>
+					</div><!-- /.col -->
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="page">
+
+		<div class="page-header">
+			<div class="container">
+				<h1 class="title">Список бажань</h1>
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs-list">
+						<li><a href="index.html" class="home"></a></li>
+						<li><span>Список бажань</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-content">
+			<div class="container">
+
+				<div class="wishlist-empty">
+					<div class="wishlist-empty-icon">
+						<svg class="icon icon-heart"><use xlink:href="images/symbol-defs.svg#icon-heart"></use></svg>
+					</div>
+					<h2 class="wishlist-empty-title">Список бажань порожній</h2>
+					<p class="wishlist-empty-descr">У Вас ще немає продуктів у списку бажань.<br> Багато цікавих продуктів Ви знайдете в нашому магазині за посиланням "Переглянути каталог".</p>
+					<div class="wishlist-empty-button">
+						<a href="page-catalog.html" class="btn btn-orange">Переглянути каталог</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</main>
+
+	<!-- Site Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="footer-brand">
+					<div class="about">
+						<a href="index.html">
+							<img class="about-logo" src="images/dest/logotype-light.svg" alt="Koza-Дереza — Доставка продуктів по Україні">
+						</a>
+						<p class="about-descr">Коzа-Дереzа — інтернет-магазин доставки продуктів додому від мережі Carte Royal з виробленою базою найкращих постачальників та виробників, які гарантують високу якість продукції.</p>
+					</div>
+					<div class="social">
+						<ul class="social-list">
+							<li>
+								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://facebook.com" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-messenger"><use xlink:href="images/symbol-defs.svg#icon-messenger"></use></svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://instagram.com" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-instagram"><use xlink:href="images/symbol-defs.svg#icon-instagram"></use></svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://viber.com" target="_blank" rel="nofollow noopener">
+									<svg class="icon icon-viber"><use xlink:href="images/symbol-defs.svg#icon-viber"></use></svg>
+								</a>
+							</li>
+						</ul>
+						<span class="social-subtitle">Приєднюйтесь до нас</span>
+					</div>
+				</div><!-- /.footer-brand -->
+				<div class="footer-menu">
+					<ul class="footer-menu-list">
+						<li><a href="#">Винотека</a></li>
+						<li><a href="#">М’ясо та ковбаси</a></li>
+						<li><a href="#">Молочні продукти</a></li>
+						<li><a href="#">Бакалія</a></li>
+						<li><a href="#">Овочі та фрукти</a></li>
+						<li><a href="#">Випічка</a></li>
+						<li><a href="#">Десерти без цукру</a></li>
+						<li><a href="#">Напівфабрикати</a></li>
+					</ul>
+				</div><!-- /.footer-menu -->
+				<div class="footer-menu">
+					<ul class="footer-menu-list">
+						<li><a href="#">Головна</a></li>
+						<li><a href="#">Каталог товарів</a></li>
+						<li><a href="#">Про нас</a></li>
+						<li><a href="#">Наші виробники</a></li>
+						<li><a href="#">Каталог рецептів</a></li>
+						<li><a href="#">Доставка, оплата та повернення</a></li>
+						<li><a href="#">Відгуки</a></li>
+						<li><a href="#">Контакти</a></li>
+					</ul>
+				</div><!-- /.footer-menu -->
+				<div class="footer-contacts">
+					<div class="callback">
+						<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
+							<span>Зворотній зв’язок</span>
+							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+						</button>
+					</div>
+					<div class="contacts">
+						<div class="contacts-item">
+							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#icon-phone"></use></svg>
+							<a href="tel:+380952030777">+38 (095) 20-30-777</a>
+						</div>
+						<div class="contacts-item">
+							<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							<a href="mailto:kozadereza.if@gmail.com">kozadereza.if@gmail.com</a>
+						</div>
+						<div class="contacts-item">
+							<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#icon-location"></use></svg>
+							<a href="https://google.com" target="_blank" rel="nofollow noopener">Івано-Франківськ, вул. Січових Стрільців, 54</a>
+						</div>
+						<div class="contacts-item">
+							<svg class="icon icon-hours"><use xlink:href="images/symbol-defs.svg#icon-hours"></use></svg>
+							<span>Пн-Сб з 10:00 до 21:00</span>
+						</div>
+					</div>
+				</div><!-- /.footer-contacts -->
+			</div><!-- /.footer-wrapper -->
+			<div class="footer-bottom">
+				<div class="row align-items-center justify-content-between">
+					<div class="copyright col-md">
+						<span>«Коzа-Дереzа» — доставка продуктів додому © 2020</span>
+					</div>
+					<div class="payment col-md-auto">
+						<img src="images/dest/payment.svg" alt="Ми приймаємо">
+					</div>
+					<div class="madeby col-md">
+						<a href="https://marketing.aprostir.com" target="_blank" rel="nofollow noopener">Made with  ❤️  by A Prostir</a>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.footer-copyright -->
+		</div><!-- /.container -->
+	</footer>
+
+	<!-- Shopping Cart-->
+	<div class="modal cart-widget fade" id="shopCart" tabindex="-1" aria-labelledby="shopCartLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="widget woocommerce widget_shopping_cart">
+					<div class="widget_shopping_cart_content" style="opacity: 1;">
+						<div class="modal-header">
+							<h5 class="modal-title" id="shopCartLabel">Ваша корзина</h5>
+							<div class="modal-close btn-close" data-dismiss="modal">
+								<span aria-hidden="true"></span>
+								<span aria-hidden="true"></span>
+							</div>
+						</div><!-- /.modal-header -->
+						<div class="modal-body">
+							<div class="woocommerce-mini-cart__empty">
+								<svg class="woocommerce-mini-cart__empty-icon icon icon-shopping-bag"><use xlink:href="images/symbol-defs.svg#icon-shopping-bag"></use></svg>
+								<p class="woocommerce-mini-cart__empty-message">Немає товарів у кошику.</p>
+							</div>
+						</div><!-- /.modal-body -->
+						<div class="modal-footer">
+							<button class="cart-btn-empty btn btn-orange" data-dismiss="modal">Повернутися до магазину</button>
+						</div><!-- /.modal-footer -->
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!-- Authorization Modal-->
+	<div class="modal modal-authorization fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="userProfileModalLabel">Особистий кабінет</h5>
+					<div class="modal-close btn-close btn-close" data-dismiss="modal">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form action="" method="POST" class="form">
+						<div class="form-group">
+							<label class="form-label" for="sign-in-login">E-mail <sup>*</sup></label>
+							<input type="email" id="sign-in-login" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="sign-in-password">Пароль <sup>*</sup></label>
+							<input type="password" id="sign-in-password" class="form-control" required>
+						</div>
+						<div class="form-link">
+							<a href="#">Втратили свій пароль?</a>
+						</div>
+						<div class="form-buttons form-buttons--auth">
+							<button type="submit" class="form-submit btn btn-green">Увійти</button>
+							<a href="#" class="btn btn-outline">Зареєструватися</a>
+						</div>
+					</form>
+					<hr>
+					<div class="auth-socials">
+						<div class="auth-socials-title">Увійти за допомогою соцмереж</div>
+						<ul class="auth-socials-list">
+							<li class="auth-socials-item">
+								<a href="#" class="auth-socials-link auth-socials-link--facebook">
+									<svg class="icon icon-facebook"><use xlink:href="images/symbol-defs.svg#icon-facebook"></use></svg>
+									<span>Facebook</span>
+								</a>
+							</li>
+							<li class="auth-socials-item">
+								<a href="#" class="auth-socials-link auth-socials-link--google">
+									<svg class="icon icon-google"><use xlink:href="images/symbol-defs.svg#icon-google"></use></svg>
+									<span>Google</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!-- Callback Modal-->
+	<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="callbackModalLabel">Зворотній зв'язок</h5>
+					<div class="modal-close btn-close btn-close" data-dismiss="modal">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="modal-body">
+					<span class="modal-descr">Напишіть нам свою пропозицію чи побажання!</span>
+					<form action="" method="POST" class="form">
+						<div class="form-group">
+							<label class="form-label" for="callback-name">Ваше ім'я <sup>*</sup></label>
+							<input type="text" id="callback-name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-phone">Номер телефону <sup>*</sup></label>
+							<input type="tel" id="callback-phone" class="form-control" data-mask="+38 (099) 99-99-999" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-email">E-mail <sup>*</sup></label>
+							<input type="email" id="callback-email" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="callback-message">Ваше повідомлення</label>
+							<textarea id="callback-message" class="form-textarea" rows="6"></textarea>
+						</div>
+						<button type="submit" class="form-submit btn btn-green">Надіслати</button>
+					</form>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!-- Mobile menu -->
+	<div class="m-menu">
+		<div class="m-menu-inner">
+			<div class="container">
+				<div class="m-menu-search">
+					<div class="container">
+						<form action="" method="POST" class="form form-search">
+							<input type="text" id="m-menu-search" class="form-control" placeholder="Що би Ви хотіли сьогодні на вечерю?" required>
+							<button class="btn btn-search">
+								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#icon-search"></use></svg>
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="m-menu-main">
+					<div class="m-menu-nav nav">
+						<ul class="nav-list">
+							<li class="nav-item">
+								<a href="#">Список бажаного</a>
+								<svg class="icon icon-wishlist"><use xlink:href="images/symbol-defs.svg#icon-wishlist"></use></svg>
+							</li>
+							<li class="nav-item">
+								<a href="#">Каталог товарів</a>
+								<svg class="icon icon-catalog"><use xlink:href="images/symbol-defs.svg#icon-catalog"></use></svg>
+							</li>
+							<li class="nav-item nav-item--login">
+								<div class="user-login">
+									<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
+									<a href="#userProfileModal" data-toggle="modal" class="link">Вхід</a>
+									<span class="dot">&bull;</span>
+									<a href="#" class="link">Реєстрація</a>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a href="#">Про нас</a>
+							</li>
+							<li class="nav-item">
+								<a href="#">Наші виробники</a>
+							</li>
+							<li class="nav-item">
+								<a href="#">Каталог рецептів</a>
+							</li>
+							<li class="nav-item">
+								<a href="#">Доставка, оплата та повернення</a>
+							</li>
+							<li class="nav-item">
+								<a href="#">Відгуки</a>
+							</li>
+							<li class="nav-item">
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</div>
+					<div class="m-menu-info">
+						<div class="phone">
+							<a href="tel:+380952030777">+38 (095) 20-30-777</a>
+							<span>Пн-Сб з 11:00 до 20:00</span>
+						</div>
+						<div class="callback">
+							<button class="btn btn-callback" data-toggle="modal" data-target="#callbackModal">
+								<span>Зворотній зв’язок</span>
+								<svg class="icon icon-email"><use xlink:href="images/symbol-defs.svg#icon-email"></use></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

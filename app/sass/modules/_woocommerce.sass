@@ -1,8 +1,5 @@
 @import '../helpers/helpers'
 
-#yith-wcwl-popup-message
-	display: none !important
-
 .post-edit-link,
 .comment-edit-link
 	display: inline-block
@@ -994,3 +991,92 @@
 			font-family: $neucha
 			font-size: 32px
 			font-weight: 400
+
+
+/* ==========================================================================
+	 WooCommerce Wishlist
+	 ========================================================================== */
+#yith-wcwl-popup-message
+	display: none !important
+
+.wishlist-empty,
+.cart-empty
+	text-align: center
+	&-icon
+		color: rgba($black, 0.1)
+		font-size: 160px
+		line-height: 1
+		+media-breakpoint-down(md)
+			font-size: 120px
+		+media-breakpoint-down(xs)
+			font-size: 80px
+	&-title
+		margin-top: 40px
+		color: $black
+		font-family: $neucha
+		font-size: 32px
+		font-weight: 400
+		line-height: 1.3
+		+media-breakpoint-down(xs)
+			margin-top: 20px
+			font-size: 26px
+	&-descr
+		margin-top: 15px
+		+media-breakpoint-down(xs)
+			font-size: 15px
+		+media-breakpoint-down(xxs)
+			font-size: 14px
+	&-button
+		margin-top: 40px
+		+media-breakpoint-down(xs)
+			margin-top: 20px
+			
+
+.wishlist-title
+	display: none
+
+.wishlist_table
+	.card-product
+		.card-buttons
+			visibility: visible
+			opacity: 1
+			.button
+				margin-bottom: 0
+
+.yith-wcwl-share
+	float: none !important
+	&-title
+		margin-top: 10px !important
+		margin-bottom: 20px !important
+		color: $black
+		font-family: $neucha
+		font-size: 32px
+		font-weight: 400
+		line-height: 1.3
+		+media-breakpoint-down(sm)
+			text-align: center
+
+.yith-wcwl-after-share-section
+	display: flex
+	align-items: center
+	.form-control
+		display: inline-flex
+		align-items: center
+		max-width: 420px
+		margin-bottom: 0
+		margin-right: 20px
+		padding: 0 20px
+		border: 1px solid $green
+		background-color: $white
+	.copy-trigger
+		color: $orange-accent
+		font-weight: 500
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		.form-control
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+			text-align: center
+		small
+			text-align: center
