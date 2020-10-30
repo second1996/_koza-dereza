@@ -423,6 +423,23 @@
 						</aside>
 					</div>
 					<div class="col-lg-9">
+
+						<div class="woocommerce-sorting">
+							<div class="woocommerce-notices-wrapper">
+								<p class="woocommerce-info">Товарів, відповідних вашому запиту, не знайдено.</p>
+							</div>
+							<p class="woocommerce-result-count">Відображаються усі з 5 результатів</p>
+							<form class="woocommerce-ordering form" method="get">
+								<select name="orderby" class="orderby form-select" aria-label="Замовлення магазину">
+									<option value="popularity">Сортувати за популярністю</option>
+									<option value="date">Сортувати за останніми</option>
+									<option value="price" selected="selected">Сортувати за ціною: від низької до високої</option>
+									<option value="price-desc">Сортувати за ціною: від високої до низької</option>
+								</select>
+								<input type="hidden" name="paged" value="1">
+							</form>
+						</div>
+
 						<div class="products-grid row no-gutters">
 							<div class="col-6 col-lg-4">
 								<div class="card card-product">

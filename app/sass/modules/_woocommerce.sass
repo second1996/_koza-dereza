@@ -57,6 +57,40 @@
 
 
 /* ==========================================================================
+	 WooCommerce Sorting
+	 ========================================================================== */
+.woocommerce-sorting
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.woocommerce-notices-wrapper
+		flex: 0 0 100%
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
+	.woocommerce-result-count,
+	.woocommerce-ordering
+		flex: 1 1 48%
+		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			flex: 0 0 100%
+	.woocommerce-result-count
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+			font-size: 14px
+	.woocommerce-ordering
+		.form
+			&-select
+				width: auto
+				margin-left: auto
+				margin-bottom: 0
+				+media-breakpoint-down(sm)
+					margin-left: 0
+				+media-breakpoint-down(xs)
+					height: 50px
+					line-height: 48px
+					background-position-y: 19px
+
+/* ==========================================================================
 	 WooCommerce Notices
 	 ========================================================================== */
 .woocommerce-notices-wrapper,
@@ -822,7 +856,9 @@
 					fill: $green-accent
 
 
-// Customize Coupon
+/* ==========================================================================
+	 WooCommerce Coupon
+	 ========================================================================== */
 .woocommerce-form-coupon
 	.coupon-wrapper
 		display: inline-block
@@ -1091,99 +1127,166 @@
 	left: 0
 	right: 0
 	z-index: 15
-	display: none
 	padding: 12px 24px
 	border-radius: 10px
 	border: 1px solid $border
 	background-color: $white
-	transform: translateY(12px)
+	visibility: hidden
+	opacity: 0
+	transform: translate3d(0, 0, 0)
+	transition: $trs-3s
 	&.active
-		display: block
+		visibility: visible
+		opacity: 1
+		transform: translate3d(0, 12px, 0)
 	ul
 		> li
 			position: relative
 			display: block
 			padding: 12px 0
-			border-bottom: 1px dashed $border
-			&:last-child
-				border-bottom: none
+			&:not(:last-child)
+				border-bottom: 1px solid $border
 			> a
 				display: table
 				width: 100%
 				> *
 					display: table-cell
 					vertical-align: top
-
-.ajax-search-results .product-image
-	width: 72px
-	max-width: 72px
+	.product-image
+		width: 72px
+		max-width: 72px
+	h3
+		display: block
+		font-weight: 400
+		font-size: 16px
 
 .product-data
 	padding-left: 24px
+	div:not(.product-categories)
+		display: inline-block
+		vertical-align: middle
+	.product-price
+		position: absolute
+		top: 12px
+		right: 0
+		display: flex
+		align-items: flex-end
+		flex-wrap: wrap
+		line-height: 1
+		&-wrapper
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			margin-right: 3px
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				align-items: flex-start
+				margin-right: 6px
+			del
+				text-decoration: none
+				.amount
+					position: relative
+					margin-right: 4px
+					color: #bbb
+					font-weight: 200
+					&::after
+						content: ''
+						position: absolute
+						top: 50%
+						left: 0
+						width: 100%
+						height: 1px
+						background-color: #bbb
+			ins
+				text-decoration: none
+				.amount
+					color: $black
+		.amount
+			color: $black
+			font-size: 18px
+			font-weight: 400
+			.currencySymbol,
+			.woocommerce-Price-currencySymbol
+				font-weight: 200
+		&-count
+			span
+				color: #8c8c8c
+				font-size: 14px
+				font-weight: 200
+	.product-stock
+		position: absolute
+		bottom: 12px
+		right: 0
+		display: block
+		margin-top: 15px
+		font-size: 14px
+		font-weight: 200
+		line-height: 1
+		&::before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			margin-right: 8px
+		&.in-stock
+			color: #555
+			&::before
+				background-color: $green-accent
+		&.low-stock
+			color: #555
+			> b,
+			> strong
+				padding: 2px 4px
+				border-radius: 4px
+				background-color: $border
+			&::before
+				background-color: #fdb522
+		&.out-of-stock
+			color: #aaa
+			&::before
+				background-color: #e0e0e0
 
-.ajax-search-results h3
-	display: block
+.product-categories
+	> span
+		display: inline-block
+		margin-right: 4px
+		&:after
+			content: ","
+		&:last-child:after
+			content: ""
+		&:last-child
+			margin-right: 0
 
-.product-data div:not(.product-categories)
-	display: inline-block
-	vertical-align: middle
-
-.product-data .product-price
-	position: absolute
-	top: 12px
-	right: 0
-
-.product-data .product-stock
-	padding: 4px 8px
-	background: #eeeeee
-	border-radius: 4px
-	position: absolute
-	bottom: 12px
-	right: 0
-
-.product-categories > span
-	display: inline-block
-	margin-right: 4px
-
-.product-categories > span:after
-	content: ","
-
-.product-categories > span:last-child:after
-	content: ""
-
-.product-categories > span:last-child
-	margin-right: 0
-
-.product-search select
-	width: 100% !important
-	min-height: 40px !important
-	margin-bottom: 16px
-
-.product-search select,
-.product-search input
-	background: $white
-	border: 1px solid #e0e0e0
+.product-search
+	select
+		width: 100% !important
+		min-height: 40px !important
+		margin-bottom: 16px
+	select,
+	input
+		background-color: $white
+		border: 1px solid #e0e0e0
 
 .search-wrapper
 	position: relative
-
-.search-wrapper input
-	padding-right: 35px !important
-
-.search-wrapper svg
-	position: absolute
-	top: 10px
-	right: 10px
-	width: 20px
-	height: 20px
-	fill: #bdbdbd
-	animation:loading 500ms 0ms infinite normal linear
-	transform-origin: center
-	opacity: 0
-
-.search-wrapper.loading svg
-	opacity: 1
+	input
+		padding-right: 35px !important
+	svg
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 20px
+		height: 20px
+		fill: #bdbdbd
+		animation:loading 500ms 0ms infinite normal linear
+		transform-origin: center
+		opacity: 0
+	&.loading svg
+		opacity: 1
 
 @keyframes loading
-	fromtransform: rotate(0deg)
-	totransform: rotate(360deg)
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)

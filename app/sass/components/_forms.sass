@@ -42,7 +42,8 @@
 		> sup
 			color: red
 	&-control,
-	&-textarea
+	&-textarea,
+	&-select
 		appearance: none
 		display: block
 		width: 100%
@@ -64,10 +65,13 @@
 			user-select: none
 			box-shadow: none
 			background-color: $c-f5
+		&:hover:not(:focus)
+			cursor: pointer
+			background-color: $c-f1
 	&-control
 		height: 60px
 		padding: 0 32px
-		line-height: 60px
+		line-height: 58px
 		&--number
 			-moz-appearance: textfield
 			&::-webkit-outer-spin-button,
@@ -78,6 +82,23 @@
 		resize: none
 		min-height: 200px
 		padding: 16px 32px
+	&-select
+		position: relative
+		height: 60px
+		padding: 0 50px 0 20px
+		line-height: 58px
+		background-image: url('../../images/dest/icons/arrow-down.svg')
+		background-repeat: no-repeat
+		background-position-x: calc(100% - 20px)
+		background-position-y: 24px
+		background-size: 15px
+		+media-breakpoint-down(xs)
+			max-width: 320px
+		+media-breakpoint-down(xxs)
+			max-width: 280px
+		option:checked
+			color: $white
+			background-color: $orange
 	&-radio
 		position: relative
 		input[type="radio"]
@@ -143,13 +164,14 @@
 		margin-bottom: 0
 		padding-right: 76px
 		border-radius: 60px
-		line-height: 70px
+		line-height: 68px
 		+media-breakpoint-down(xl)
 			height: 64px
-			line-height: 64px
+			line-height: 62px
 	.btn-search
 		position: absolute
 		top: 0
 		right: 0
 		bottom: 0
 		height: 100%
+		transform: translateY(-2px)
