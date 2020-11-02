@@ -1121,172 +1121,205 @@
 /* ==========================================================================
 	WooCommerce Ajax Search
 	========================================================================== */
+.search-form
+	.form-search
+		&.loading
+			.btn-search
+				.icon-search
+					opacity: 0
+				.search-loader
+					display: block
+			~ .ajax-search-results
+				visibility: hidden
+				opacity: 0
+	.search-loader
+		display: none
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: 1
+			display: inline-block
+			vertical-align: middle
+			width: 26px
+			height: 26px
+			margin-top: -11px
+			margin-left: -12px
+			border-radius: 50%
+			border: 2px solid rgba($black, 0.15)
+			border-left-color: $orange
+			will-change: transform
+			transform: translate3d(0,0,0)
+			opacity: 1
+			animation: kd-rotate .5s infinite linear
+
+// Main Ajax Search customize
 .ajax-search-results
 	position: absolute
 	top: 100%
 	left: 0
 	right: 0
 	z-index: 15
-	padding: 12px 24px
-	border-radius: 10px
-	border: 1px solid $border
-	background-color: $white
+	transform: translate3d(0, 0, 0)
 	visibility: hidden
 	opacity: 0
-	transform: translate3d(0, 0, 0)
-	transition: $trs-3s
-	&.active
+	+media-breakpoint-down(xl)
+		right: -250px
+	&.is-active
 		visibility: visible
 		opacity: 1
 		transform: translate3d(0, 12px, 0)
-	ul
+		transition: $trs-3s
+
+	// Results wrapper (list of results)
+	&-wrapper
+		overflow: hidden
+		border-radius: 6px
+		border: 3px solid $c-f1
+		box-shadow: 0 0 30px rgba($black, 0.05)
+		background-color: $white
+		// Empty result
+		.ajax-products-empty
+			// background-color: #fff3f3
+			padding: 16px 30px
+			color: #602727
+			font-size: 15px
+		// List products
 		> li
 			position: relative
 			display: block
-			padding: 12px 0
+			padding: 20px 24px
+			transition: background-color .35s ease
 			&:not(:last-child)
 				border-bottom: 1px solid $border
+			&:hover
+				background-color: rgba($green-accent, 0.035)
+				.ajax-product-title
+					.title
+						color: $orange-accent
 			> a
-				display: table
-				width: 100%
-				> *
-					display: table-cell
-					vertical-align: top
-	.product-image
+				display: flex
+	.ajax-product-image
+		align-self: center
+		overflow: hidden
 		width: 72px
 		max-width: 72px
-	h3
-		display: block
-		font-weight: 400
-		font-size: 16px
-
-.product-data
-	padding-left: 24px
-	div:not(.product-categories)
-		display: inline-block
-		vertical-align: middle
-	.product-price
-		position: absolute
-		top: 12px
-		right: 0
+		border-radius: 5px
+	.ajax-product-meta
 		display: flex
-		align-items: flex-end
-		flex-wrap: wrap
-		line-height: 1
-		&-wrapper
+		width: 100%
+		flex-direction: column
+		justify-content: space-between
+		padding-left: 24px
+		&-head,
+		&-footer
 			display: flex
-			align-items: center
-			flex-wrap: wrap
-			margin-right: 3px
-			+media-breakpoint-down(xs)
-				flex-direction: column
-				align-items: flex-start
-				margin-right: 6px
-			del
-				text-decoration: none
-				.amount
-					position: relative
-					margin-right: 4px
-					color: #bbb
-					font-weight: 200
-					&::after
-						content: ''
-						position: absolute
-						top: 50%
-						left: 0
-						width: 100%
-						height: 1px
-						background-color: #bbb
-			ins
-				text-decoration: none
-				.amount
-					color: $black
-		.amount
-			color: $black
-			font-size: 18px
-			font-weight: 400
-			.currencySymbol,
-			.woocommerce-Price-currencySymbol
-				font-weight: 200
-		&-count
-			span
+			justify-content: space-between
+			align-items: start
+		.ajax-product-title
+			display: flex
+			flex-direction: column
+			.sku
+				margin-bottom: 6px
 				color: #8c8c8c
 				font-size: 14px
 				font-weight: 200
-	.product-stock
-		position: absolute
-		bottom: 12px
-		right: 0
-		display: block
-		margin-top: 15px
-		font-size: 14px
-		font-weight: 200
-		line-height: 1
-		&::before
-			content: ''
-			display: inline-block
-			width: 10px
-			height: 10px
-			border-radius: 50%
-			margin-right: 8px
-		&.in-stock
-			color: #555
+				line-height: 1
+			.title
+				display: block
+				margin-bottom: 0
+				font-weight: 400
+				font-size: 16px
+				transition: color .35s ease
+		.ajax-product-price
+			display: flex
+			align-items: flex-end
+			flex-wrap: wrap
+			line-height: 1
+			&-wrapper
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				margin-right: 3px
+				+media-breakpoint-down(xs)
+					flex-direction: column
+					align-items: flex-start
+					margin-right: 6px
+				del
+					text-decoration: none
+					.amount
+						position: relative
+						margin-right: 4px
+						color: #bbb
+						font-size: 14px
+						font-weight: 200
+						&::after
+							content: ''
+							position: absolute
+							top: 50%
+							left: 0
+							width: 100%
+							height: 1px
+							background-color: #bbb
+				ins
+					text-decoration: none
+					.amount
+						color: $black
+			.amount
+				color: $black
+				font-size: 18px
+				font-weight: 400
+				.currencySymbol,
+				.woocommerce-Price-currencySymbol
+					font-weight: 200
+			&-count
+				span
+					color: #8c8c8c
+					font-size: 14px
+					font-weight: 200
+		.ajax-product-stock
+			margin-top: 15px
+			font-size: 14px
+			font-weight: 200
+			line-height: 1
 			&::before
-				background-color: $green-accent
-		&.low-stock
-			color: #555
-			> b,
-			> strong
-				padding: 2px 4px
-				border-radius: 4px
-				background-color: $border
-			&::before
-				background-color: #fdb522
-		&.out-of-stock
-			color: #aaa
-			&::before
-				background-color: #e0e0e0
-
-.product-categories
-	> span
-		display: inline-block
-		margin-right: 4px
-		&:after
-			content: ","
-		&:last-child:after
-			content: ""
-		&:last-child
-			margin-right: 0
-
-.product-search
-	select
-		width: 100% !important
-		min-height: 40px !important
-		margin-bottom: 16px
-	select,
-	input
-		background-color: $white
-		border: 1px solid #e0e0e0
-
-.search-wrapper
-	position: relative
-	input
-		padding-right: 35px !important
-	svg
-		position: absolute
-		top: 10px
-		right: 10px
-		width: 20px
-		height: 20px
-		fill: #bdbdbd
-		animation:loading 500ms 0ms infinite normal linear
-		transform-origin: center
-		opacity: 0
-	&.loading svg
-		opacity: 1
-
-@keyframes loading
-	0%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(360deg)
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				margin-right: 8px
+			&.in-stock
+				color: #555
+				&::before
+					background-color: $green-accent
+			&.low-stock
+				color: #555
+				> b,
+				> strong
+					padding: 2px 4px
+					border-radius: 4px
+					background-color: $border
+				&::before
+					background-color: #fdb522
+			&.out-of-stock
+				color: #aaa
+				&::before
+					background-color: #e0e0e0
+		.ajax-product-categories
+			margin-top: 6px
+			line-height: 1.2
+			> span
+				display: inline-block
+				color: rgba($black, 0.75)
+				font-size: 14px
+				font-weight: 200
+				&::after
+					content: '•'
+					margin: 0 4px
+					color: $green
+				&:last-child::after
+					display: none
+				&:last-child
+					margin-right: 0
