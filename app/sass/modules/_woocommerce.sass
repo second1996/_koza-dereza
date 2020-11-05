@@ -510,6 +510,11 @@
 			background-color: $c-f5
 			background-clip: padding-box
 			outline: none
+			+media-breakpoint-down(xs)
+				height: 46px
+				padding-left: 20px
+				padding-right: 20px
+				line-height: 44px
 			&__rendered
 				padding-left: 0 !important
 			&__clear
@@ -551,6 +556,9 @@
 				padding: 8px 16px
 				border-radius: 6px
 				outline: none
+				+media-breakpoint-down(xs)
+					padding: 6px 12px
+					font-size: 15px
 				&:not(:last-child)
 					margin-bottom: 4px
 				&[data-selected="true"]
@@ -561,11 +569,16 @@
 	// Customize form
 	&-wrapper
 		display: flex
+		+media-breakpoint-down(md)
+			flex-direction: column
 	&-details
 		flex: 1 1 auto
 		padding-right: 30px
 		border-right: 2px dashed $border
-
+		+media-breakpoint-down(md)
+			margin-bottom: 60px
+			padding-right: 0
+			border-right: 0
 	&-section-title
 		margin-bottom: 30px
 		font-family: $neucha
@@ -588,6 +601,13 @@
 		&__field-wrapper
 			display: flex
 			flex-wrap: wrap
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				.form-control
+					height: 46px
+					padding-left: 20px
+					padding-right: 20px
+					line-height: 44px
 			.form-row
 				flex: 0 0 100%
 				&-first
@@ -596,10 +616,20 @@
 				&-last
 					flex: 0 0 50%
 					padding-left: 10px
+				+media-breakpoint-down(xs)
+					&-first
+						padding-right: 0
+					&-last
+						padding-left: 0
 			.form-group
 				margin-top: 0
 				&:not(:first-child)
 					margin-top: 0
+	.woocommerce-checkout-notes-wrapper
+		+media-breakpoint-down(xs)
+			.form-textarea
+				padding-left: 20px
+				padding-right: 20px
 	// Order
 	&-review-order
 		overflow: hidden
@@ -611,19 +641,11 @@
 		max-width: 600px
 		height: 100%
 		padding: 0 30px 50px 30px
-		// border-radius: 10px
-		// border-left: 2px dashed $border
-		// background-color: #edf8ec
-		// &::after
-		// 	content: ''
-		// 	position: absolute
-		// 	left: 0
-		// 	right: 0
-		// 	bottom: 0
-		// 	z-index: 2
-		// 	height: 23px
-		// 	background: url(../../images/dest/footer-pattern.png) no-repeat center/cover
-		// 	opacity: 0.15
+		+media-breakpoint-down(lg)
+			max-width: 450px
+		+media-breakpoint-down(md)
+			max-width: 100%
+			padding: 0
 		.checkout-btn-complete
 			width: 100%
 		.woocommerce-checkout-section-title
@@ -644,16 +666,25 @@
 					color: $black
 					font-weight: 500
 					line-height: 1.3
+					+media-breakpoint-down(xs)
+						padding-left: 20px
+						padding-right: 20px
+						font-size: 14px
 					&.product-name
 						width: 60%
 					&.product-total
 						width: 40%
 			tbody
 				border-radius: 0 0 6px 6px
+				line-height: 1.4
 				tr:not(:last-child)
 					border-bottom: 1px dashed $border
 				td
 					padding: 12px 30px
+					+media-breakpoint-down(xs)
+						padding-left: 20px
+						padding-right: 20px
+						font-size: 14px
 				.product-name
 					color: $black
 					font-weight: 200
@@ -671,6 +702,10 @@
 						padding: 15px 30px
 						color: $black
 						font-weight: 500
+						+media-breakpoint-down(xs)
+							padding-left: 20px
+							padding-right: 20px
+							font-size: 14px
 					.value
 						color: $orange
 						font-size: 20px
@@ -794,6 +829,10 @@
 			.value
 				color: $orange
 				font-weight: 200
+	.woocommerce-privacy-policy-text
+		+media-breakpoint-down(xs)
+			font-size: 15px
+			line-height: 1.45
 
 
 	// Payment methods
@@ -1174,7 +1213,8 @@
 
 	// Results wrapper (list of results)
 	&-wrapper
-		overflow: hidden
+		overflow-y: auto
+		max-height: 335px
 		border-radius: 6px
 		border: 3px solid $c-f1
 		box-shadow: 0 0 30px rgba($black, 0.05)
@@ -1241,7 +1281,7 @@
 				display: flex
 				align-items: center
 				flex-wrap: wrap
-				margin-right: 3px
+				margin-right: 6px
 				+media-breakpoint-down(xs)
 					flex-direction: column
 					align-items: flex-start
@@ -1263,6 +1303,7 @@
 							height: 1px
 							background-color: #bbb
 				ins
+					color: $black
 					text-decoration: none
 					.amount
 						color: $black
@@ -1273,7 +1314,7 @@
 				.currencySymbol,
 				.woocommerce-Price-currencySymbol
 					font-weight: 200
-			&-count
+			.price-count
 				span
 					color: #8c8c8c
 					font-size: 14px
